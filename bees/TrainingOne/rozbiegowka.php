@@ -1,5 +1,31 @@
 <?php 
 
+	// kajak radar 
+	
+	// burda bruda  aabb baba   cacy  cyca   aaaabbbb abababab
+	
+	// true false
+	
+	function CzyPalindrom($kandydat) 
+	{
+		//echo $kandydat[3];
+		
+	// true true => true
+	// false true => false
+	// true false => false
+	// false fasle false
+		return $kandydat[0] == $kandydat[4] && $kandydat[1] == $kandydat[3];
+	}
+                //01234 
+	CzyPalindrom('s³owo');
+	$result = CzyPalindrom('kajjak'); // true false
+	var_dump($result);
+	
+	function CzyAnagram($kand, $kand2)
+	{
+		
+	}
+exit;
 	$rok = 2015;
 	
 	// 
