@@ -1,0 +1,13 @@
+function ZwrocBank($bank)
+	{
+		
+		if($bank == '1010')
+		{
+			echo "NBP";
+		}
+		if($bank == '1020')
+		{
+			echo "PKO BP";
+		}
+		
+	}
