@@ -4,12 +4,11 @@
 function ZwrocBank($numerKonta)
 {
 
-	
+	$numerXxxx = substr($numerKonta, 2, 4); 
 
 
 
-	$banki = array(	
-					'1010'=>'Narodowy Bank Polski',    // dzieki TomaszLach za tablice :)
+	$banki = array('1010'=>'Narodowy Bank Polski',    // dzieki TomaszLach za tablice :)
 					'1020'=>'PKO BP',
 					'1030'=>'Citybank Handlowy',
 					'1050'=>'ING',
@@ -46,19 +45,10 @@ function ZwrocBank($numerKonta)
 					'2160'=>'Toyota Bank',
 					'2190'=>'DnB Nord',
 					'2480'=>'Getin Noble Bank',
-					'2490'=>'Alior Bank'
-					) ;
+					'2490'=>'Alior Bank',
+					'102' => "tomaszek") ;
 
-	$numerXxxx = substr($numerKonta, 2, 4); 
-	if (is_array($banki > 1) )
-	{
-		return $banki[$numerXxxx];
-    
-	}
-	else
-	{
-	echo "Czekam, aż wprowadzisz numer";
-	}
+	return $banki[$numerXxxx];
 }
 
 // metoda post do przechwytywania danych konta
@@ -66,10 +56,8 @@ if(isset($_POST['submit']))
 {
 
 $var = $_POST['any_name'];  
-$numerKonta = $var;
 
 }
-
 ?>
 <html lang="">
 	<head>
@@ -88,7 +76,7 @@ $numerKonta = $var;
 	
 		<div class="col-md-6">
 			<!-- dorobiony formularz w html bo tak ladniej :) -->
-			<form class="form" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
+			<form class="form-horizontal" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
 				<fieldset>
 
 				<!-- Form Name -->
@@ -98,7 +86,7 @@ $numerKonta = $var;
 					<div class="control-group">
 						<label class="control-label" for="reciverbanknumber">Numer Konta Odbiorcy</label>
 							<div class="controls">
-								<input id="reciverbanknumber" name="any_name" type="text" placeholder=" Numer Konta" class="input-xlarge">
+								<input id="reciverbanknumber" name="any_name" type="text" placeholder="numerkonta" class="input-xlarge">
 								<p>Wprowadź numer konta (wzór XX-XXXX-XXXXXXXX bez myślników)</p>
 							</div>
 					<div class="control-group">
