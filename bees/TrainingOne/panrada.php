@@ -105,21 +105,15 @@ function zwrocBank () {
 
 	);
 
-	foreach ($bank as $key => $value) {
+//	foreach ($bank as $key => $value) {
 	
-	if ($key == '1020')
-	{
-		return "To jest bank".$value;
-	}
-	elseif ($key == '1030') {
-		return "To jest bank".$value;
-	}
-	else ($key == '1040') {
-		return "To jest bank".$value;
-
-	} 	
 	
+//		return $key . "To jest bank".$value;
+		
+//	
 
-	}
+//	}
+
+return	$bank[$wycinek];
 }
 
