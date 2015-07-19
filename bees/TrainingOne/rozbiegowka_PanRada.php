@@ -104,7 +104,7 @@ function ZwrocBank($numerWprowadzony)
 			</form>
 		</div>
 		<div class="col-md-6">
-			<h1><?php echo ZwrocBank($numerWprowadzony) . "\n";?></h1>
+			<h1><?php if(!empty ($numerWprowadzony)) { print_r(ZwrocBank($numerWprowadzony));};?></h1>
 		</div>
 
 
