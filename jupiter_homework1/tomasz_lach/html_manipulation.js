@@ -168,24 +168,73 @@ function readData(){
   }
 
   console.log("dane otrzymane", data);
+  console.log("pierwszy otrzymany bank", data[0]);
+  return data[0];
 }
 
-//bank bph
-var bph = { "fields" :
-[
-{"parent_id" : "body", "tagname" : "form", "id" : "form","type" : "", "value" : ""}, 
-{"parent_id" : "form", "tagname" : "div", "id" : "1-row", "type" : "", "value" : ""},
-{"parent_id" : "form", "tagname" : "div", "id" : "2-row", "type" : "", "value" : ""},
-{"parent_id" : "1-row", "tagname" : "input", "id" : "1", "type" : "text", "value" : "blablabla"},
-{"parent_id" : "2-row", "tagname" : "input", "id" : "2", "type" : "text", "value" : "blablabla"},
-{"parent_id" : "form", "tagname" : "input", "id" : "3", "type" : "submit", "value" : "wcisniej mnie"} 
-]
-};
 
-//testowy json
 //var test = {"parent_id" : "body", "tagname" : "form", "id" : "form","type" : "", "value" : ""};
 
 
+
+
+
+function chooseForm(bankName){
+
+var bankForms = new Array();
+	
+	// bankForms['Narodowy Bank Polski']
+	// bankForms['PKO BP']
+	// bankForms['Citybank Handlowy']
+	// bankForms['ING']
+	bankForms['BPH'] ={ "fields" :
+				[
+				{"parent_id" : "body", "tagname" : "form", "id" : "form","type" : "", "value" : ""}, 
+				{"parent_id" : "form", "tagname" : "div", "id" : "1-row", "type" : "", "value" : ""},
+				{"parent_id" : "form", "tagname" : "div", "id" : "2-row", "type" : "", "value" : ""},
+				{"parent_id" : "1-row", "tagname" : "input", "id" : "1", "type" : "text", "value" : "blablabla"},
+				{"parent_id" : "2-row", "tagname" : "input", "id" : "2", "type" : "text", "value" : "blablabla"},
+				{"parent_id" : "form", "tagname" : "input", "id" : "3", "type" : "submit", "value" : "wcisniej mnie"}
+				]
+				};
+	// bankForms['BZ WBK']
+	// bankForms['BGK']
+	// bankForms['mBank']
+	// bankForms['Bank Millennium']
+	// bankForms['Pekao']
+	// bankForms['HSBC']
+	// bankForms['Meritum Bank']
+	// bankForms['Bank Pocztowy']
+	// bankForms['Nordea Bank']
+	// bankForms['Euro Bank']
+	// bankForms['BOŚ']
+	// bankForms['Mercedes-Benz Bank Polska']
+	// bankForms['BNP Paribas Fortis']
+	// bankForms['SGB - Bank']
+	// bankForms['RBS Bank (Polska)']
+	// bankForms['Plus Bank']
+	// bankForms['Raiffeisen Bank']
+	// bankForms['Societe Generale']
+	// bankForms['FM Bank PBP']
+	// bankForms['Deutsche Bank Polska']
+	// bankForms['Bank Polskiej Spółdzielczości']
+	// bankForms['Credit Agricole Bank Polska']
+	// bankForms['Idea Bank']
+	// bankForms['Rabobank Polska']
+	// bankForms['BGŻ']
+	// bankForms['FCE Bank Polska']
+	// bankForms['Santander Consumer Bank']
+	// bankForms['Volkswagen Bank']
+	// bankForms['Fiat Bank Polska']
+	// bankForms['Toyota Bank']
+	// bankForms['DnB Nord']
+	// bankForms['Getin Noble Bank']
+	// bankForms['Alior Bank']
+
+	console.log("zwracany json ",bankForms[bankName]);
+	return bankForms[bankName];
+
+}
 
 //sprawdzanie czy element to tablica
 function isArray(what) {
@@ -194,6 +243,8 @@ function isArray(what) {
 
 //generowanie formularza
 // obiekt = {nazwabanku, [parent_id, tagname, id, type, value ]}
+
+
 function generateForm(obiekt){
 	for (var key in obiekt){
 
@@ -207,15 +258,9 @@ function generateForm(obiekt){
 		}
 
 	}
-
-
 }
 
-function jsonTest(obiekt){
-	
 
-	for (var key in obiekt){
-		console.log("obiekt json", obiekt[key]);
-	}
-}
+
+
 

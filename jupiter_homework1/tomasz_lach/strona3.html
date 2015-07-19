@@ -7,7 +7,10 @@
 <script>
 
 
-readData();
+var bankName = readData();
+console.log("bankname", bankName);
+var bankJSON = chooseForm(bankName);
+console.log("bankJSON", bankJSON);
 
 </script>
 <h1>Formularz Banku</h1>
@@ -24,10 +27,10 @@ readData();
 {"parent_id" : "form", "tagname" : "input", "id" : "3", "type" : "submit", "value" : "wcisniej mnie"} 
 ]
 };
-  	var test = {"parent_id" : "body", "tagname" : "form", "id" : "form","type" : "", "value" : ""};
+  	//var test = {"parent_id" : "body", "tagname" : "form", "id" : "form","type" : "", "value" : ""};
 
     //jsonTest(test);
-    generateForm(bph);
+    generateForm(bankJSON);
   
 </script>
 </ul>
