@@ -1,0 +1,48 @@
+Moja koncepcja - oczywiście do dyskusji/krytyki/olania/akceptacji.
+
+Interesujący nas wycinek HTML'a:
+    <form id="accountForm" action="#">
+      <input type="text">
+      <input type="submit" value="Załaduj formularz">
+    </form>
+
+Kolejność działania (po submit'cie formularza):
+  - pobieramy numer konta
+    - getAccountNumber() -> accountNumber: string
+      - łatwe
+
+  - sprawdzamy poprawność (2 pierwsze cyfry są kontrolne)
+    - isValidAccountNumber(accountNumber: string) -> isValid: bool
+      - łatwe
+
+  - wyciągamy z niego fragment, który decyduje o banku
+    - getCrucialNumber(accountNumber: string) -> crucialNumber: string
+     - łatwe / średnie (zależy od wybranego sposobu implementacji)
+
+  - na podstawie fragmentu wybieramy bank
+    - Bank.getBank(crucialNumber: string) -> Bank
+      - łatwe / średnie (zależy od wybranego sposobu implementacji)
+
+  - korzystając z instancji banku, generujemy formularz
+    - Bank.getForm() -> form: HTMLFormElement
+      - łatwe / średnie / trudne (każdy miał jeden napisać)
+
+  - wstrzykujemy formularz do dokumentu
+    - renderForm(form: HTMLFormElement) -> undefined
+      - łatwe
+
+Dodatkowo:
+  - Bank.addBank(crucialNumber: string, getForm: function) -> undefined
+    - łatwe / średnie (zależy od wybranego sposobu implementacji)
+
+Kolejność działania (przed formularzem):
+  - każdy bank jest załączony w osobnym pliku, w taki sposób
+    Bank.addBank('xxxx', function () {
+      // ...
+      // ...
+      // ...
+
+      return form;
+    });
+
+  - nasłuchujemy na submit
