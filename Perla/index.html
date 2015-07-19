@@ -3,12 +3,17 @@
     <head>
         <meta charset="utf-8"/>
         <script src="jquery.js"></script>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/custom.css" rel="stylesheet">
     </head>
     <body>
         <!--TODO : Simple regex-->
-        <input id="AccountNumber" type="text" name="AccountNumber" /><br> 
-
-        <button id="CheckBank">Sprawdź swój bank</button>
+        <br>
+        <div class="col-xs-3" id="formholder">
+            <input id="AccountNumber" type="text" name="AccountNumber" class="form-control" />
+        </div>
+        <button id="CheckBank" class="btn btn-default">Sprawdź swój bank</button>
+        <br>
         <script src="BanksHashMap.js"></script>
         <script src="CheckAccount.js"></script>
     </body>
