@@ -8,17 +8,19 @@
 
 
 var bankName = readData();
-console.log("bankname", bankName);
+console.log("bankname", bankName);// trzeba jeszcze zrobić aby nazwa banku była w tytule i body
+document.title = "formularz banku "+bankName;
 var bankJSON = chooseForm(bankName);
 console.log("bankJSON", bankJSON);
 
 </script>
-<h1>Formularz Banku</h1>
+<h1 id="h1">Formularz Banku</h1>
 <ul>
 <script>
 
 	var bph = { "fields" :
 [
+
 {"parent_id" : "body", "tagname" : "form", "id" : "form","type" : "", "value" : ""}, 
 {"parent_id" : "form", "tagname" : "div", "id" : "1-row", "type" : "", "value" : ""},
 {"parent_id" : "form", "tagname" : "div", "id" : "2-row", "type" : "", "value" : ""},
@@ -31,6 +33,7 @@ console.log("bankJSON", bankJSON);
 
     //jsonTest(test);
     generateForm(bankJSON);
+    document.getElementById("h1").innerHTML = bankName;
   
 </script>
 </ul>
