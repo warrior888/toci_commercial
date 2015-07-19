@@ -25,6 +25,7 @@ function generateElement(elementName, elementId, elementType, elementValue){
 	return element;
 }
 
+//identifies the bank on the basis of account number
 function checkBank(accountNumber){
 	console.log("numer konta",accountNumber);
 
@@ -77,7 +78,7 @@ function checkBank(accountNumber){
 	return Banks[BankId];
 }
 
-
+//validates bank account number
 function validate(regex, elementId){
 	var value = document.getElementById(elementId).value.toString();
 	console.log("account number", value);
@@ -101,7 +102,7 @@ function validate(regex, elementId){
 
 }
 
-
+//prepares data to send
 function sendData(data1, data2){
 
 		
@@ -150,7 +151,7 @@ function transferForm(){
 		}; 
 }
 
-
+//reads data from the window.location
 function readData(){
   var query = window.location.search;
    
@@ -169,9 +170,52 @@ function readData(){
   console.log("dane otrzymane", data);
 }
 
+//bank bph
+var bph = { "fields" :
+[
+{"parent_id" : "body", "tagname" : "form", "id" : "form","type" : "", "value" : ""}, 
+{"parent_id" : "form", "tagname" : "div", "id" : "1-row", "type" : "", "value" : ""},
+{"parent_id" : "form", "tagname" : "div", "id" : "2-row", "type" : "", "value" : ""},
+{"parent_id" : "1-row", "tagname" : "input", "id" : "1", "type" : "text", "value" : "blablabla"},
+{"parent_id" : "2-row", "tagname" : "input", "id" : "2", "type" : "text", "value" : "blablabla"},
+{"parent_id" : "form", "tagname" : "input", "id" : "3", "type" : "submit", "value" : "wcisniej mnie"} 
+]
+};
+
+//testowy json
+//var test = {"parent_id" : "body", "tagname" : "form", "id" : "form","type" : "", "value" : ""};
+
+
+
+//sprawdzanie czy element to tablica
+function isArray(what) {
+    return Object.prototype.toString.call(what) === '[object Array]';
+}
+
 //generowanie formularza
 // obiekt = {nazwabanku, [parent_id, tagname, id, type, value ]}
 function generateForm(obiekt){
+	for (var key in obiekt){
 
+		if(isArray(obiekt[key])){
+			generateForm(obiekt[key]);
+		}
+		else {
+			console.log('obiekt json', obiekt[key]);
+			console.log('wlasciwoss jsona', obiekt[key].parent_id);
+			AddHtmlNode(obiekt[key].parent_id, generateElement(obiekt[key].tagname, obiekt[key].id, obiekt[key].type, obiekt[key].value));
+		}
+
+	}
+
+
+}
+
+function jsonTest(obiekt){
+	
+
+	for (var key in obiekt){
+		console.log("obiekt json", obiekt[key]);
+	}
 }
 

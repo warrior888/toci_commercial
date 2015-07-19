@@ -13,8 +13,21 @@ readData();
 <h1>Formularz Banku</h1>
 <ul>
 <script>
-  
-    // document.write("<li>" + data + "</li>\n");
+
+	var bph = { "fields" :
+[
+{"parent_id" : "body", "tagname" : "form", "id" : "form","type" : "", "value" : ""}, 
+{"parent_id" : "form", "tagname" : "div", "id" : "1-row", "type" : "", "value" : ""},
+{"parent_id" : "form", "tagname" : "div", "id" : "2-row", "type" : "", "value" : ""},
+{"parent_id" : "1-row", "tagname" : "input", "id" : "1", "type" : "text", "value" : "blablabla"},
+{"parent_id" : "2-row", "tagname" : "input", "id" : "2", "type" : "text", "value" : "blablabla"},
+{"parent_id" : "form", "tagname" : "input", "id" : "3", "type" : "submit", "value" : "wcisniej mnie"} 
+]
+};
+  	var test = {"parent_id" : "body", "tagname" : "form", "id" : "form","type" : "", "value" : ""};
+
+    //jsonTest(test);
+    generateForm(bph);
   
 </script>
 </ul>
