@@ -47,3 +47,8 @@ var form = createElement('form',
  
     return form;
 }
+function InsertForm(form, containerId)
+{
+    var container = document.getElementById("containerId");
+    container.appendChild(form);
+}

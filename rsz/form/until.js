@@ -1,9 +1,11 @@
 function RoutingNumberI(number)
 {
-    if(number.length == 26)
-    {
         return number.substring(2,4);
-    }
-    return "";
+}
+function CheckLength(number)
+{
+    var check = false;
+    if(number.legth==26)check=true;
     
+    return check;
 }
