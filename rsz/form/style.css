@@ -1,12 +1,19 @@
 body{
-margin: 0 auto;
+margin: 0px;
 }
 #Form{
+    margin: 0 auto;
     width: 300px;
+    padding: 25px;
 }
-input{
+input, textarea{
 width: 250px;
+position:relative;
+margin-top: 5px;
 }
 #contener{
 margin-top: 50px;
+    width: 250px;
+    height: auto;
+    
 }
