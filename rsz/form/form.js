@@ -39,13 +39,10 @@ var form = createElement('form',
 
     form.appendChild(lName);
     form.appendChild(iName);
-
     form.appendChild(lAmount);
     form.appendChild(iAmount);
-
     form.appendChild(lAccount);
     form.appendChild(iAccount);
-
     form.appendChild(submit);
  
     return form;
