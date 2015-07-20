@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Training 1 - konta bankowe!</title>
+    <link type="text/css" rel="stylesheet" href="css/styles.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script type="text/javascript" src="scripts/bankaccounts.js"></script>
+</head>
+<body>
+    <div id="wrapper">
+        <h1>Training One - bank accounts</h1>
+        <form action="#">
+            <label name="account bank number">Enter bank account number (26 digits):</label>
+            <input id="account_number" type="text" placeholder="bank account number" maxlength="33">
+            <input id="check_number" type="submit" value="Check bank account" onclick="validate()">
+        </form>
+        <div id="content">
+            <span id="info">INFO: </span>
+            <span id="info_text"> Transaction form will append after you'll
+            enter the bank account number </span>
+        </div>
+    </div>
+</body>
+</html>
