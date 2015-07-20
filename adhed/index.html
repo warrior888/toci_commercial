@@ -7,6 +7,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script type="text/javascript" src="scripts/banksList.js"></script>
     <script type="text/javascript" src="scripts/bankaccounts.js"></script>
+    <script type="text/javascript" src="scripts/transactionForm.js"></script>
 </head>
 <body>
     <div id="wrapper">
@@ -18,8 +19,10 @@
         </form>
         <div id="content">
             <span id="info">INFO: </span>
-            <span id="info_text"> Transaction form will append after you'll
-            enter the bank account number </span>
+            <span id="info_text"> Transaction form will append after you'll enter the bank account number </span>
+            </div>
+        <div id="form_wrapper">
+            <a href="#" id="show_form" onclick="createTransactionForm()">=> Click here to show PKO BP form <=</a>
         </div>
     </div>
 </body>
