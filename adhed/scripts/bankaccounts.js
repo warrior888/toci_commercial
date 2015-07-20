@@ -5,7 +5,8 @@
 var bankDictionary = {}; // Bank dictionary with number and bank names
 
 // Load unique number and bank names from JSON file
-function loadBankDictionary() {
+// NOT WORKING WITH LOCAL FILE and CROSS-DOMAIN
+function loadBankDictionaryWithJQuery() {
     jQuery.getJSON("http://leniwiec.vot.pl/TOCI/scripts/banksList.json").done(function (data) {
         $.each(data, function () {
             bankDictionary[this.number] = this.bank;
@@ -13,6 +14,16 @@ function loadBankDictionary() {
         console.log("Loading success.");
     });
 }
+
+function loadBankDictionary() {
+    var banksList = JSON.parse(banks);
+    for(var i = 0; i < banksList.length; i++) {
+        bankDictionary[banksList[i].number] = banksList[i].bank;
+    }
+    console.log("Banks loaded with success!");
+}
+
+
 
 // Return bank name from the unique 4-digit number typed as parameter
 function checkBankFromNumber(num) {
@@ -47,6 +58,8 @@ function changeInfoText(text) {
     var element = document.getElementById("info_text");
     element.innerHTML = text.toString();
 }
+
+//loadBankDictionaryWithJQuery();
 
 loadBankDictionary();
 
