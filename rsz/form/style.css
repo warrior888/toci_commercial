@@ -1,0 +1,12 @@
+body{
+margin: 0 auto;
+}
+#Form{
+    width: 300px;
+}
+input{
+width: 250px;
+}
+#contener{
+margin-top: 50px;
+}
