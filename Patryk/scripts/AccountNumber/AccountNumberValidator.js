@@ -1,6 +1,6 @@
 function SetFormAction () {
-	var form = GetNode("AccountNumberForm");
-	form.setAttribute("onsubmit","return TryGetForm()");
+	var button = GetNode("submitButton");
+	button.setAttribute("onclick","TryGetForm()");
 }
 
 function TryGetForm(){
