@@ -1,0 +1,35 @@
+body{
+margin: 0px;
+    background-color:darkgray;
+    padding: 20px;
+    font-family: "Courier New";
+}
+#Form{
+    margin: 0 auto;
+    width: 300px;
+    padding: 25px;
+    background-color: floralwhite;
+    box-shadow: 1px 1px 0px black;
+}
+input, textarea{
+width: 250px;
+position:relative;
+margin-top: 5px;
+}
+#contener{
+margin-top: 50px;
+    width: 250px;
+    height: auto;
+    
+}
+
+input:required:invalid, input:focus:invalid {
+    background-image: url("invalid.png");
+    background-position: right top;
+    background-repeat: no-repeat;
+  }
+  input:required:valid {
+    background-image: url("valid.png");
+    background-position: right top;
+    background-repeat: no-repeat;
+  }
