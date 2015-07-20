@@ -31,13 +31,22 @@ function formRender()
     lAmount.innerHTML="Kwota";
     var inputAmount = document.createElement("input");
     inputAmount.setAttribute("type","text");
+ 
     
     var lp = document.createElement("Label");
     lp.innerHTML="Typ przelewu";
     
     var inputCh1 = document.createElement("input");
-    inputCh1.setAttribute("type","checkbox");
-    inputCh1.setAttribute("value","Standardowy");
+    inputCh1.setAttribute("type","radio");
+    var inputCh2 = document.createElement("input");
+    inputCh2.setAttribute("type","radio");
+    inputCh2.innerHTML="dsfsddf";
+    var inputCh3 = document.createElement("input");
+    inputCh3.setAttribute("type","radio");
+    inputCh3.innerHTML="dsfsddf";
+    
+    var inputSend = document.createElement("input");
+    inputSend.setAttribute("type","submit");
     
     form.appendChild(lNumberTo);
     form.appendChild(inputA);
@@ -56,6 +65,10 @@ function formRender()
     
     form.appendChild(lp);
     form.appendChild(inputCh1);
+    form.appendChild(inputCh2);
+    form.appendChild(inputCh3);
+    
+    form.appendChild(inputSend);
     
     return form;
 }
