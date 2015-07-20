@@ -60,8 +60,9 @@ body {
 }
 
 h1 {
-    font-size: 2em;
+    font-size: 3em;
     margin: 5px 0 15px 0;
+    color: rgb(77, 110, 137);
 }
 
 input, label {
