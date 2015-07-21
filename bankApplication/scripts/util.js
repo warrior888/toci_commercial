@@ -25,7 +25,10 @@ function isValidAccountNumber(accountNumber) {
 }
 
 // getCrucialNumber(accountNumber: string) -> crucialNumber: string
-function getCrucialNumber(accountNumber) {}
+function getCrucialNumber(accountNumber) {
+  crucialNumber = accountNumber.substring(2,6);
+  return crucialNumber;
+}
 
 // renderForm(form: HTMLFormElement) -> undefined
 function renderForm(form) {}
