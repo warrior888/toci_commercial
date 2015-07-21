@@ -1,8 +1,28 @@
 // getAccountNumber() -> accountNumber: string
-function getAccountNumber() {}
+function getAccountNumber() {
+  
+  var accountNumber = document.getElementById("account").value.toString();
+  return accountNumber;
+
+}
 
 // isValidAccountNumber(accountNumber: string) -> isValid: bool
-function isValidAccountNumber(accountNumber) {}
+function isValidAccountNumber(accountNumber) {
+  var regularEx = /[0-9]{26}$/;
+
+  if (regex.test(accountNumber)){
+    
+    console.log("validation input"+elementId, true);
+    return true;
+  }
+  else{
+
+    console.log("validation input"+elementId, false);
+    return false;
+  }
+
+
+}
 
 // getCrucialNumber(accountNumber: string) -> crucialNumber: string
 function getCrucialNumber(accountNumber) {}
