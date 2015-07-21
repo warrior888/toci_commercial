@@ -1,9 +1,10 @@
 console.log("2490 Alior Bank")
 
-function form2490() {
+Bank.addBank('2490', function () {
   var form = createElement('form',
     { action: '#' }
   );
+
 
   // Data
 
