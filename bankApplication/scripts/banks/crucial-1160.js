@@ -1,6 +1,6 @@
 Bank.addBank('1160', function(){
 
-	    var body = getElementById("body");
+	    //var body = getElementById("body");
       
       var form = createElement("form", {action :'#'} );
 
