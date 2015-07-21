@@ -18,9 +18,9 @@ Bank.addBank('1160', function(){
       var labelTargetAccount =createElement('label', {innerHTML : "Konto odbiorcy"});
       var inputTargetAccount =createElement('input');
       
-      var submit = document.createElement('input', {type : "submit", value : "wyślij"});
+      var submit = createElement('input', {type : "submit", value : "wyślij"});
 
-      var textArea = document.createElement('textArea');
+      var textArea = createElement('textArea');
 
       body.appendChild(form);
 
