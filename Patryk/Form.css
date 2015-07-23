@@ -1,11 +1,12 @@
 @CHARSET "UTF-8";
 
 
-.mainDiv, form{
+form {
     margin: 0 auto;
     width: 370px;
     padding: 2em;
     border: 2px solid #CCC;
+    -ms-border-radius: 1em;
     border-radius: 1em;
     background-color: #EDF9E8;
 }
@@ -25,7 +26,6 @@ label {
 }
 
 .input{
-    width: 200px;
     border: 1px solid #999;
 }
 
@@ -33,7 +33,7 @@ label {
     padding-left: 280px;
 }
 
-.badNumber{
+.badValue{
     border: 3px solid #999; 
     border-color: red; 
 }
