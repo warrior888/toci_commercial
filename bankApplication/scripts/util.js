@@ -11,17 +11,19 @@ function getAccountNumber() {
 function isValidAccountNumber(accountNumber) {
   // ^ oznacza początek - skoro mamy $ (koniec), to czemu nie dać ^ ?
   // var regularEx = /[0-9]{26}$/;
-  var regularEx = /^[0-9]{26}$/;
+  // var regularEx = /^[0-9]{26}$/;
 
-  if (regex.test(accountNumber)) {
-    // console.log("validation input"+elementId, true);
-    console.log('validation input', elementId, true);
-    return true;
-  } else {
-    // console.log("validation input"+elementId, false);
-    console.log('validation input', elementId, false);
-    return false;
-  }
+  // if (regex.test(accountNumber)) {
+  //   // console.log("validation input"+elementId, true);
+  //   console.log('validation input', elementId, true);
+  //   return true;
+  // } else {
+  //   // console.log("validation input"+elementId, false);
+  //   console.log('validation input', elementId, false);
+  //   return false;
+  // }
+
+  return /^\d{26}$/.test(accountNumber);
 }
 
 // getCrucialNumber(accountNumber: string) -> crucialNumber: string
@@ -33,7 +35,24 @@ function getCrucialNumber(accountNumber) {
 }
 
 // renderForm(form: HTMLFormElement) -> undefined
-function renderForm(form) {}
+function renderForm(form) {
+    // Może być gdzie indziej, ale jakoś nie mam pomysłu
+    var transferFormTargetId = 'transferFormTarget';
+    var transferFormTarget = document.getElementById(transferFormTargetId);
+
+    if (!transferFormTarget) {
+      transferFormTarget = createElement('div', {}, {
+        id: transferFormTargetId
+      });
+
+      document.body.appendChild(transferFormTarget);
+    } else {
+      // Usuwamy poprzedni form
+      transferFormTarget.removeChild(transferFormTarget.firstChild);
+    }
+
+    transferFormTarget.appendChild(form);
+}
 
 // createElement(tagName: string, attributes: { string: any }, fields: { string: any }) -> HTMLElement
 // Helper do tworzenia elementów, przykład:

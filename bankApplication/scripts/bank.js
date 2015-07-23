@@ -23,7 +23,7 @@ Bank.getBank = function (crucialNumber) {
 
 //funkcja dodająca bank do zmiennej przechowującej banki
 // Można pomyśleć nad Bank.addBank(bank: Bank) -> undefined
-// Bank.addBank(crucialNumber: string, getForm: function) -> undefined
+// Bank.addBank(crucialNumber: string, getForm: (callback: function) -> HTMLFormElement) -> undefined
 Bank.addBank = function (crucialNumber, getForm) {
   // TODO: jakieś sprawdzenie, czy taki bank już istnieje?
   Bank.banks[crucialNumber] = new Bank(crucialNumber, getForm);
