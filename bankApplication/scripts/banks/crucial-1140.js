@@ -1,6 +1,5 @@
 // Paskudny formularz mBank'u
-// TODO: obsługa formularza
-Bank.addBank('1140', function () {
+Bank.addBank('1140', function (callback) {
   var form = createElement('form',
     { action: '#' }
   );
@@ -48,6 +47,19 @@ Bank.addBank('1140', function () {
   form.appendChild(inputTargetAccount);
 
   form.appendChild(submit);
+
+  // Gdyby ustalić jakąś konwencję id na inputach,
+  // to można by było ten fragment (już uogólniony)
+  // przenieść do init.js i podpinać po .getForm()
+  // (wtedy callback byłby zbędny)
+  form.addEventListener('submit', function () {
+    // Świetne miejsce na walidacje
+    callback({
+      name:    inputTargetName.value,
+      amount:  inputTargetAmount.value,
+      account: inputTargetAccount.value
+    });
+  });
 
   return form;
 });
