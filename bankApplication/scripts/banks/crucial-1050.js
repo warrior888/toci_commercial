@@ -1,6 +1,7 @@
 //to samo co w Terry/bank/TerryINGForm
 
-Bank.addBank = ('1050', function() {
+// Bank.addBank = ('1050', function() {
+Bank.addBank('1050', function() {
         var form = GenerateElement('form');
         form.id = 'INGBankForm';
         form.action = '#';
