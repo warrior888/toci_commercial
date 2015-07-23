@@ -1,4 +1,4 @@
-console.log("2490 Alior Bank")
+console.log("2490 Alior Bank");
 
 Bank.addBank('2490', function () {
   var form = createElement('form',
@@ -78,4 +78,4 @@ Bank.addBank('2490', function () {
   form.appendChild(submit);
 
   return form;
-}
+});
