@@ -3,6 +3,7 @@ function getAccountNumber() {
   // .toString() jest zbędny
   // var accountNumber = document.getElementById("account").value.toString();
   var accountNumber = document.getElementById('account').value;
+    accountNumber = accountNumber.replace(/\s+/g, ''); // usuniecie spacji
   return accountNumber;
 
 }

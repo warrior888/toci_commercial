@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var accountNumber = getAccountNumber();
 
     if (isValidAccountNumber(accountNumber)) {
-      var bank = Bank.getBank(getCrucialNumber(accountNumber));
+        var bank = Bank.getBank(getCrucialNumber(accountNumber));
 
       if (bank) {
         renderForm(bank.getForm(function (data) {
