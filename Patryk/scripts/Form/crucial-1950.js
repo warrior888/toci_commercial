@@ -1,4 +1,5 @@
-﻿
+﻿//Patryk Stulczewski - Idea Bank
+
 var labelForName = CreateLabel("Nazwa odbiorcy:", "nazwa");
 var labelForNumber = CreateLabel("Numer rachunku:", "numer");
 var labelForTitle = CreateLabel("Tytul platnosci:", "tytul");
@@ -11,18 +12,28 @@ var inputForTitle = CreateInput("tytul", "text");
 var inputForSum = CreateInput("kwota", "text");
 
 inputForName.addEvents({
-    'keypress': function (event) { CheckSign(event, new RegExp("[a-zA-Z ]")) },
+    'keypress': function (event) {
+        Validate(event.key, new RegExp("[a-zA-Z ]"), function() {
+            event.preventDefault();
+        });
+    },
     'keyup': function () {
         if (this.value.length == 1) {
             this.value = this.value.toLocaleUpperCase();
         }
     },
-    'focus': function() { FocusAction(this); }   
+    'focus': function () { FocusAction(this); }
 });
 
 inputForNumber.addEvents({
     'focus': function () { FocusAction(this); },
-    'blur': function () { Validate(this, new RegExp("^[0-9]{18}$")) }
+    'blur': function () {
+        console.log(this);
+        Validate(this.value, new RegExp("^[0-9]{18}$"), function() {
+            console.log('niepoprawne dane');
+            //this.setAttribute('class', 'badValue');
+        });
+    }
 });
 
 inputForTitle.addEvents({
@@ -33,32 +44,29 @@ inputForTitle.addEvents({
 });
 
 inputForSum.addEvents({
-    'keypress': function (event) { CheckSign(event, new RegExp("[0-9]")); },
+    'keypress': function (event) {
+        Validate(event.key, new RegExp("[0-9]"), function () {
+            event.preventDefault();
+        });
+    },
     'focus': function () { FocusAction(this); },
 });
 
-
-function CheckSign(event, regexp) {
-    if (!regexp.test(event.key)) {
-        event.preventDefault();
-    }
-}
-
-function Validate(element,regexp) {
-    if (!regexp.test(element.value)) {
-        element.setAttribute('class', 'badValue');
+function Validate(value, regexp, failureAction) {
+    if (!regexp.test(value)) {
+        failureAction();
     }
 }
 
 function FocusAction(element) {
     element.setAttribute('placeholder', 'wprowadz dane');
-    element.setAttribute('class', 'input');
+    //element.setAttribute('class', 'input');
 }
 
-var LineForm = function(label, input, divClass) {
+var LineForm = function (label, input, divClass) {
     this.label = label;
     this.input = input;
- 
+
     var div = GenerateElement('div', '');
     if (divClass != undefined)
         div.setAttribute('class', divClass);
@@ -85,7 +93,7 @@ function GenerateLinesForm() {
     return lines;
 }
 
-function GenerateIdeaBankForm() {
+function GenerateNordeaBankForm() {
     var form = CreateForm("nordeaForm", SendDataFromForm, "post");
     var linesForm = GenerateLinesForm();
     for (var line in linesForm) {
@@ -103,7 +111,7 @@ function AddSubmitButton(parentNode) {
     AddHtmlNode(parentNode, div);
 }
 
-function CreateInput(id, type,value) {
+function CreateInput(id, type, value) {
 
     var input = GenerateElement('input', id);
     input.type = type;
@@ -162,7 +170,7 @@ function SendDataFromForm() {
     $.ajax({
         url: "",
         data: $(form).serialize(),
-        success: function() {
+        success: function () {
             console.log("wyslano dane z formularza");
         }
     });

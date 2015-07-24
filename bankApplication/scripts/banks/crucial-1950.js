@@ -12,7 +12,10 @@ var inputForTitle = CreateInput("tytul", "text");
 var inputForSum = CreateInput("kwota", "text");
 
 inputForName.addEvents({
-    'keypress': function (event) { CheckSign(event, new RegExp("[a-zA-Z ]")) },
+    'keypress': function (event) { Validate(event.key, new RegExp("[a-zA-Z ]")), function() {
+        event.preventDefault();
+        }
+    },
     'keyup': function () {
         if (this.value.length == 1) {
             this.value = this.value.toLocaleUpperCase();
@@ -23,7 +26,11 @@ inputForName.addEvents({
 
 inputForNumber.addEvents({
     'focus': function () { FocusAction(this); },
-    'blur': function () { Validate(this, new RegExp("^[0-9]{18}$")) }
+    'blur': function () { Validate(this.value, new RegExp("^[0-9]{18}$")), function() {
+        console.log('niepoprawne dane');
+        //this.setAttribute('class', 'badValue');
+        }
+    }
 });
 
 inputForTitle.addEvents({
@@ -34,21 +41,15 @@ inputForTitle.addEvents({
 });
 
 inputForSum.addEvents({
-    'keypress': function (event) { CheckSign(event, new RegExp("[0-9]")); },
+    'keypress': function (event) { Validate(event.key, new RegExp("[0-9]"), function() {
+        event.preventDefault();
+    }); },
     'focus': function () { FocusAction(this); },
 });
 
-
-function CheckSign(event, regexp) {
-    if (!regexp.test(event.key)) {
-        event.preventDefault();
-    }
-}
-
-function Validate(element,regexp) {
-    if (!regexp.test(element.value)) {
-        console.log('niepoprawne dane');
-        //element.setAttribute('class', 'badValue');
+function Validate(value, regexp, failureAction) {
+    if (!regexp.test(value)) {
+        failureAction();
     }
 }
 
@@ -160,7 +161,6 @@ function GenerateElement(elementName, id) {
 
 function SendDataFromForm() {
     var form = GetNode("nordeaForm");
-    alert("poszlo");
     $.ajax({
         url: "",
         data: $(form).serialize(),
