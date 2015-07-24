@@ -6,7 +6,7 @@
 
 Bank.addBank('1020', function () {
     var form = createElement('form',
-        { action: '#' }
+        { action: '#' }, { id: 'formPKO'}
     );
 
     var bankAccountNumberLabel = createLabelElement("account number", "Numer konta odbiorcy:");

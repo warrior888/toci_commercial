@@ -1,0 +1,28 @@
+form#formPKO {
+    font: 14px Helvetica, Arial, sans-serif;
+}
+
+form#formPKO label {
+    font-weight: bold;
+}
+
+form#formPKO label, form#formPKO input {
+    display: block;
+    padding: 5px;
+    margin: 5px 0 3px 0;
+}
+
+form#formPKO {
+    margin: 25px;
+    padding: 10px;
+    border: 3px solid #cacaca;
+    border-radius: 3px;
+}
+
+#formPKO input#accountNumber {
+    width: 230px;
+}
+
+#formPKO input#recipientName {
+    width: 230px;
+}
