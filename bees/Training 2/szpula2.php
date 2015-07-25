@@ -1,8 +1,8 @@
 <?php
 
-		$wartosc = 10;
+		$wartosc = 0;
 		
-		if($wartosc<1 and $wartosc>30)
+		if($wartosc<1 || $wartosc>30)
 		{
 			echo "Wartosc jest zla";
 		}
