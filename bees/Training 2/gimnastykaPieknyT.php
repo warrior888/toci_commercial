@@ -5,9 +5,11 @@ if ($wartosc > 30 || $wartosc < 1)
 	echo"wartosc jest zla";
 
 else
+{
 	if($wartosc < 8)
 		echo "pierwszy tydzien";
 	else
+	{
 		if($wartosc < 15)
 			echo "drugi tydzien";
 		else
@@ -18,3 +20,5 @@ else
 					echo "czwatry tydzien";
 				else
 					echo"piaty tydzien";
+	}
+}
