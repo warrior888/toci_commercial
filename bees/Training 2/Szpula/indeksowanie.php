@@ -14,9 +14,8 @@
 		echo $slowo[1];
 		echo $slowo[0];*/
 		
-		for($i=strlen($slowo); $i<=strlen($slowo); $i--)
+		for($i = strlen($slowo); $i >= 0; $i--)
 		{
 			echo $slowo[$i];
 		}
-
-?>
+		?>
