@@ -6,23 +6,23 @@
 		{
 			echo "Wartosc jest zla";
 		}
-		if($wartosc>=1 and $wartosc<=7)
+		if($wartosc>=1 && $wartosc<=7)
 		{
 			echo "Pierwszy tydzien";
 		}
-		if($wartosc>=8 and $wartosc<=14)
+		if($wartosc>=8 && $wartosc<=14)
 		{
 			echo "Drugi tydzien";
 		}
-		if($wartosc>=15 and $wartosc<=21)
+		if($wartosc>=15 && $wartosc<=21)
 		{
 			echo "Trzeci tydzien";
 		}
-		if($wartosc>=22 and $wartosc<=28)
+		if($wartosc>=22 && $wartosc<=28)
 		{
 			echo "Czwart tydzien";
 		}
-		if($wartosc>=29 and $wartosc<=30)
+		if($wartosc>=29 && $wartosc<=30)
 		{
 			echo "Piaty tydzien";
 		}
