@@ -42,6 +42,9 @@ function toWords($liczba_do_sparsowania)
 			case 9:
 				echo "dziewięć"."\n";
 				break;
+			default:
+				echo "to nie jest cyfra".."\n";
+				break;
 		}
 	}
 }
