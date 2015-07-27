@@ -30,7 +30,7 @@ function coDruga($text)
 	}
 	else
 	{
-		echo "text".$text." jest za krótki aby iterować co drugą literę";
+		echo "text".$text." jest za krótki aby iterować co drugą literę"."\n";
 	}
 }
 	
@@ -50,7 +50,7 @@ function coKtoras($text, $skok)
 	}
 	else
 	{
-		echo "text ".$text." jest za krótki aby iterowac co ".$skok." litere";
+		echo "text ".$text." jest za krótki aby iterowac co ".$skok." litere"."\n";
 	}
 }
 
@@ -62,8 +62,40 @@ coKtoras("buba", 5);
 	// 3 k  w  k  u 
     
 	// zad 3
+//rekurencja
+function pierwszaOstatnia1($text)
+{
+	//echo "pierwsza i ostatnia dla wyrazu ".$text."\n";
+	if (strlen($text)>=2)
+	{
+		echo $text[0]."\n";
+		echo $text[strlen($text)-1]."\n";
+		pierwszaOstatnia1(substr($text, 1,-1));
+	}
+	else if (strlen($text) == 1)
+	{
+		echo $text[0]."\n";
+	}
+	else if(strlen($text) == 0)
+	{
+		echo "wyraz jest pusty!!\n";
+	}
+
+}
+
+$testowa = "12345";
+pierwszaOstatnia1($testowa);
+pierwszaOstatnia1("");
+
+//na indeksach tablicy
+function pierwszaOstatnia2($text)
+{}
 	
-	// c o o g k e o n
+
+
+// $tescik = "xyz";
+// ecjp $tescik[-1];
+// echo end($tescik);
 	
 	// zad 4 * 
 	
