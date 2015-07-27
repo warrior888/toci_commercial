@@ -151,7 +151,12 @@ pierwszaOstatnia3($tescik2);
 // echo end($tescik);
 	
 	// zad 4 * 
-$kwotaPrzelewu ="524 135 412";
+$kwotaPrzelewu = 524135412;
+
+
+echo ceil(log10($kwotaPrzelewu));
+echo log10($kwotaPrzelewu);
+
 function numberToWords($number)
 {
 	// 1. podzielic liczbe na 3 elementowe podliczby
@@ -159,16 +164,53 @@ function numberToWords($number)
 	// 3. w zaleznosci od polozenia podliczby dopisac oznaczenie wielkosci np. milionów, tysiecy etc
 	$jednostki = array();
 	$jednostki[1]='jeden';
+	$jednostki[2]='dwa';
+	$jednostki[3]='trzy';
+	$jednostki[4]='cztery';
+	$jednostki[5]='pięć';
+	$jednostki[6]='sześć';
+	$jednostki[7]='siedem';
+	$jednostki[8]='osiem';
+	$jednostki[9]='dziewięć';
 
 	$nastki = array();
 	$nastki[11]='jedenascie';
+	$nastki[11]='dwanaście';
+	$nastki[13]='trzynaście';
+	$nastki[14]='czternaście';
+	$nastki[15]='piętnaście';
+	$nastki[16]='szesnaście';
+	$nastki[17]='siedemnaście';
+	$nastki[18]='osiemnaście';
+	$nastki[19]='dziewiętnaście';
+
 
 	$dziesiatki = array();
 	$dziesiatki[10]='dziesięć';
 	$dziesiatki[20]='dwadzieścia';
+	$dziesiatki[30]="trzydzieści";
+	$dziesiatki[40]="czterdzieści";
+	$dziesiatki[50]="pięćdziesiąt";
+	$dziesiatki[60]="sześćdziesiąt";
+	$dziesiatki[70]='siedemdziesiąt';
+	$dziesiatki[80]='osiemdziesiąt';
+	$dziesiatki[90]='dziewięćdziesiąt';
 
 	$setki = array();
 	$setki[100]="sto";
+	$setki[200]="dwieście";
+	$setki[300]="trzysta";
+	$setki[400]="czterysta";
+	$setki[500]="pięćset";
+	$setki[600]="sześćset";
+	$setki[700]="siedemset";
+	$setki[800]="osiemset";
+	$setki[900]="dziewięćset";
+
+	//1 tysiac, 2-4 tysiace, 5-999 tysiecy
+	//1 milion, 2-4 miliony, 5-999 milionów
+	//1 miliard, 2-4 miliardy, 5-999 miliardów
+	//1 bilion, 2-4 biliony, 5-999 bilionów
 
 
 
