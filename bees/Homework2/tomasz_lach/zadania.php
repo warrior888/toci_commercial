@@ -119,8 +119,32 @@ pierwszaOstatnia2($testowa);
 pierwszaOstatnia2("");
 pierwszaOstatnia2("f");
 
-	
+function pierwszaOstatnia3($text)
+{
+	echo "pierwszaOstatnia na petli for \n";
+	$poczatek = 0;
+	$koniec = strlen($text)-1;
 
+	$iterations = (int) (strlen($text)/2)+1;
+
+	for($i = 0; $i<$iterations; $i++)
+	{
+		echo $text[$poczatek]."\n";
+		echo $text[$koniec]."\n";
+		$poczatek++;
+		$koniec--;
+
+		if($poczatek ==$koniec)
+		{
+			echo $text[$poczatek]."\n";
+			break;
+		}
+		//var_dump($iterations);
+	}
+}
+
+$tescik2 = "1234567";
+pierwszaOstatnia3($tescik2);
 
 // $tescik = "xyz";
 // ecjp $tescik[-1];
