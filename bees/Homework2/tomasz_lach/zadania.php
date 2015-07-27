@@ -151,8 +151,30 @@ pierwszaOstatnia3($tescik2);
 // echo end($tescik);
 	
 	// zad 4 * 
+$kwotaPrzelewu ="524 135 412";
+function numberToWords($number)
+{
+	// 1. podzielic liczbe na 3 elementowe podliczby
+	// 2. odczytac wartosc liczby bez oznaczenia wielkosci np. sto dwadziescia trzy
+	// 3. w zaleznosci od polozenia podliczby dopisac oznaczenie wielkosci np. milionów, tysiecy etc
+	$jednostki = array();
+	$jednostki[1]='jeden';
+
+	$nastki = array();
+	$nastki[11]='jedenascie';
+
+	$dziesiatki = array();
+	$dziesiatki[10]='dziesięć';
+	$dziesiatki[20]='dwadzieścia';
+
+	$setki = array();
+	$setki[100]="sto";
+
+
+
+}
 	
-	$kwotaPrzelewu ="524 135 412";
+
 	// piec dwa cztery
 	
 	// piecset dwadziescia cztery miliony sto trzydziesci piec tysiecy czterysta dwanascie 
