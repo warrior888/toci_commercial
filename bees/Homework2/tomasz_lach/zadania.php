@@ -222,5 +222,7 @@ function numberToWords($number)
 	// piecset dwadziescia cztery miliony sto trzydziesci piec tysiecy czterysta dwanascie 
 	
 	// zad 5 ***
+	//sprawdzanie czy wyraz zawiera się w innym wyrazie, oraz  ile razy w danym stringu dany wyraz się pojawił
+	//zagnieżdżanie pętli w pętli
 	
 	// szczegolnosc osci nie prezklada sie na kosci   osc => true  dgshaj => false
