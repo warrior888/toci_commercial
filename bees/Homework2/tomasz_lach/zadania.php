@@ -86,10 +86,39 @@ function pierwszaOstatnia1($text)
 $testowa = "12345";
 pierwszaOstatnia1($testowa);
 pierwszaOstatnia1("");
+pierwszaOstatnia1("g");
 
 //na indeksach tablicy
 function pierwszaOstatnia2($text)
-{}
+{
+	$poczatek = 0;
+	$koniec = strlen($text)-1;
+
+	if ($koniec>=0)
+	{
+
+		echo "pierwszaOstatnia iteracyjnie \n";
+
+		while($poczatek != $koniec)
+		{
+			echo $text[$poczatek]."\n";
+			echo $text[$koniec]."\n";
+			$poczatek++;
+			$koniec--;
+		}
+
+		echo $text[$poczatek]."\n";
+	}
+	else
+	{
+		echo "text jest pusty \n";
+	}
+}
+
+pierwszaOstatnia2($testowa);
+pierwszaOstatnia2("");
+pierwszaOstatnia2("f");
+
 	
 
 
