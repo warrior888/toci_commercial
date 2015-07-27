@@ -1,5 +1,8 @@
 <?php
 
+
+$text = 'cokolwiek lub ciokolwiek innego';
+
 	// zad 0
 	
 function MojaDlugoscTextu($text)  //tozsame do strlen
@@ -15,13 +18,45 @@ function MojaDlugoscTextu($text)  //tozsame do strlen
 }
 
 	// zad 1
+function coDruga($text)
+{
+	echo "iterowanie co 2giej litery"."\n";
+	if (strlen($text) >= 2)
+	{
+		for($i=1; $i<strlen($text); $i+=2)
+		{
+			echo $text[$i]."\n";
+		}
+	}
+	else
+	{
+		echo "text".$text." jest za krótki aby iterować co drugą literę";
+	}
+}
 	
-	$text = 'cokolwiek lub ciokolwiek innego';
+coDruga($text);	
+coDruga("ab");
 	
-	// o o w e  u  -> co 2 literka
-
     // zad 2
-    
+function coKtoras($text, $skok)
+{
+	echo "iterowanie co ".$skok." litery"."\n";
+	if (strlen($text) >= $skok)
+	{
+		for( $i = ($skok -1); $i < strlen($text); $i+=$skok)
+		{
+			echo $text[$i]."\n";
+		}
+	}
+	else
+	{
+		echo "text ".$text." jest za krótki aby iterowac co ".$skok." litere";
+	}
+}
+
+coKtoras($text, 4);
+coKtoras("buba", 4);
+coKtoras("buba", 5);
 	//dla zadania powyzej ma mi zadanialac tak, zebym mogl podac , co ktora literke ma mi wyswietlic
 	
 	// 3 k  w  k  u 
@@ -32,7 +67,7 @@ function MojaDlugoscTextu($text)  //tozsame do strlen
 	
 	// zad 4 * 
 	
-	$kwotaPrzelewu = 524 135 412;
+	$kwotaPrzelewu ="524 135 412";
 	// piec dwa cztery
 	
 	// piecset dwadziescia cztery miliony sto trzydziesci piec tysiecy czterysta dwanascie 
