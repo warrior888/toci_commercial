@@ -23,3 +23,27 @@
 	$stringLiczba['przyklad'] = array('hsdfkgskd', 'bsdfahk');
 	
 	//var_dump($stringLiczba);
+	
+	
+	
+	$tresc = 'fnewuoghweuogbnwuogbnwerg';
+	//$tablica =
+
+	$slowo = 'kwiatek'; // auto domek costam wieza
+		
+	// kwai => 'hdusafhasduoghsduoghsduotywe'
+	// auto => hfweughweuoghweuwghuoghweugweuk
+	// domek => efuwotghrneruowhufhdughsdu
+	
+	// kw -> 3
+	 // auto -> 4
+	 // domek -> 6
+	 
+	function Extractuj($tresc, $skok)
+	{
+		//petla dl tresc o skok
+	}
+	
+	
+	
+	/// domowe 4782305728064732683476837667565785050

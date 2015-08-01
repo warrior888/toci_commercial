@@ -5,11 +5,13 @@
 	
 	function WyciaganieLiczby($par)
 	{
-	for ($i = 0; $i < strlen($liczba); $i++)
+		for ($i = 0; $i < strlen($liczba); $i++)
 		{
-			if($liczba[$i] == int )
+			if(gettype($liczba[$i]) == 'string')
 			{
 				echo $liczba[$i];
 			}
 		}
-	}WyciaganieLiczby($par);
+	}
+	
+	WyciaganieLiczby($par);
