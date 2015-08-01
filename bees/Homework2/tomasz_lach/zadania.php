@@ -200,6 +200,7 @@ function numberToWords($number)
 	$dziesiatki[90]='dziewięćdziesiąt';
 
 	$setki = array();
+	$setki[0]="";
 	$setki[100]="sto";
 	$setki[200]="dwieście";
 	$setki[300]="trzysta";
@@ -215,6 +216,7 @@ function numberToWords($number)
 	//1 miliard, 2-4 miliardy, 5-999 miliardów
 	//1 bilion, 2-4 biliony, 5-999 bilionów
 	$wartosci = array(
+		array("","", ""),
 		array("tysiąc","tysiące", "tysięcy"),
 		array("milion", "miliony", "milionów"),
 		array("miliard", "miliardy", "miliardów"),
@@ -237,6 +239,9 @@ function numberToWords($number)
 	//var_dump($skladowe);
 
 
+	//odwracanie tablicy
+	$skladowe = array_reverse($skladowe);
+
 
 //materiał na oddzielną funkcję
 //zamiana 3 cyfrowej liczby na słowa
@@ -245,11 +250,22 @@ function numberToWords($number)
 //2 podziel przez 10, aby wiedzieć czy liczy naście czy dziesiąt, czy zero,
 //2a jeżeli naście to sprawa prosta
 //jeżeli dziesiąc to  dzielimy %10 i to co wyjdzie to jednostki
+
+	//var_dump(count($skladowe));
+
+	$wartosc = count($skladowe)-1;
+
+	//$buffer = "";
+
 	foreach($skladowe as $number2)
 	{
+		$buffer = $number2;
+
+
+
 		$hundreds = floor($number2 / 100);
 		$hundreds = $hundreds *100;
-		var_dump($hundreds);
+		//var_dump($hundreds);
 		echo $setki[$hundreds]."\n";
 
 		$number2 = $number2 - $hundreds;
@@ -264,13 +280,30 @@ function numberToWords($number)
 		else
 		{
 			$tens = $tens * 10;
-			var_dump($tens);
+			//var_dump($tens);
 			echo $dziesiatki[$tens]."\n";
 
 			$number2 = (int) ($number2 - $tens);
-			var_dump($number2);
+			//var_dump($number2);
 			echo $jednostki[$number2]."\n";
 		}
+
+
+		if ($buffer == 1)
+		{
+			echo $wartosci[$wartosc][0]."\n";
+		}
+		elseif ($buffer > 1 && $buffer < 5)
+		{
+			echo $wartosci[$wartosc][1]."\n";
+		}
+		elseif ($buffer >=5)
+		{
+			echo $wartosci[$wartosc][2]."\n";
+		}
+
+
+		$wartosc-=1;
 	}
 
 	echo $jednostki[5];
@@ -282,7 +315,7 @@ function numberToWords($number)
 
 
 
-numberToWords(655314);
+numberToWords(655314000);
 
 
 
