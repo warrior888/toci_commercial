@@ -2,7 +2,7 @@
 /*
 $text = 'cokolwiek lub cokolwiek innego';
 
-for ($i= 1; $i<strlen($text);$i+=2)
+for ($i= 0; $i<strlen($text);$i+=2)
 {
 	echo $text[$i];
 }
