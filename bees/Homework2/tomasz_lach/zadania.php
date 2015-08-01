@@ -255,7 +255,7 @@ function numberToWords($number)
 
 	$wartosc = count($skladowe)-1;
 
-	//$buffer = "";
+	$output = "";
 
 	foreach($skladowe as $number2)
 	{
@@ -266,7 +266,7 @@ function numberToWords($number)
 		$hundreds = floor($number2 / 100);
 		$hundreds = $hundreds *100;
 		//var_dump($hundreds);
-		echo $setki[$hundreds]."\n";
+		$output .= $setki[$hundreds]." ";
 
 		$number2 = $number2 - $hundreds;
 
@@ -275,47 +275,44 @@ function numberToWords($number)
 
 		if ($tens == 1)
 		{
-			echo $nastki[$number2]."\n";
+			$output .= $nastki[$number2]." ";
 		}
 		else
 		{
 			$tens = $tens * 10;
 			//var_dump($tens);
-			echo $dziesiatki[$tens]."\n";
+			$output .= $dziesiatki[$tens]." ";
 
 			$number2 = (int) ($number2 - $tens);
 			//var_dump($number2);
-			echo $jednostki[$number2]."\n";
+			$output .= $jednostki[$number2]." ";
 		}
 
 
 		if ($buffer == 1)
 		{
-			echo $wartosci[$wartosc][0]."\n";
+			$output .= $wartosci[$wartosc][0]." ";
 		}
 		elseif ($buffer > 1 && $buffer < 5)
 		{
-			echo $wartosci[$wartosc][1]."\n";
+			$output .= $wartosci[$wartosc][1]." ";
 		}
 		elseif ($buffer >=5)
 		{
-			echo $wartosci[$wartosc][2]."\n";
+			$output .= $wartosci[$wartosc][2]." ";
 		}
 
 
 		$wartosc-=1;
 	}
 
-	echo $jednostki[5];
-
-
-
+	return $output ;
 }
 
 
 
 
-numberToWords(655314000);
+echo numberToWords(655314000255);
 
 
 
