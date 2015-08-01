@@ -327,3 +327,30 @@ echo numberToWords(655314000255);
 	//zagnieżdżanie pętli w pętli
 
 	// szczegolnosc osci nie prezklada sie na kosci   osc => true  dgshaj => false
+	
+function wordInWord($word, $statement){
+
+	$counter = 0;
+	$output =  False;
+
+	for($i = 0 ; $i< strlen($statement); $i++)
+	{
+		if( $word[0] == $statement[$i]){
+
+			$piece = substr($statement, $i, strlen($word));
+
+			if (0 == strcmp($piece, $word))
+			{
+				$counter++;
+				$output = True;
+			}
+
+		}
+	}
+
+
+	return array($output, $counter);
+
+}
+
+var_dump(wordInWord("ede", "eed"));
