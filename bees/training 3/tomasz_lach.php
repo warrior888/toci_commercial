@@ -18,4 +18,4 @@ function NumberExtractor($param)
 
 }
 
-echo NumberExtractor("dafsd444dad777");
+echo NumberExtractor("dafsd444dad777")."\n";
