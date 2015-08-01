@@ -154,8 +154,8 @@ pierwszaOstatnia3($tescik2);
 $kwotaPrzelewu = 524135412;
 
 
-echo ceil(log10($kwotaPrzelewu));
-echo log10($kwotaPrzelewu);
+//echo ceil(log10($kwotaPrzelewu));
+//echo log10($kwotaPrzelewu);
 
 function numberToWords($number)
 {
@@ -163,6 +163,7 @@ function numberToWords($number)
 	// 2. odczytac wartosc liczby bez oznaczenia wielkosci np. sto dwadziescia trzy
 	// 3. w zaleznosci od polozenia podliczby dopisac oznaczenie wielkosci np. milionów, tysiecy etc
 	$jednostki = array();
+	$jednostki[0]='';
 	$jednostki[1]='jeden';
 	$jednostki[2]='dwa';
 	$jednostki[3]='trzy';
@@ -174,6 +175,7 @@ function numberToWords($number)
 	$jednostki[9]='dziewięć';
 
 	$nastki = array();
+	$nastki[10]='dziesięć';
 	$nastki[11]='jedenascie';
 	$nastki[11]='dwanaście';
 	$nastki[13]='trzynaście';
@@ -186,6 +188,7 @@ function numberToWords($number)
 
 
 	$dziesiatki = array();
+	$dziesiatki[0]='';
 	$dziesiatki[10]='dziesięć';
 	$dziesiatki[20]='dwadzieścia';
 	$dziesiatki[30]="trzydzieści";
@@ -211,18 +214,80 @@ function numberToWords($number)
 	//1 milion, 2-4 miliony, 5-999 milionów
 	//1 miliard, 2-4 miliardy, 5-999 miliardów
 	//1 bilion, 2-4 biliony, 5-999 bilionów
+	$jednostki = array(
+		array("tysiąc","tysiące", "tysięcy"),
+		array("milion", "miliony", "milionów"),
+		array("miliard", "miliardy", "miliardów"),
+		array("bilion", "biliony", "bilionów")
+		);
+
+
+//materiał na oddzielną funkcję!!!!!
+	$skladowe = array();
+
+	while ($number >=1000)
+	{
+		$rest = $number % 1000;
+		$number = floor($number / 1000);
+		//var_dump($number)."\n";
+		array_push($skladowe, $rest);
+
+	}
+	array_push($skladowe, $number);
+	//var_dump($skladowe);
+
+
+
+//materiał na oddzielną funkcję
+//zamiana 3 cyfrowej liczby na słowa
+
+//1 podziel przez 100, aby wiedzieć ile setek i odjąć tę wartość od liczby
+//2 podziel przez 10, aby wiedzieć czy liczy naście czy dziesiąt, czy zero,
+//2a jeżeli naście to sprawa prosta
+//jeżeli dziesiąc to  dzielimy %10 i to co wyjdzie to jednostki
 
 
 
 }
-	
+
+function toWords($number)
+{
+	$hundreds = floor($number / 100);
+	$hundreds = $hundreds *100;
+	$setki[$hundreds];
+
+	$number = $number - $hundreds;
+
+	$tens = floor($number/10);
+
+	if ($tens == 1)
+	{
+		$nastki[$number];
+	}
+	else
+	{
+		$tens = $tens * 10;
+		$dziesiatki[$tens];
+
+		$number = $number - $tens;
+		$jednostki[$number];
+	}
+
+}
+
+
+numberToWords(5934695325);
+
+
+
+
 
 	// piec dwa cztery
-	
-	// piecset dwadziescia cztery miliony sto trzydziesci piec tysiecy czterysta dwanascie 
-	
+
+	// piecset dwadziescia cztery miliony sto trzydziesci piec tysiecy czterysta dwanascie
+
 	// zad 5 ***
 	//sprawdzanie czy wyraz zawiera się w innym wyrazie, oraz  ile razy w danym stringu dany wyraz się pojawił
 	//zagnieżdżanie pętli w pętli
-	
+
 	// szczegolnosc osci nie prezklada sie na kosci   osc => true  dgshaj => false
