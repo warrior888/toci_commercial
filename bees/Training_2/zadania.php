@@ -30,13 +30,13 @@ function MojaDlugoscTextu($text)  //tozsame do strlen
 	
 	// c o o g k e o n
 	
-	// zad 4 * 
+	// zad 4 * kwota
 	
 	$kwotaPrzelewu = 524 135 412;
 	// piec dwa cztery
 	
 	// piecset dwadziescia cztery miliony sto trzydziesci piec tysiecy czterysta dwanascie 
 	
-	// zad 5 ***
+	// zad 5 ***  str in str
 	
 	// szczegolnosc osci nie prezklada sie na kosci   osc => true  dgshaj => false
