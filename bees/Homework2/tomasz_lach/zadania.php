@@ -214,7 +214,7 @@ function numberToWords($number)
 	//1 milion, 2-4 miliony, 5-999 milionów
 	//1 miliard, 2-4 miliardy, 5-999 miliardów
 	//1 bilion, 2-4 biliony, 5-999 bilionów
-	$jednostki = array(
+	$wartosci = array(
 		array("tysiąc","tysiące", "tysięcy"),
 		array("milion", "miliony", "milionów"),
 		array("miliard", "miliardy", "miliardów"),
@@ -245,38 +245,44 @@ function numberToWords($number)
 //2 podziel przez 10, aby wiedzieć czy liczy naście czy dziesiąt, czy zero,
 //2a jeżeli naście to sprawa prosta
 //jeżeli dziesiąc to  dzielimy %10 i to co wyjdzie to jednostki
+	foreach($skladowe as $number2)
+	{
+		$hundreds = floor($number2 / 100);
+		$hundreds = $hundreds *100;
+		var_dump($hundreds);
+		echo $setki[$hundreds]."\n";
+
+		$number2 = $number2 - $hundreds;
+
+		$tens = floor($number2 / 10);
+		//var_dump($tens);
+
+		if ($tens == 1)
+		{
+			echo $nastki[$number2]."\n";
+		}
+		else
+		{
+			$tens = $tens * 10;
+			var_dump($tens);
+			echo $dziesiatki[$tens]."\n";
+
+			$number2 = (int) ($number2 - $tens);
+			var_dump($number2);
+			echo $jednostki[$number2]."\n";
+		}
+	}
+
+	echo $jednostki[5];
 
 
 
 }
 
-function toWords($number)
-{
-	$hundreds = floor($number / 100);
-	$hundreds = $hundreds *100;
-	$setki[$hundreds];
-
-	$number = $number - $hundreds;
-
-	$tens = floor($number/10);
-
-	if ($tens == 1)
-	{
-		$nastki[$number];
-	}
-	else
-	{
-		$tens = $tens * 10;
-		$dziesiatki[$tens];
-
-		$number = $number - $tens;
-		$jednostki[$number];
-	}
-
-}
 
 
-numberToWords(5934695325);
+
+numberToWords(655314);
 
 
 
