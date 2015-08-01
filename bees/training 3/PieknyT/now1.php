@@ -5,12 +5,16 @@ function Extractuj($tresc, $skok)
 {
 	//petla dl tresc o skok
 	
-	$tablica = ['kwiatek' => 3,
+	$tablica = array('kwiatek' => 3,
 				'auto' => 4,
 				'domek' => 6,
 	
-	           ];
-	 
+	           );
+	           
+	        //$tablica['dsafasd'] = 4352;   
+	 $wynik = '';
+	           
+	           
 	foreach ($tablica as $klucz => $element) {
 	
 		if ($klucz == $skok)
@@ -20,12 +24,18 @@ function Extractuj($tresc, $skok)
 				
 			for ($i ; $i < $dlSlowa; $i+=$element)
 			{
-				return $tresc[$i]."\n";
+				$wynik = $wynik . $tresc[$i];
 			}
 		}
 	
 	}
 	
+	return $wynik;
 }
 
-Extractuj('vbvrhbefvwdcverfgvtrbrtbewvefvev', 'kwiatek');
+$nastepnazmnienna = Extractuj('vbvrhbefvwdcverfgvtrbrtbewvefvev', 'kwiatek');
+
+
+
+
+

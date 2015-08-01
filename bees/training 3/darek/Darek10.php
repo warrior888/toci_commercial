@@ -47,13 +47,13 @@ function WyciaganieLiczby ($par)
 		//petla dl tresc o skok
 	}
 */
-echo NumberExtractor ("asdsadadafd423423424")."\n";
+//echo NumberExtractor ("asdsadadafd423423424")."\n";
 
 function costam( $text, $param)
 {
 
-$parametry = array('kwiatek'=>3,'auto'=>4,'domek'=>6);
-	if(array_key_exists($param, $parametry))
+	$parametry = array('kwiatek'=>3,'auto'=>4,'domek'=>6);
+	if(array_key_exists($param, $parametry)) // isset ($parametry[$param])
 	{
 		$skok = $parametry[$param];
 		
@@ -69,14 +69,15 @@ $parametry = array('kwiatek'=>3,'auto'=>4,'domek'=>6);
 		{
 			echo "text".$text."rozmiar za krotki".$skok."litere"."\n";
 		}
-		else
-		{
-			echo "sdasdas\n";
-		}
-		
 	}
+	else
+	{
+		echo "nie znaleziono\n";
+	}
+		
+	
 }
-	coktoras("abcdefghijklmnoprstuvwxyz", "domek");
-	coktoras("abcdefghijklmnoprstuvwxyz", "kwiatek");
-	coktoras("abcdefghijklmnoprstuvwxyz", "auto");
+	costam("abcdefghijklmnoprstuvwxyz", "domek");
+	costam("abcdefghijklmnoprstuvwxyz", "kwiatek");
+	costam("abcdefghijklmnoprstuvwxyz", "auto");
 ?>
