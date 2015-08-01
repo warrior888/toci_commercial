@@ -1,9 +1,8 @@
 <?php
 
 
-function Extractuj($tresc, $skok)
+function Extrachuj($tresc, $skok)
 {
-	//petla dl tresc o skok
 	
 	$tablica = ['kwiatek' => 3,
 				'auto' => 4,
@@ -20,7 +19,7 @@ function Extractuj($tresc, $skok)
 				
 			for ($i ; $i < $dlSlowa; $i+=$element)
 			{
-				return $tresc[$i]."\n";
+				echo $tresc[$i]."\n";
 			}
 		}
 	
@@ -28,4 +27,4 @@ function Extractuj($tresc, $skok)
 	
 }
 
-Extractuj('vbvrhbefvwdcverfgvtrbrtbewvefvev', 'kwiatek');
+ Extrachuj('vbvrhbefvwdcverfgvtrbrtbewvefvev','auto');
