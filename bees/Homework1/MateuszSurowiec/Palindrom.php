@@ -1,8 +1,10 @@
 <?php
 
+
+
+
 function CzyPalindrom($kandydat)
 {
-	$kandydat = 'kaaaaajak';
 	echo "Slowo to: " . $kandydat . "\n";
 	
 	$tablica = array();
@@ -24,4 +26,29 @@ function CzyPalindrom($kandydat)
 		echo "Slowo: " . $kandydat . " nie jest palindromem";
 	}
 
-} CzyPalindrom($kandydat);
+} 
+
+function Palindrom ($text)
+{
+	$dlugosc = strlen($text);
+	for ($i = 0; $i < $dlugosc; $i++)
+	{
+		if ($text[$i] != $text[$dlugosc - $i]) // raddae
+		{
+			return false;
+		}
+	}
+}
+
+// rad dar
+
+function Palindrom($text)
+{
+	return strrev($text) === $text;
+}
+
+
+CzyPalindrom('kaaaaajak');
+CzyPalindrom('radar');
+CzyPalindrom('cyc');
+CzyPalindrom('fhdasuig');

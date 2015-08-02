@@ -4,10 +4,30 @@ $liczba = '12356';
 
 
 
+$konfig = array(
+	0 => 'zero',
+	1 => 'jeden',
+);
 
+
+function toWords($konfig, $liczba_do_sparsowania)
+{
+	$result = '';
+	for ($i=0; $i<strlen($liczba_do_sparsowania); $i++ )
+	{
+		if (isset($konfig[$liczba_do_sparsowania[$i]]))
+		{
+			$result .= $konfig[$liczba_do_sparsowania[$i]]. ' ';
+		}
+	}
+	
+	return $result;
+}
 
 function toWords($liczba_do_sparsowania)
 {
+	
+	
 	for ($i=0; $i<strlen($liczba_do_sparsowania); $i++ )
 	{
 		switch($liczba_do_sparsowania[$i])
@@ -43,7 +63,7 @@ function toWords($liczba_do_sparsowania)
 				echo "dziewięć"."\n";
 				break;
 			default:
-				echo "to nie jest cyfra".."\n";
+				echo "to nie jest cyfra"."\n";
 				break;
 		}
 	}

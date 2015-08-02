@@ -5,7 +5,7 @@ $napis = "kajak";
 $napis2 = "edek";
 //echo $napis[-1];
 
-function czyPalindrom($text)
+function czyPalindrom($text)// zeby 
 {
 	//echo $text."\n";   //debugowanie
 
@@ -23,27 +23,27 @@ function czyPalindrom($text)
 			return False;
 		}
 	}
-	elseif (strlen($text) === 2) 
+	else
 	{
-		if ($text[0] === $text[1])
-		{
-			return True;
-		}
-		else
-		{
-			return False;
-		}
+		return strlen($text) === 1 ? true : strlen($text) === 2 ? $text[0] === $text[1] : false;
 	}
-	elseif (strlen($text) === 1 )
+	
+	if ($zm == 2)   // return $zm == 2 ? 3 : 4; 
 	{
-
-		return True;
+		return 3;
 	}
 	else
 	{
+		return 4;
+	}
+	
+	
+	
+	//else
+	//{
 		echo "Słowo jest puste \n";
 		return False;
-	}
+//	}
 }
 
 var_dump(czyPalindrom($napis));
@@ -55,59 +55,29 @@ var_dump(czyPalindrom(""));
 
 
 
+function CountOccurences($text)
+{
+	$result = array();
+	for($i = 0; $i < strlen($text); $i++)
+	{
+		$letter  = $text[$i];
+		isset($result[$letter]) ? $result[$letter]++ : $result[$letter] = 1;
+	}
+	
+	return $result;
+}
+
 
 function czyAnagram($napis1, $napis2) 
 {
-	
-	if ( strlen($napis1) == 0 or strlen($napis2) == 0)
-		{
-			return False;
-		}
-		else
-		{	
-				$text1 = str_split($napis1); //foreach nie można iterować stringa, trzeba go wpierw zmienic na array
-				$text2 = str_split($napis2);
-				$arr1 = Array();
-				$arr2 = Array();
-
-				foreach($text1 as $letter )
-				{
-					//echo $letter."\n";
-					if( array_key_exists($letter, $arr1))
-					{
-						$arr1[$letter] += 1;
-					}
-					else
-					{
-						$arr1[$letter] = 1;
-					}
-				}
-				//var_dump($arr1);
-
-				foreach($text2 as $letter )
-				{
-					//echo $letter."\n";
-
-					if( array_key_exists($letter, $arr2))
-					{
-						$arr2[$letter] +=1;
-					}
-					else
-					{
-						$arr2[$letter] = 1;
-					}
-				}
-				//var_dump($arr2);
-
-				if ($arr1 == $arr2)
-				{
-					return True;
-				}
-				else
-				{
-					return False;
-				}
-		}		
+	if ( strlen($napis1) == 0 || strlen($napis2) == 0)
+	{
+		return false;
+	}
+	else
+	{	
+		return  CountOccurences($napis1) == CountOccurences($napis2);
+	}		
 }
 
 $txt1 = "burda";
