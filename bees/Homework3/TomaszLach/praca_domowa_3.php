@@ -51,16 +51,36 @@ echo insertAndSwap("abcdefghijklmnopqrstuvwxyz")."\n";
 
 //zad 3
 $pattern = array(3 => 1, 2=>5, 1=>6);
-var_dump($pattern);
+$accNumber = "abcdefghijklmnopqrstuvwxyz";
+$accNumber_copy = $accNumber;
 
-function patternSwap(array $pattern, $accNumber="abcdefghijklmnopqrstuvwxyz")
+function swap( &$arr , $first, $second)
 {
-	$output = "00000000000000000000000000";
-	foreach($pattern as $key => $value)
-	{
-		$output[$value] = $accNumber[$key];
-	}
-	return $output;
+	$temp = $arr[$first];
+	$arr[$first] = $arr[$second];
+	$arr[$second] = $temp;
+
+	return $arr;
 }
 
-echo patternSwap($pattern)."\n";
+function patternSwap(array $pattern, &$accNumber)
+{
+	foreach($pattern as $key => $value)
+	{
+		swap($accNumber, $value, $key);		
+	}
+	return $accNumber;
+}
+
+//zad 4
+function reversePatternSwap(array $originalPattern, &$secondaryAccNumber)
+{
+	$reversePattern = array_flip($originalPattern);
+	$reversePattern = array_reverse($reversePattern, true);//parametr true jest mega ważny !!!!!!!!
+
+	return patternSwap($reversePattern,$secondaryAccNumber);
+}
+
+echo $accNumber_copy." oryginał \n";
+echo strcmp($accNumber_copy, patternSwap($pattern, $accNumber))."\n";
+echo strcmp($accNumber_copy, reversePatternSwap($pattern,$accNumber))."\n";
