@@ -1,7 +1,6 @@
 <?php
 	
-	require_once 'AnagramSortowanie.php'; // include ilclude once require require once
-	
+	require_once 'AnagramSortowanie.php';
 	$kandydat = 'aabb';
 	$kandydat2 = 'abac';
 	
@@ -22,9 +21,8 @@
 	 return false;
 	}
 	
-	/// slowo    oowls
-	// loosw     loosw
-	 
+	
+	
 	if (EmesSort($tablica) == EmesSort($tablica2))
 	{
 		echo "\nSa";
