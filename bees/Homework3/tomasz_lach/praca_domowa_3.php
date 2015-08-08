@@ -85,4 +85,54 @@ echo $accNumber_copy." oryginał \n";
 echo strcmp($accNumber_copy, patternSwap($pattern, $accNumber))."\n";
 echo strcmp($accNumber_copy, reversePatternSwap($pattern,$accNumber))."\n";
 
-//zad 5
+//zad 5  //z czego wycinać,  co wycinać
+
+//returns chosen letters
+function cutOut($text, array $positions)
+{
+	$output = "";
+	foreach($positions as $value)
+	{
+		$output .= $text[$value];
+	}
+	return $output;
+}
+
+//returns everything except chosen letters
+function rest($text, array $position)
+{
+	$output = "";
+	$flag = false;
+
+	for($i = 0; $i< strlen($text); $i++)
+	{
+		for($j = 0; $j< count($position); $j++)
+		{
+			if($i == $position[$j])
+			{
+				$flag = true;
+			}
+		}
+		if ($flag == false)
+		{
+			$output .=$text[$i];
+		}
+		$flag = false;
+	}
+	return $output;
+}
+
+
+
+function ingFun($passwd, array $visibleLetter)
+{
+	$elementyWskazane = cutOut($passwd, $visibleLetter);
+	$elementyNiewskazane = rest($passwd, $visibleLetter);
+
+	return md5($elementyNiewskazane.$elementyWskazane);
+}
+
+$password = "abcdefghijklmnopq";
+$chosenElements = array(1,2,4,7,9);
+
+echo ingFun($password, $chosenElements)."\n";
