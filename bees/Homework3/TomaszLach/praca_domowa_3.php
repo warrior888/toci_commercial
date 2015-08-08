@@ -14,10 +14,28 @@ function insertSpace($accNumber, $place=4)
 		}
 	}
 
-
 	return $output."\n";
 }
 
 echo insertSpace("012345678901234567890123");
 echo insertSpace("012345678901234567890123", 6);
 echo insertSpace("012345678901234567890123", 5);
+
+//zad2
+//$jump - zmienna określająca który element będzie zamieniony z zerowym
+function swapPlace($accNumber, $jump = 2)
+{
+	$output = $accNumber;
+	for($i=0; $i<strlen($output);$i++)
+	{
+		if($i % $jump == 0)
+		{
+			$temp = $output[$i];
+			$output[$i] = $output[$i+($jump-1)];
+			$output[$i+($jump-1)] = $temp;
+		}
+	}
+	return $output."\n";
+}
+
+echo swapPlace("012345678901234567890123");
