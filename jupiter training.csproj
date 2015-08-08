@@ -68,6 +68,7 @@
     <None Include="Perla\fonts\glyphicons-halflings-regular.woff2" />
     <None Include="Perla\nbproject\private\private.properties" />
     <None Include="Perla\nbproject\project.properties" />
+    <None Include="training 3\PieknyT\now.php" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="adhed\.idea\encodings.xml" />
@@ -133,6 +134,9 @@
     <Content Include="training 2\sample\js\events.js" />
     <Content Include="training 2\sample\js\sample.js" />
     <Content Include="training 2\sample\js\training.js" />
+    <Content Include="training 3\index.html" />
+    <Content Include="training4\index.html" />
+    <Content Include="training4\script\script.js" />
     <Content Include="Werner\2490.js" />
     <Content Include="Werner\util.js" />
   </ItemGroup>
@@ -144,6 +148,7 @@
     <Folder Include=".git\refs\tags\" />
     <Folder Include="Homeworks\Training1\" />
     <Folder Include="Homeworks\Training2\" />
+    <Folder Include="training 3\scripts\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSHARP.Targets" />
   <ProjectExtensions>

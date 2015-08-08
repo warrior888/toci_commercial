@@ -7,13 +7,10 @@ function wstawSpacje($numerKonta)
 	
 	for ($i = 0; isset($numerKonta[$i]); $i++) 
 	{
-		if($i == 3 || $i == 7 || $i == 11 || $i == 15 || $i == 19 || $i == 23 ) // nie wiem jak to odspagecic???
+		$wynik.= $numerKonta[$i];
+		if($i % 4 == 3 ) // nie wiem jak to odspagecic???
 		{
-			$wynik.= $numerKonta[$i]."\n";
-		}
-		else 
-		{
-			$wynik.= $numerKonta[$i];
+			$wynik.= " ";
 		}
 	}
 	return $wynik;

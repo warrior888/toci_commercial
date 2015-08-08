@@ -12,16 +12,18 @@ echo $slowo[$i]."\n";
 
 function spacja($liczba)
 {
+	$wynik = '';
 	for ($i=0;$i<strlen($liczba);$i++)
 	{
-		echo $liczba[$i];
+		$wynik .= $liczba[$i];
 		if (($i+1) % 4 ==0 )
 		{
-			echo ' ';
+			$wynik .= ' ';
 		}
 	}
 
+	return $wynik;
 }
 	
 	
-echo spacja ('2312312312312312312'); 
+//echo spacja ('2312312312312312312'); 
