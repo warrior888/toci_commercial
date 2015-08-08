@@ -84,3 +84,5 @@ function reversePatternSwap(array $originalPattern, &$secondaryAccNumber)
 echo $accNumber_copy." oryginał \n";
 echo strcmp($accNumber_copy, patternSwap($pattern, $accNumber))."\n";
 echo strcmp($accNumber_copy, reversePatternSwap($pattern,$accNumber))."\n";
+
+//zad 5
