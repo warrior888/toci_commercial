@@ -61,7 +61,7 @@ class IngAccountNumber extends BankAccount
 
 	function insertAndSwap()
 	{
-		return insertSpace(swapPlace($accountNumber));
+		return insertSpace(swapPlace($this->accountNumber));
 	}
 
 
