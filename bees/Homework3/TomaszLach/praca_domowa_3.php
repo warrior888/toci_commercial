@@ -67,7 +67,7 @@ function patternSwap(array $pattern, &$accNumber)
 {
 	foreach($pattern as $key => $value)
 	{
-		swap($accNumber, $value, $key);		
+		swap($accNumber, $value, $key);
 	}
 	return $accNumber;
 }
