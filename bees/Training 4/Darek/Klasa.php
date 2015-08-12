@@ -21,7 +21,7 @@ class magia extends bazowa
 
 	function strzal($numerKonta) 
 	{
-	return	spacja(Zamiana($numerKonta));
+	$this -> return	spacja(Zamiana($numerKonta));
 	}
 
 	strzal ('123456789');
