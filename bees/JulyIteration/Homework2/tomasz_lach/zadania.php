@@ -157,12 +157,7 @@ $kwotaPrzelewu = 524135412;
 //echo ceil(log10($kwotaPrzelewu));
 //echo log10($kwotaPrzelewu);
 
-function numberToWords($number)
-{
-	// 1. podzielic liczbe na 3 elementowe podliczby
-	// 2. odczytac wartosc liczby bez oznaczenia wielkosci np. sto dwadziescia trzy
-	// 3. w zaleznosci od polozenia podliczby dopisac oznaczenie wielkosci np. milionów, tysiecy etc
-	$jednostki = array();
+$jednostki = array();
 	$jednostki[0]='';
 	$jednostki[1]='jeden';
 	$jednostki[2]='dwa';
@@ -210,6 +205,65 @@ function numberToWords($number)
 	$setki[700]="siedemset";
 	$setki[800]="osiemset";
 	$setki[900]="dziewięćset";
+	
+function SplitNumber($number)
+{
+	$result = array();
+	
+	for($i = 0; $i < strlen($number); $i+=3)
+	{
+		$result[] = substr($number, $i, 3);
+	}
+	
+	return $result;
+}
+
+function GetThreeElements($number) //25
+{
+		$hundreds = floor($number / 100);
+		$hundreds = $hundreds *100; // substr($number, 0, 1) . '00'
+		//var_dump($hundreds);
+
+		$tens = $number - $hundreds;
+		
+		$digits = (int)substr($tens, 1); //floor($tens / 10);
+		
+		$tens = floor($tens / 10) * 10;
+
+		
+		
+		return array('hund' => $hundreds, 'tens' => $tens, 'digits' => $digits);
+}
+
+function GetTextForThreeElements($hundreds, $tens, $digits )
+{
+	global $setki;
+	global $dziesiatki;
+	global $nastki;
+	global $jednostki;
+	
+	
+	$output = $setki[$hundreds]." ";
+	
+	if ((int)($tens / 10) == 1)
+	{
+		$output .= $nastki[$tens + $digits]." ";
+	}
+	else
+	{
+		$output .= $dziesiatki[$tens]." " . $jednostki[$digits]." ";
+
+	}
+	
+	return $output;
+}
+
+function numberToWords($number)
+{
+	// 1. podzielic liczbe na 3 elementowe podliczby
+	// 2. odczytac wartosc liczby bez oznaczenia wielkosci np. sto dwadziescia trzy
+	// 3. w zaleznosci od polozenia podliczby dopisac oznaczenie wielkosci np. milionów, tysiecy etc
+	
 
 	//1 tysiac, 2-4 tysiace, 5-999 tysiecy
 	//1 milion, 2-4 miliony, 5-999 milionów
@@ -226,21 +280,12 @@ function numberToWords($number)
 
 //materiał na oddzielną funkcję!!!!!
 	$skladowe = array();
-
-	while ($number >=1000)
-	{
-		$rest = $number % 1000;
-		$number = floor($number / 1000);
-		//var_dump($number)."\n";
-		array_push($skladowe, $rest);
-
-	}
-	array_push($skladowe, $number);
-	//var_dump($skladowe);
-
-
+/*
+*/
 	//odwracanie tablicy
-	$skladowe = array_reverse($skladowe);
+	$skladowe = SplitNumber($number); // array_reverse($skladowe);
+	
+	
 
 
 //materiał na oddzielną funkcję
@@ -259,45 +304,27 @@ function numberToWords($number)
 
 	foreach($skladowe as $number2)
 	{
-		$buffer = $number2;
 
-
-
-		$hundreds = floor($number2 / 100);
-		$hundreds = $hundreds *100;
+		//list($hundreds, $tens, $digits) = GetThreeElements($number2);
+		$wynik = GetThreeElements($number2);
+		$hundreds = $wynik['hund'];
+		$tens = $wynik['tens'];
+		$digits = $wynik['digits'];
+		
+		//var_dump($hundreds, $tens, $digits);
 		//var_dump($hundreds);
-		$output .= $setki[$hundreds]." ";
 
-		$number2 = $number2 - $hundreds;
+		$output .= GetTextForThreeElements($hundreds, $tens, $digits);
 
-		$tens = floor($number2 / 10);
-		//var_dump($tens);
-
-		if ($tens == 1)
-		{
-			$output .= $nastki[$number2]." ";
-		}
-		else
-		{
-			$tens = $tens * 10;
-			//var_dump($tens);
-			$output .= $dziesiatki[$tens]." ";
-
-			$number2 = (int) ($number2 - $tens);
-			//var_dump($number2);
-			$output .= $jednostki[$number2]." ";
-		}
-
-
-		if ($buffer == 1)
+		if ($digits == 1)
 		{
 			$output .= $wartosci[$wartosc][0]." ";
 		}
-		elseif ($buffer > 1 && $buffer < 5)
+		elseif ($digits > 1 && $digits < 5)
 		{
 			$output .= $wartosci[$wartosc][1]." ";
 		}
-		elseif ($buffer >=5)
+		elseif ($digits >=5)
 		{
 			$output .= $wartosci[$wartosc][2]." ";
 		}
@@ -310,11 +337,12 @@ function numberToWords($number)
 }
 
 
-
+var_dump('-------------------------------////////////////////////---------------------');
 
 echo numberToWords(655314000255);
 
 
+var_dump('-------------------------------////////////////////////---------------------');
 
 
 

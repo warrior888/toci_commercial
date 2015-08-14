@@ -31,7 +31,24 @@
 	}
 
 	
+	function AreAnagrams($cand1, $cand2)
+	{
+		$cand1Ar = array();
+		$cand2Ar = array();
+		
+		for ()
+		{
+			for()
+			{
+				
+			}
+		}
+	}
 	
+	function  AreAnagrams($cand1, $cand2)
+	{
+		//return sort($cand1) == 
+	}
 	
 	
 	
