@@ -1,5 +1,9 @@
 <?php 
 
+	str_split($string, 3);
+	
+	//strlen()
+
 	// kajak radar 
 	
 	// burda bruda  aabb baba   cacy  cyca   aaaabbbb abababab
