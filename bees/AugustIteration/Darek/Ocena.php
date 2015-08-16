@@ -8,7 +8,7 @@ if ($ocena >0 && $ocena<7)
 }
 else
 {
-	echo 'blad brachu';
+	echo 'blad brachu'."\n";
 }
 
 
