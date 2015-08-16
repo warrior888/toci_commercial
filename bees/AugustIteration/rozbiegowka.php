@@ -1,5 +1,10 @@
 <?php
-	// Zmienne, typy zmiennych, funkcje, instrukcje, blok kodu, operatory +-*/% =  ==  === != < > >= <= || &&    | &   ++ -- +=  -= *= /=  .
+
+
+ //dfefgedgd
+	// Zmienne, typy zmiennych, funkcje, instrukcje + petle, blok kodu, operatory +-*/% =  ==  === != < > >= <= || &&    | &   ++ -- +=  -= *= /=  .
+	
+/*
 	$komunikat = 'Toci szkoli programistow !!!';
 	
 	$liczba = 8;
@@ -40,5 +45,39 @@
 		echo "\n";
 	}
 	
-	// tablica [] operator indexowania isset kazdy text w php jest prost¹ tablic¹
+	*/
 	
+	// tablica [] operator indexowania isset kazdy text w php jest prost¹ tablic¹
+	                 // 01234567890
+	$textJakikolwiek = 'ala ma kota a kot ma psa a pies kosc'; // 11 ? 
+	echo "\n\n";
+		
+	echo $textJakikolwiek[4];
+	
+	echo $textJakikolwiek[7];
+	
+	echo "\n\n";
+	
+	//strlen
+	
+	for ($i = 0; isset($textJakikolwiek[$i]); $i++)
+	{
+		echo $i;
+		echo "  w petli \n\n";
+	}
+	
+	
+	
+	echo "\nStrlnen mowi: ";
+	
+	echo strlen($textJakikolwiek);
+	
+	
+	for ($i = 0; $i < strlen($textJakikolwiek); $i++)
+	{
+		echo $textJakikolwiek[$i];
+		echo "\n";
+	}
+	//$i--
+	
+	// --

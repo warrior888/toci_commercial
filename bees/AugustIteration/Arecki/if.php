@@ -14,5 +14,7 @@
         echo 'Piec'; 
     } else if ($ocena == 6) {
         echo 'Szesc'; 
-    } else echo 'Nie mam dobrej oceny';
+    } else { 
+    	echo 'Nie mam dobrej oceny'; 
+    }
             
