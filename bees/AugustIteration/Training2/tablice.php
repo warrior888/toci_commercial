@@ -36,3 +36,6 @@
 	}
 	
 	var_dump($tablica);
+
+
+echo ' :-) ';
