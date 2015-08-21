@@ -43,7 +43,7 @@ else
 
 $text = 'szybkosc dzialania skryptu';
 
-for ($i = strlen($text); $i >= 0; $i--)
+for ($i = strlen($text) -1; $i >= 0; $i--)
 {
 	echo $text[$i];
 	echo "\n";
