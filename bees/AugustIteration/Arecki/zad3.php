@@ -1,16 +1,21 @@
 <?php
 
-    $tekst1 = 'Arek';
-    $tekst2 = 'Arecki';
-    $x = strlen($tekst1)-1;
-    $y = strlen($tekst2)-1;
+//Sprawdzanie palindromów
 
-    if ($x == $y) {
-    
-    for ($i = 0; $i <= $x; $i++) {
-       if (tekst1 == tekst2) {
-       		echo 'Teksty takie same';
-       } else echo 'Teksty rozne';
-           } 
-    } else echo 'Teksty rozne';
+$tablica = array ("ala", "kajak", "piotrek");
+
+$dlugoscTablicy = count($tablica);
+
+echo $dlugoscTablicy;
+
+for ($i=0; $i < $dlugoscTablicy ; $i++)
+	if ($tablica[$i] == strrev($tablica[$i]))
+	{
+		echo "Slowo " . "$tablica[$i]" . " jest palindromem   ";
+	}
+	else 
+	{
+		echo "Slowo " . "$tablica[$i]" . " nie jest palindromem   ";
+	}
+
 ?>
