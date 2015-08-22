@@ -6,12 +6,12 @@
     
    echo $bankCode;
 //funkcja
-	function ZwrocBank($kod) {
+	function ZwrocBank($bankCode) {
 
-		if (isset($bankID[$kod])) // 1050 => false
+		if (isset($bankID[$bankCode])) // 1050 => false
 		{
-			return $bankID[$kod];
-            echo $bankID[$kod];
+			return $bankID[$bankCode];
+            echo $bankID[$bankCode];
 		}
 		else {
 			return null;
