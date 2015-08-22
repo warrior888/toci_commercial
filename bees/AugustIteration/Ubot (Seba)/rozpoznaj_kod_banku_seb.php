@@ -56,6 +56,6 @@ function ZwrocBankLepiej() {
 
 	echo ZwrocBankLepiej();
 
-	echo ZwrocBankNajlepiej($bankCode)
+	echo ZwrocBankNajlepiej($bankCode);
 
 ?>
