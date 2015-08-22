@@ -10,13 +10,13 @@
 
 		if ($bankCode == $bankID[1020])
 		{
-			echo = $bankID[1020];
+			echo  $bankID[1020];
 		}
 		elseif ($bankCode == $bankID[1030]) {
-			echo = $bankID[1030];
+			echo  $bankID[1030];
 		}
 		else {
-			echo = $error;
+			echo  $error;
 		}
 	}
 

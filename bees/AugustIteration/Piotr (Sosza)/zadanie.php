@@ -55,10 +55,16 @@
 	
 	$tab = array('klucz' => 'wartosc', 'kwiatek' => 'roza'); // Asocjacyjna tablica
 	
-	$tab2 = array()
+	//$tab[$]
 	
-	$tab['kwiatek']
+	//$tab2 = array()
 	
+	//$tab['kwiatek']
 	
+	if ()
+	{
+		
+	}
+	elseif 
 	
 ?>
