@@ -51,4 +51,14 @@
 		echo $test[$liczbaliter];
 		echo "\n";
 	}
+	
+	
+	$tab = array('klucz' => 'wartosc', 'kwiatek' => 'roza'); // Asocjacyjna tablica
+	
+	$tab2 = array()
+	
+	$tab['kwiatek']
+	
+	
+	
 ?>
