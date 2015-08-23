@@ -3,7 +3,7 @@
 $text = 'egjurjuogjoerg'; 
 $text2 = 'sfisihguisidhguis';
 
-if (count $text == count $text2);
+if (count( $text) == count ($text2))
 	{
 	echo "Texty sa rowne";
 	}

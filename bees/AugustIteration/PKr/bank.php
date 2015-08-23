@@ -1,5 +1,8 @@
 <?php
 
+
+// tablice petle funkcje
+
 $kontobankowe = "10 2040 7853 3939 2929";
 
 $wycinek = 1040;

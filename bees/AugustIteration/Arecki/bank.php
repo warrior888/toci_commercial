@@ -20,25 +20,24 @@
 		
 		if (isset($bankID[$bankCode])) // 1050 => false
 		{
-<<<<<<< HEAD
+
              // echo $bankID[$bankCode];
 			return $bankID[$bankCode];
           
-=======
+
 			echo $bankID[$bankCode];
 			return $bankID[$bankCode];
             
->>>>>>> 75d34f2c8f1db431e7175449a5df5d12a3d9d800
+
 		}
 		else {
 			return null;
 		}
 
 	}
-
-<<<<<<< HEAD
+	
 	echo ZwrocBank(1020, $bankID);
-=======
+
 	echo ZwrocBank("1020", array(543634));
 /*
 if ($bankCode == 1020) {
@@ -53,4 +52,3 @@ if ($bankCode == 1020) {
         echo 'Spoldzielczy';
    }
 */
->>>>>>> 75d34f2c8f1db431e7175449a5df5d12a3d9d800

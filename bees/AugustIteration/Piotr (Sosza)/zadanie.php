@@ -61,10 +61,6 @@
 	
 	//$tab['kwiatek']
 	
-	if ()
-	{
-		
-	}
-	elseif 
+
 	
 ?>

@@ -9,7 +9,7 @@ for ($i=0; $i < count($tablica); $i++)
 	echo $tablica [$i];
 	}
 
-if ($tablica[$i] == strrev $tablica[$i])
+if ($tablica[$i] == strrev ($tablica[$i]))
 	
 	{
 	echo 'To jest Palindrom';
