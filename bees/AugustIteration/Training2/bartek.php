@@ -1,6 +1,5 @@
 <?php
 
-
 	function ZrobPrzelewy($listaPrzelewow)  // => 
 	{
 //		/echo 'OD: nazwa, DO: nazwa';
@@ -20,9 +19,6 @@
 	{
 		return substr($nrKonta, 2, 4); // 1020
 	}
-	
-	
-	
 	
 	
 	ZrobPrzelewy(

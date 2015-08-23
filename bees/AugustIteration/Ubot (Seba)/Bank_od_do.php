@@ -45,4 +45,11 @@ function znadzNrKonta ($przelewy, $kodBanku){
 function pobierzKodBanku ($nrKonta){
 	return substr ($nrKonta, 2, 4);
 };
+
+?>
+
+//wykonaj kod
+
+znajdzNrKonta($listaPrzelewow);
+
 ?>
