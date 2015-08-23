@@ -3,6 +3,7 @@
 $pal = array ("ALA", "KON", "KAJAK", "Cos", "kremerk", "Bob", "Sosza");
 
 $dlu = count($pal) ;
+
 for ($i=0; $i < $dlu ; $i++)
 	if ($pal[$i] == strrev($pal[$i]))
 	{
