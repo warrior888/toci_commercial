@@ -6,7 +6,7 @@ function IleRazy ($slowo, $litera) {
     
     for ($i=0; $i < strlen($slowo); $i++) {
         
-            if (substr($slowo,$i,1) == $litera) {
+            if ($slowo[$i] == $litera) {
               $x+=1;  
             }  
     }
@@ -19,4 +19,4 @@ function IleRazy ($slowo, $litera) {
         
 }
 
-IleRazy ('cokolwiek', 'm');
+IleRazy ('cokolwiek', 'o');
