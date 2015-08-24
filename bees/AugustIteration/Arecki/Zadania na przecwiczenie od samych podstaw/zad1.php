@@ -14,7 +14,7 @@ function IleRazy ($slowo, $litera) {
     if ($x !=0) {
     echo 'Liczba liter ' . $litera . ' w slowie ' . $slowo . ' to: ' . $x;
     } else {
-        echo 'Brak litery ' . $litera . ' w tym slowie.';
+        echo 'Brak litery ' . $litera . ' w slowie ' . $slowo;
     }
         
 }
