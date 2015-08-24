@@ -15,15 +15,20 @@ function SlowoWSlowie ($glowneSlowo, $wycinek) {
             }      
     }
     
-     if ($y == 1) {
-         
-     echo "\n" . 'W ciagu tesktowym ' . $glowneSlowo . ' wycinek ' . $wycinek . ' wsytepuje ' . $y . ' raz' . "\n";
-         
-     } else {
-         
-        echo "\n" . 'W ciagu tesktowym ' . $glowneSlowo . ' wycinek ' . $wycinek . ' wsytepuje ' . $y . ' razy' . "\n";
-         
+     switch ($y) {
+                  
+         case 0: 
+             echo "\n" . ' W ciagu tesktowym ' . $glowneSlowo . ' wycinek ' . $wycinek . ' nie wystepuje.';
+             break;
+         case 1: 
+             echo "\n" . ' W ciagu tesktowym ' . $glowneSlowo . ' wycinek ' . $wycinek . ' wsytepuje ' . $y . ' raz.' . "\n";
+             break;
+         default: 
+             echo "\n" . ' W ciagu tesktowym "' . $glowneSlowo . '" wycinek "' . $wycinek . '" wsytepuje ' . $y . ' razy.' . "\n";
+             break;
+        
      }
+
 }
 
 SlowoWSlowie('Konstantynopolitanczykowianeczka', 'an');
