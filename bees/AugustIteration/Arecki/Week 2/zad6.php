@@ -26,17 +26,21 @@ function sprawdzAnagram ($text1, $text2) {
       }
         
         if ($y >= strlen($text1)) {
+            
+            echo "\n" . 'Slowa ' . $text1 . ' i ' . $text2 . ' jest anagramem.' . "\n";
           
-            echo 'Slowa ' . $text1 . ' i ' . $text2 . ' jest anagramem.';
-          
-          }
-    
+          } else {
+            
+             echo "\n" . 'Slowa ' . $text1 . ' i ' . $text2 . ' nie sa anagramami.' . "\n";
+            
+        }
+        
     } else {
         
-        echo "\n" . 'Slowa ' . $text1 . ' i ' . $text2 . ' nie sa anagramami.'; 
+        echo "\n" . 'Slowa ' . $text1 . ' i ' . $text2 . ' nie sa anagramami.' . "\n"; 
         
     }
 
 }
 
-sprawdzAnagram('loka', 'kola');
+sprawdzAnagram('ptak', 'pakt');
