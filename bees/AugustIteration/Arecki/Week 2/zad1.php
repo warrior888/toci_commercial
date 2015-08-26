@@ -2,6 +2,9 @@
 
 //Zad1 - Ile razy w podanym słowie wystepuję podana litera
 
+/*Wskazówka:
+substr_count ($slowo, $litera) ---> gotowana funkcja ktora w jednej linijce robi to samo co caly moj program.*/
+
 function IleRazy ($slowo, $litera) {   // $slowo, $litera ---> parametry funkcji.
     
     $x=0;
