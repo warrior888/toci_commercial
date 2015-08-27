@@ -1,0 +1,5 @@
+<?php
+$wyraz = "mama"
+
+
+?>
