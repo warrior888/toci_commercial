@@ -1,5 +1,5 @@
 <?php
-
+//Zad1 - Ile razy w podanym słowie występuje podana litera ('polska', 'p') --> wynik: 1.
 $slowo = 'konstantynopolitańczykowianeczka';
 $litera = 'a';
 

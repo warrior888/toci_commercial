@@ -1,4 +1,7 @@
 <?php
+
+//Zad2 - Ile razy w danym stringu występują podane w nim litery. ('polska') --> wynik: p:1, o:1, l:1
+
 $slowo ='mama';
 
 function PrzeliczLitery ($zmiennaSlowo){
