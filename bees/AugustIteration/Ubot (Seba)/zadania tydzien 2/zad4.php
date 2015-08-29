@@ -17,7 +17,7 @@ $nextLetter = "";
         echo $stringBefore;
 
         if (substr($zmiennaSlowo,$i,1) == $zmiennaLitera) {
-            $isItSame = substr($zmiennaSlowo,$i,1).$nextLetter;
+            $isItSame = $zmiennaSlowo[$i] . $zmiennaSlowo[$i++];
 
             if ( $isItSame == $wymienZ){
                 $wymienZ = $wymienNa;
