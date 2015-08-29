@@ -1,4 +1,4 @@
 <?php
 $d=date("D");
-if ($d=="Fri")
+if ($d=="Fri") ;
 	echo "Mi³ego weekendu";
