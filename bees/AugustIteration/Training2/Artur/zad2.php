@@ -23,3 +23,4 @@
 	}
 	
 	echo Palindromy('ono');
+	// jak wywaliæ tylko pasuj¹cy element z tablicy?
