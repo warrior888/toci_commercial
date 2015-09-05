@@ -1,6 +1,6 @@
 <?php
 
-    function rekurencja($liczba) {
+  function rekurencja($liczba) {
         
         $wynik=1;
         
