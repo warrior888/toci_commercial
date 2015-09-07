@@ -16,9 +16,9 @@
         
         $mnoznik = $this->horsePower/10;
         
-       $wynik = $speed / $mnoznik;
+        $wynik = $speed / $mnoznik;
         
-       echo 'Samochod rozpedza sie do predkosci ' . $speed . ' km/h w ciagu ' . (int)$wynik . ' sekund.';
+        echo 'Samochod rozpedza sie do predkosci ' . $speed . ' km/h w ciagu ' . (int)$wynik . ' sekund.';
         
     } // koniec funkcji Move()
     
