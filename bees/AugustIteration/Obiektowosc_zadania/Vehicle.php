@@ -9,21 +9,21 @@ class Car {
     public $numberOfWheels;
     public $numberOfGears;
     public $horsePower;
+    public $weight; 
 
     public function Move($speed) {
-        
+
         if ($speed > $this->speed) { // $speed != $this->speed
             return "Engine error!";
         }
 
-        $time = 0;
+        $mnoznik = $this->horsePower * $this->weight / 1000;
 
-        for ($i = 1; $i < $speed; $i = $i * 4) { // $i *= 4
-            $time = $time + $i; //$time == $time + $i; - bzdura
-            echo $time . "\n";
-        }
+        $wynik = $speed / $mnoznik;
 
-        var_dump($time);
+        echo 'Samochod rozpedza sie do predkosci '
+        . $speed . ' km/h w ciagu ' . (int) $wynik . ' sekund.';
+
     }
 
     public function ShowWehicleSpeed() {
@@ -35,6 +35,11 @@ class Car {
 //Audi - 320kmph, manual, 4, 6, 450HP
 
 $Audi = new Car();
+$Audi->gearbox = 'Manual';
+$Audi->numberOfWheels = 4;
+$Audi->numberOfGears = 7;
+$Audi->horsePower = 450;
+$Audi->weight = 1400;
 //uzupełnić proprecje;
 echo $Audi->Move(280);
 

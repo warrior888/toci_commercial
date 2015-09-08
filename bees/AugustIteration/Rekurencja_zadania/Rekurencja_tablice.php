@@ -72,6 +72,21 @@ $example = array('AdrianK' =>
     array('telefon' => '724433021'), 'Pakoo', 'Sosza', 'Ubot' => 
     array('samochody' => array('Audi', 'BMW')));
 
+$AdrianK = $example['AdrianK']['Dzieci'];
+
+foreach($AdrianK as $child)
+{
+    echo "Dzieckiem AdrianaK jest: ".$child."\n";
+}
+
+echo $example['Luk']['telefon'];
+
+$UbotCars = $example['Ubot']['samochody'];
+
+foreach($UbotCars as $car)
+{
+    echo $car."\n";
+}
 
 //wyswietl dzieci AdrianaK (foreach)
 //Wyswietl numer Luka [][]
