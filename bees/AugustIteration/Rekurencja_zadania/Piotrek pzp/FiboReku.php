@@ -6,7 +6,7 @@
 		// $sequenceNr = 0,1,2,3...n
 			
 		if($sequenceNr < 0) //error detection
-		echo "error " ;
+		echo "error " ; //brackets!! {}
 		
 		// First method 
 		
