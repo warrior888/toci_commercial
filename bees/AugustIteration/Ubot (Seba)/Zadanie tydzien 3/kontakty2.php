@@ -6,14 +6,14 @@ $array = ['kontakty' => ['rodzina' => ['id01' =>[ 'imie' => 'Tomek', 'numer' => 
                                     ['id02' =>[ 'imie' => 'Tomek', 'numer' => '666 666 777', 'nazwisko' => 'Kot']]]
             ];
 
-var_dump($array);
+
 
 function ZnajdzKontakt($array,$nazwa)
 {
     foreach ($array as $value) {
         if (is_array($value)) {
 
-            $przypisanie = function ZnajdzKontakt($value,$nazwa);
+            $przypisanie = ZnajdzKontakt($value,$nazwa);
 
             if($przypisanie){
                 return $przypisanie;
