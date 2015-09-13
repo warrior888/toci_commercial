@@ -10,7 +10,7 @@ class ComputerShop {
     public $computerMemoryBrand;
 
     
-    public function __construct($hard='notebook',$moth=0,$audio=0,$memo=0) { //todo: Parametry domyślne głównego konstruktora
+    public function __construct($hard='notebook',$moth=0,$audio=0,$memo=0) { 
           
         $this->computerType = new ComputerHardware($hard);
         $this->computerMotherBoard = new ComputerMotherboards($moth);
@@ -20,10 +20,10 @@ class ComputerShop {
     
     public function ShowMyDreamComputer() {
         
-       echo 'Moj wymarzony typ komputera to: '. $this->computerType->userType . "\n"; 
-       echo 'Moja wymarzona plyta glowna to plyta marki: ' . $this->computerMotherBoard->userMotherboard . "\n"; 
-       echo 'Moja wymarzona karta dzwiekowa to: ' . $this->computerAudioCard->userAudioCard . "\n"; 
-       echo 'Moja wymarzona marki pamieci to: ' . $this->computerMemoryBrand->userMemory; 
+       return 'Moj wymarzony typ komputera to: '. $this->computerType->userType . "\n" . 
+        'Moja wymarzona plyta glowna to plyta marki: ' . $this->computerMotherBoard->userMotherboard . "\n" . 
+        'Moja wymarzona karta dzwiekowa to: ' . $this->computerAudioCard->userAudioCard . "\n" . 
+        'Moja wymarzona marki pamieci to: ' . $this->computerMemoryBrand->userMemory; 
     }
 
 }
@@ -33,7 +33,6 @@ class ComputerShop {
 class ComputerHardware {
 
     public $type = array('notebook' => 'Laptop', 'tower_PC' => 'Stacjonarka');
-    
     public $userType;
 
     public function __construct($index) {
