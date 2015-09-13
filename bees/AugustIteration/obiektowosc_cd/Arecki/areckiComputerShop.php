@@ -32,7 +32,7 @@ class ComputerShop {
 
 class ComputerHardware {
 
-    public $type = array('notebook' => 'Laptop', 'tower_PC' => 'Stacjonarka');
+    private $type = array('notebook' => 'Laptop', 'tower_PC' => 'Stacjonarka');
     public $userType;
 
     public function __construct($index) {
@@ -44,7 +44,7 @@ class ComputerHardware {
 
 class ComputerMotherboards {
 
-    public $motherboardBrands = array('MSI', 'ASUS', 'Gigabyte', 'Samsung');
+    private $motherboardBrands = array('MSI', 'ASUS', 'Gigabyte', 'Samsung');
     public $userMotherboard;
 
     public function __construct($motherboardNumber) {
@@ -57,7 +57,7 @@ class ComputerMotherboards {
 
 class ComputerAudioCard {
     
-    public $audioCardBrands = array('Realtek', 'Creative Labs', 'ASUS', 'M-Audio');
+    private $audioCardBrands = array('Realtek', 'Creative Labs', 'ASUS', 'M-Audio');
     public $userAudioCard;
     
     public function __construct($audioCardNumber) {
@@ -70,7 +70,7 @@ class ComputerAudioCard {
 
 class ComputerMemory {
     
-    public $memoryBrands = array('Kingston', 'Crucial', 'Corsair');
+    private $memoryBrands = array('Kingston', 'Crucial', 'Corsair');
     public $userMemory;
     
     public function __construct($memoryNumber) {
