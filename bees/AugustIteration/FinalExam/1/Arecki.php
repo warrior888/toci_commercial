@@ -11,31 +11,31 @@
 // Zad 4 - Finalnie w klasie ma być metoda, która wyniki powyższych dwóch funkcji zapisze w pliku SummmaryExamResult.txt
 
 class SummaryExam {
-    
-    public $variable;
-    public $secondVariable;    
-        
+
+    private $variableOfFibonocci;
+    private $variableOfNine;
+
     public function __construct ($fibonacciElement, $n=0, $m=100) {
-        
-        $this->variable = $this->ciagFibonacciego($fibonacciElement);
-        $this->secondVariable = $this->numbersDivisibleByNine($n, $m);
+
+        $this->variableOfFibonocci = $this->ciagFibonacciego($fibonacciElement);
+        $this->variableOfNine = $this->numbersDivisibleByNine($n, $m);
     }
-    
+
     public function numbersDivisibleByNine($n, $m) {
        
-    $tabliczka = array();
+    $arr = array();
         
     while  ($n <= $m) { 
               
-        if ($n % 9 === 0) {    
-            $tabliczka[] = $n;   
+        if ($n % 9 === 0) {
+            $arr[] = $n;
         }
         
          $n+=1;
         
     }
         
-    return $tabliczka;
+    return $arr;
 }
     
     public function ciagFibonacciego($fibonacciElement) {
@@ -46,17 +46,17 @@ class SummaryExam {
         
     } else {
         
-        $x = 1;
-        $y = 1;
+        $before = 1;
+        $after = 1;
         
         for ($i=3; $i <= $fibonacciElement; $i++) {
         
-             $tymczasowa = $x + $y;
-             $x = $y;
-             $y = $tymczasowa;
+             $temp = $before + $after;
+            $before = $after;
+            $after = $temp;
         }
         
-      return $y;
+      return $after;
         
     }
     
@@ -65,10 +65,10 @@ class SummaryExam {
     public function saveToFile() {
     
         $nazwa_pliku = 'C:\xampp\htdocs\php\Final Exam\SummmaryExamResult.txt';
-        $do_zapisania = 'Ciag Fibonacciego: ' . $this->variable . PHP_EOL;
+        $do_zapisania = 'Ciag Fibonacciego: ' . $this->variableOfFibonocci . PHP_EOL;
         $do_zapisania .= 'Liczby podzielne przez 9 to: ';
           
-        foreach ($this->secondVariable as $wynik) {
+        foreach ($this->variableOfNine as $wynik) {
            $do_zapisania .= $wynik . ' ';
         }
         
@@ -90,6 +90,3 @@ $dane = fread($plik, filesize($nazwa_pliku));
 fclose($plik);
 
 echo $dane;*/
-
-
-?>
