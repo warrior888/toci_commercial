@@ -6,10 +6,10 @@ define("PI" , 3.14);
 
 class Cylinder
 {
-  public $_radius;
-  public $_height;
-  public $_result;
-  public $_result1;
+  private $_radius;
+  private $_height;
+  private $_result;
+  private $_result1;
   
 
   public function setHeight($height)
