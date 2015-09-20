@@ -1,6 +1,6 @@
 <?php
 
-echo "Witam, Nazywam się Robert Śmietanowski i jestem na github-ie"
+echo "Witam, Nazywam sie Robert Smietanowski i jestem na github-ie";
 
 /* 
  * To change this license header, choose License Headers in Project Properties.
