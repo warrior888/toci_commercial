@@ -11,7 +11,7 @@ $quotient = $number1*$number2;
             
             {
        echo "$sum \n$difference \n$product \n$quotient";
-        //echo"$number1 + $number2\n($number1 - $number2)\n($number1 * $number2)\n($number1 / $number2))";
+   
         
             }
  
