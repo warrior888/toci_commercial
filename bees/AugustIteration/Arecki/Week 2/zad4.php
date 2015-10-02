@@ -2,25 +2,11 @@
 
 //Zad4 - Zamień w tekscie pewien ciag znaków na inny, a reszte zostaw na swoim miejscu.
 
-
 function ZamienWycinek ($text, $wycinek, $zamiennik) {
     
-    return str_replace($wycinek,$zamiennik,$text); // str_replace(co_zamieniamy, na_co_zamieniamy, w_jakim_stringu)
-    
-}
-
-echo ZamienWycinek('lalalol', 'la', 'heh');
-
-
-//Zobaczcie ile się namęczył pod spodem, a to wszystko można osiągnąć funkcją str_replace()
-
-
-/*
-function ZamienWycinek ($text, $wycinek, $zamiennik) {
-
     $dlugoscTekstu = strlen($text);
     $dlugoscWycinka = strlen($wycinek);
-    $dlugoscZamiennika = strlen($zamiennik);
+    
         
      for ($i=0; $i < $dlugoscTekstu; $i++) {
         
@@ -28,16 +14,33 @@ function ZamienWycinek ($text, $wycinek, $zamiennik) {
 
             if ($x == $wycinek) {
                 
-                for ($j=0; $j < $dlugoscWycinka; $j++) {
-                
-                $text[$i+$j] = $zamiennik[$j];
+             $tekscior[] = $zamiennik;
+                $i = $i + $dlugoscWycinka - 1;
                  
-                }
-            } 
-    }
+                } else {
+            
+                $tekscior[] = $x[0];
+                
+            }
+         
+            }
     
-   echo "\n" . $text . "\n";
+    for ($j=0; $j < count($tekscior); $j++) {
+    
+   echo  $tekscior[$j];
+        
+    }
 
 }
 
-ZamienWycinek('lalalol', 'la', 'he'); */
+ZamienWycinek('lalalol', 'la', 'heh');
+
+/*
+function ZamienWycinek ($text, $wycinek, $zamiennik) {
+    
+    return str_replace($wycinek,$zamiennik,$text); // str_replace(co_zamieniamy, na_co_zamieniamy, w_jakim_stringu)
+    
+}
+
+echo ZamienWycinek('lalalol', 'la', 'heh');
+*/
