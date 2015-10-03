@@ -4,9 +4,9 @@
 
 echo "\nZadanie_1\n";
 
-for($i = 1; $i <= 100; $i++){
-    if($i % 2 === 0){
-        echo $i."\n";
+for ($i = 1; $i <= 100; $i++) {
+    if ($i % 2 === 0) {
+        echo $i . "\n";
     }
 }
 
@@ -15,8 +15,8 @@ for($i = 1; $i <= 100; $i++){
 echo "\nZadanie_2\n";
 
 $sum = 0;
-for($j = 20; $j <= 30; $j++){
-    echo $sum=$sum+$j."\n";
+for ($j = 20; $j <= 30; $j++) {
+    echo $sum = $sum + $j . "\n";
 }
 
 //połączenie dwóch powyższych zadań
