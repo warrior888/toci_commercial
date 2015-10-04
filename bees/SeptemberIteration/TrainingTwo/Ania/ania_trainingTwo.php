@@ -7,17 +7,20 @@ echo "Zadanie 1 \n\n";
 
 function Wyswietl($b, $a = 0){
     $i = $a;
+    $wynik = '';
     while($i <= $b){
         if($i % 2 === 1 || $i % 5 === 1){
-            echo $i."\n";
+            $wynik .= $i."\n";
         }
         $i++;
     }
+    
+    return $wynik;
 }
 
-Wyswietl(30);
+echo Wyswietl(30);
 echo "\n";
-Wyswietl(30,10);
+echo Wyswietl(30,10);
 echo "\n";
 
 echo "Zadanie 2 \n\n";
