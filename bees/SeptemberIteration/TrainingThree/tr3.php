@@ -7,6 +7,27 @@
 		
 	}
 	
+	$tabAsocjacyjna = array('a' => 18, 'b' => 14, 'beata' => 'text');
+	
+	var_dump($tabAsocjacyjna);
+	
+	
+	$tabAsocjacyjna['a'] = 'ala ma kota';
+	
+	var_dump($tabAsocjacyjna);
+	
+	$zmienna = 'a';
+	
+	$tabAsocjacyjna[$zmienna] = 'ala ma psa';
+	
+	var_dump($tabAsocjacyjna);
+	
+	$tabAsocjacyjna[$zmienna] = array('a' => 30, 'b' => 14, 'beata' => 'text');
+	
+	var_dump($tabAsocjacyjna);
+	
+	echo $tabAsocjacyjna['a'][$zmienna];
+	
 	$imie = 'anina';
 	
 	//echo $imie[3] . $imie[2] . $imie[1] .  $imie[0];
@@ -40,6 +61,28 @@
 		return $kandydat == own_strrev($kandydat);
 	}
 	
+	function ownPalindrom($kandydat)
+	{
+		//radar => 5
+		for($i = 0, $j = strlen($kandydat) - 1; $i < $j; $i++, $j--)
+		{
+			if ($kandydat[$i] != $kandydat[$j])
+			{
+				return false;
+			}
+		}
+		
+		return true;
+	}
+	
+	if (ownPalindrom('radar')) {
+		echo 'jest to plandrom';
+	}
+	
+	if (ownPalindrom('beata')) {
+		echo 'jest to plandrom';
+	}
+	
 	// Beata aciuk Naciuk   Naciuk
 	function own_strstr($entireString, $portion)
 	{
@@ -65,8 +108,8 @@
 	
 	function own_strcut($kandydat, $podmiana)
 	{
-		$kandydatLength = stlren($kandydat);
-		$podmianaLength = stlren($podmiana);
+		$kandydatLength = strlen($kandydat);
+		$podmianaLength = strlen($podmiana);
 		
 		for ($i = 0; $i < $kandydatLength; $i++)
 		{
