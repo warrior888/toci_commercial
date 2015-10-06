@@ -20,7 +20,18 @@ $zmienna2 = 11;
 // . - łączy tekst
 // \n - przejście do nowej linii
 
-if($zmienna1 % 2 === 0)
+// po pierwsze trzeba napisać warunek który sprawdzi czy liczba jest parzysta
+//(czy jest podzielna przez 2 czyli czy daje resztę z dzielenia
+//przez dwa - bo takie liczby są liczbami parzystymi w matematyce) 
+
+//następnie trzeba temu warunkowi przypisać jakąś wartość po prawej i 
+//jednocześnie sprawdzić czy te dwie dane po lewej i prawej stronie są tego
+//samego typu TRZEBA PAMIĘTAĆ ŻEBY PRZY SPRAWDZANIU ZGADZAŁY SIĘ ZNAKI LUB/I
+//TYPY DANYCH bo inaczej wyskoczy błąd
+
+if($zmienna1 % 2 === 0) //jeśli zmienna1 daje resztę z dzielenia przez 2 to 
+                        //wyrzuci wynik z dzielenia
+                        //jednocześnie trzeba sprawdzić znak i/lub typ obu liczb
 {
     echo $zmienna1 + $zmienna2 . "\n";
     echo $zmienna1 - $zmienna2 . "\n";
