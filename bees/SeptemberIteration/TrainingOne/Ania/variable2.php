@@ -109,7 +109,7 @@
 // --- PĘTLE ---
 
 for($i = 0; $i < 6; $i++){
-// $i++ - ikrementacja
+// $i++ - inkrementacja
 // $i-- - dekrementacja
     if($i % 2 === 0){
         echo "Hello world po raz $i\n";
