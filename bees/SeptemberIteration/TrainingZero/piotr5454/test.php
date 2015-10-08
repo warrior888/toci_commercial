@@ -1,4 +1,4 @@
 <?php
 
-echo 'piotr5454, dzialam';
+echo 'piotr5454'."\n".'dzialam';
 
