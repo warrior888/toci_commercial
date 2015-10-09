@@ -43,29 +43,46 @@ $myAge = 43;
 $fatherAge = 57;
 
 if ($myAge == $fatherAge) //wyświetli false, bo wartości nie są równe
-{
-    echo "true";
-}
+        {
+            echo "true";
+        }
 
-else {
-    
-echo "false"; }
+        else {
+
+        echo "false" . "\n"; }
 
 
 if ($myAge === $fatherAge) //wyświetli false, bo i wartości i typy nie są równe
+        {
+            echo "true";
+        }
+
+        else {   //ELSE MOŻE BYĆ TYLKO JEDNO
+
+        echo "false" . "\n"; }
+
+
+$number = 30;
+
+if($number % 2 === "0") // 30 jest podzielne przez inna liczbę w tym 
+                          //przypadku
+                          //przez 2 bo reszta z dzielenia wynosi 0
+        {
+        echo "true";
+        }
+
+        
+if ($number % 2 == "0") 
 {
-    echo "true";
+    echo "zmienna ".$number. " jest podzielna przez 2";
+}
+
+else if($number % 7 === 0) //ELSE IF MOŻE BYĆ NIESKOŃCZENIE WIELE
+{
+    echo "zmienna ".$number." nie jest podzielna przez 7";
 }
 
 else {
-    
-echo "false"; }
-
-
-$zmienna1 = 30;
-
-if($zmienna1 % 2 === "0") // 30 jest podzielne przez inna liczbę w tym przypadku
-                          //przez 2 bo reszta z dzielenia wynosi 0
-{
-
+    echo "zmienna ".$number. " jest podzielna przez 2 ale nie przez 7!";
 }
+    
