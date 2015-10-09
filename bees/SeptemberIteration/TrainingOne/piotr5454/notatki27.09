@@ -15,4 +15,4 @@ else {
     {
         echo "$number. jest podzielna przez 2, 3 i 6"
     }
-} 
+}  
