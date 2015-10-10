@@ -88,6 +88,7 @@ function SprawdzKlucz($arrayName, $keyName)
     return false;
 }
 var_dump($arr);
+
 $exercises = array('ala' => 'ma kota', 'bartek' => 'ma psa', 9123, 88, 88);
 //var_dump(SprawdzKlucz($arr, 56));
 
@@ -98,3 +99,8 @@ $exercises = array('ala' => 'ma kota', 'bartek' => 'ma psa', 9123, 88, 88);
 //var_dump(HowManyIsInArray($exercises, 88) => 2
 //var_dump(HowManyIsInArray($exercises, 1500100900) => 0
 
+//Ania/Ania_arrays.php
+
+//Cały czas słucham, gdyby ktoś miał SUPER WAŻNE PYTANIE, to pytajcie.
+//Ale chciałbym, żebyście poćwiczyli sami szare komórki :)
+//jeśli ktoś skończył, to pisze o tym na TeamViewerze
