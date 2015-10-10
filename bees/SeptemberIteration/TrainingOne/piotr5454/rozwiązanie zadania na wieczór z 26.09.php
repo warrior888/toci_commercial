@@ -2,7 +2,7 @@
 
 //Zainicjuj dwie zmienne liczbowe i napisz algorytm, który jeśli pierwsza z tych liczb 
 //jest parzysta wyświetli sumę, różnice, iloczyn i iloraz tych liczb. 
-//Wyniki mają być wyświetlone każdy w osobnej linii.
+//Wyniki mają być wyświetlone każdy w osobnej linii
 
 $zmienna1 = 22;
 $zmienna2 = 11;
@@ -20,18 +20,14 @@ $zmienna2 = 11;
 // . - łączy tekst
 // \n - przejście do nowej linii
 
-// po pierwsze trzeba napisać warunek który sprawdzi czy liczba jest parzysta
-//(czy jest podzielna przez 2 czyli czy daje resztę z dzielenia
-//przez dwa - bo takie liczby są liczbami parzystymi w matematyce) 
+//trzeba napisać warunek który sprawdzi czy liczba jest parzysta
+//[czy jest podzielna przez 2 i daje resztę z dzielenia równą 0 (w tym celu
+//używamy operatora przyrównania)]
 
-//następnie trzeba temu warunkowi przypisać jakąś wartość po prawej i 
-//jednocześnie sprawdzić czy te dwie dane po lewej i prawej stronie są tego
-//samego typu TRZEBA PAMIĘTAĆ ŻEBY PRZY SPRAWDZANIU ZGADZAŁY SIĘ ZNAKI LUB/I
-//TYPY DANYCH bo inaczej wyskoczy błąd
-
-if($zmienna1 % 2 === 0) //jeśli zmienna1 daje resztę z dzielenia przez 2 to 
-                        //wyrzuci wynik z dzielenia
-                        //jednocześnie trzeba sprawdzić znak i/lub typ obu liczb
+if($zmienna1 % 2 === 0) //jeśli zmienna1 daje resztę z dzielenia przez 2 równą 0 
+                        //to jest liczbą parzystą, trzeba uważać aby operator
+                        //przyrównania był właściwy żeby nie wyskoczył błąd
+                        //echo wyśw. wynik
 {
     echo $zmienna1 + $zmienna2 . "\n";
     echo $zmienna1 - $zmienna2 . "\n";
@@ -50,4 +46,4 @@ if($a == $b){
     echo "true";
 } else {
     echo "false";
-}
+} 

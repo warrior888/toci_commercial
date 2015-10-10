@@ -1,4 +1,3 @@
 <?php
 
-echo 'piotr5454, działam';
-
+echo "piotr5454, dzialam";  
