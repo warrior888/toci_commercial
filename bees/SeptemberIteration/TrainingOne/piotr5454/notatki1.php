@@ -1,6 +1,7 @@
 <?php
 
 $notatki = 26.09;
+
 echo "notatki z $notatki";
 
 $how = "wesolo"; /*każda zmienna ma swój typ, ta jest typu string czyli 
