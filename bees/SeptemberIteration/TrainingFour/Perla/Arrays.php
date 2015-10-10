@@ -88,7 +88,13 @@ function SprawdzKlucz($arrayName, $keyName)
     return false;
 }
 var_dump($arr);
+$exercises = array('ala' => 'ma kota', 'bartek' => 'ma psa', 9123, 88, 88);
 //var_dump(SprawdzKlucz($arr, 56));
 
-
+//ShowArray($arrayName) => 'klucz: [nazwa_klucza], wartosc: [wartosc]
+//OwnCount($arrayName) => count($arrayName), for
+//ShowArrayInString($arrayName) => ma kota ma psa 9123 -> echo ShowArrayInString($exercises)
+//HowManyIsInArray($arrayName, $field)
+//var_dump(HowManyIsInArray($exercises, 88) => 2
+//var_dump(HowManyIsInArray($exercises, 1500100900) => 0
 
