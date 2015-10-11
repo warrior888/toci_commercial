@@ -2,7 +2,7 @@
 
 // PRZEPISUJEMY FUNKCJE BIBLIOTECZNE
 
-// // // // // // // // // // // // // // // // // // // // // // // // // // // // // //
+// ---------------------------------------------------------------------------
 
 // --- STRLEN ---
 // oblicza długość łańcucha string
@@ -25,7 +25,7 @@ function own_strlen($string)
 
 // echo own_strlen('ania ma kota'); // -> działa
 
-// // // // // // // // // // // // // // // // // // // // // // // // // // // // // //
+// ---------------------------------------------------------------------------
 
 // --- STRREV ---
 // odwraca ciąg znaków (odwraca string)
@@ -81,11 +81,10 @@ function own_Palindrom($kandydat)
     return true;
 }
 
-// echo "1. " . own_Palindrom('radar'); // -> działa
-// echo "\n";
-// echo "2. " . own_Palindrom('beata'); // -> działa
+// echo var_dump(own_Palindrom('radar'));
+// echo var_dump(own_Palindrom('beata'));
 
-// // // // // // // // // // // // // // // // // // // // // // // // // // // // // //
+// ---------------------------------------------------------------------------
 
 // --- STRSTR ---
 // szuka wystąpienia łańcucha znakowego $nedle w łańcuchu $haystack
@@ -98,91 +97,82 @@ function own_strstr($stogSiana, $igla)
     $stogSianaLength = own_strlen($stogSiana);
     $iglaLength = own_strlen($igla);
     
-    $wynik = '';
-    
+    $k = $iglaLength;
     $i = 0;
     
-        for ($k = 1, $j = $i + 1; $j < $stogSianaLength, $k <= $iglaLength; $k++, $j--)
-	{
-            if ($stogSiana[$j] == $igla[$iglaLength - k]) // 1. [1] == [1], [0] == [0] // 2. [2] == [1], [1] == [0]
+    $wynik = '';
+        
+    while($i < $stogSianaLength)
+    {
+        if($stogSiana[$i] === $igla[$iglaLength - $k])
+        {
+            if($k === 1)
             {
-		$wynik .= $stogSiana[$j];
+                for($j = $i - $iglaLength + 1; $j < $stogSianaLength; $j++)
+                {
+                    $wynik .= $stogSiana[$j];
+                }
+                
+                return $wynik;
             }
             else
             {
+                $k--;
                 $i++;
             }
-	}
-        
-        return $wynik;
+        }
+        else
+        {
+            $i++;
+        }
+    }
+    return false;
 }
 
-// echo own_strstr('Ala ma', 'ma'); // -> NIE DZIAŁA
+// echo own_strstr('Mama ma Ale, Ala ma kota', 'ma'); // -> działa
 
-function own_strstr1($stogSiana, $igla)
+// ---------------------------------------------------------------------------
+
+// --- STRPOS ---
+// znajduje pozycję pierwszego wystąpienia podciągu w ciągu znaków
+
+//echo strpos('beata aciuk naciuk', 'aciuk'); // 6 pozycja
+
+function own_strpos($stogSiana, $igla)
 {
     $stogSianaLength = own_strlen($stogSiana);
     $iglaLength = own_strlen($igla);
     
-    $i = $stogSianaLength - 1; // [5]
-    $wynik = '';
+    $k = $iglaLength;
+    $i = 0;
     
-    while($i >= 0)
+    $wynik = '';
+        
+    while($i < $stogSianaLength)
     {
-        $k = $igla;
-                
-        for ($j = $i; $j < $stogSianaLength; $j--)
-	{
-            if ($stogSiana[$j] == $igla[$iglaLength - k]) // 1. [5] == [0], [4] == [1]
+        if($stogSiana[$i] === $igla[$iglaLength - $k])
+        {
+            if($k === 1)
             {
-                if($k == 0)
-                {
-                    while($i < $stogSianaLength)
-                    {
-                        echo $i . "\n";
-                        $wynik .= $stogSiana[$i];
-                        $i++;
-                    }
-                    
-                    return $wynik;
-                }
-                else
-                {
-                    $k--;
-                }
-		
+                return $i - $iglaLength + 1;
             }
             else
             {
-                $i--;
+                $k--;
+                $i++;
             }
-	}
-        $i--;
+        }
+        else
+        {
+            $i++;
+        }
     }
-    
     return false;
 }
 
- echo own_strstr1('Ala', 'ma'); // -> NIE DZIAŁA
+// echo own_strpos('Mama ma Ale, Ala ma kota', 'ma'); // -> działa
 
-// // // // // // // // // // // // // // // // // // // // // // // // // // // // // //
-
-// --- STRPOS ---
-// znajduje pozycję pierwszego wystąpienia podciągu w ciągu znaków
-// --- STRRPOS ---
-// znajduje pozycję ostatniego wystąpienia podciągu w ciągu znaków
-
-//echo strpos('beata aciuk naciuk', 'aciuk'); // 6 pozycja
-//echo strrpos('beata aciuk naciuk', 'aciuk'); // 13 pozycja
-
-function own_strpos($stogSiana, $igla)
-{
-    // zadanie 3 - zrobić strpos z wykorzystaniem strstr
-}
-
-// echo own_strpos('beata aciuk naciuk', 'aciuk') // -> NIE DZIAŁA
-
-// // // // // // // // // // // // // // // // // // // // // // // // // // // // // //
+// ---------------------------------------------------------------------------
 
 // nasza funkcja, która będzie wycinać tekst ($podmiana) z ciągu tekstu ($kandydat)
 
@@ -200,7 +190,7 @@ function own_strcut($kandydat, $podmiana)
 
 // echo own_strcut('beata naciuk', 'naciuk'); // -> NIE DZIAŁA
 
-// // // // // // // // // // // // // // // // // // // // // // // // // // // // // //
+// ---------------------------------------------------------------------------
 
 // --- STR_REPLACE ---
 // służy do zamiany, podmiany ciągu znaków, wyrazów
@@ -217,7 +207,7 @@ function own_strcut($kandydat, $podmiana)
 
 function own_str_replace($podmiana, $textPodmiany, $kandydat)
 {
-    if(strstr($kandydat, $podmiana))
+    if(own_strstr($kandydat, $podmiana))
     {
         
     }
