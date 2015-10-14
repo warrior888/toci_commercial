@@ -100,7 +100,61 @@ if (strlen($name1) === 5){ //jeśli długość ciagu znaków zmiennej $name1 ró
 $name2 = "piotr";
 $surname = "mlynczak";
 $namesurname = $name2." ".$surname;
-echo $namesurname. "\n";
-if (strlen($namesurname) === 12){//nie wyświetli się bo moja zmienna ma 14 znaków
-   
+
+if (strlen($namesurname) === 12){//nie wyświetli się bo moja nie zmienna ma 12 znaków
+  echo $namesurname. "\n";
+}
+
+
+$boolTrue = true; /* interpretowana jako negacja wartości false czyli jest to 
+ * wszystko to co nie jest pustym ciągiem znaków czyli dowolny ciąg znaków,
+ * wartości liczbowe dodatnie/ujemne/różne od zera (wartości ułamkowe)
+ */
+$boolFalse = false; //interpretowana jako pusty ciąg znaków "", null i false
+                    //i oczywiście jako 0 logiczne
+//skąd wiadomo że $boolFalse jest tak interpretowana? mianowicie jeśli:
+$boolCandidate1 = "" ;
+$boolCandidate2 = null;
+$boolCandidate3 = false;/*PONIŻEJ SPRAWDZENIE DLACZEGO TA ZMIENNA JEST "", 
+ * WARTOŚCIĄ NULL i WARTOŚCIĄ FALSE  ZARAZEM
+ */
+
+if ($boolCandidate1 == false){//PONIEWAŻ PUSTY CIĄG ZNAKÓW
+    echo "jest false";
+}
+if ($boolCandidate2 == false){//WARTOŚĆ NULL
+    echo "jest false";
+}
+if ($boolCandidate3 == false){//I WARTOŚĆ FALSE SĄ INTERPRETOWANE JAKO FALSE
+    echo "jest false";        //CZYLI JAKO ZAPRZECZENIE WARTOŚCI TRUE
+}
+
+$boolCandidate4 = "ala ma kota";
+
+if ($boolCandidate4 == false){/*przeciwieństwem pustego ciągu znaków
+ * będzie wartość która ma jakieś znaki dlatego na ekranie nie dostanie się
+ * wartości false tylko wartość true
+ */
+    echo "jest false";  
+}
+$boolCandidate5 = "ala ma kota 123";
+
+if ($boolCandidate5 == TRUE){//teraz wyświetli się echo bo wartość jest prawdziwa
+    echo "jest true!";  
+}
+/*WARUNEK IF WYKONUJE SIĘ TYLKO WTEDY JEŚLI WARTOŚĆ W NAWIASACH JEST ZWRÓCONA
+ * JAKO TRUE CZYLI KIEDY DANY WARUNEK JEST SPEŁNIONY
+ * można z nawiasów wyrzucić przyrównanie do TRUE i echo też się wyświetli bo
+ * zmienna $boolCandidate5 jest sama w sobie już wartością true (jest
+ * zaprzeczeniem pustego ciągu znaków) a ten IF sprawdza automatycznie czy dana 
+ * zmienna jest prawdziwa czy fałszywa
+ */
+if ($boolCandidate5){//wyświetli się echo bo if sprawdza jaka jest wartość zmiennej 
+    echo "jest true!"; 
+}
+if (true){//analogiczny zapis do tego wyżej
+    echo "jest true!"; 
+}
+if (!($boolCandidate5)){//true zostało zanegowane więc echo nie wyświetli się
+    echo "jest true!"; 
 }

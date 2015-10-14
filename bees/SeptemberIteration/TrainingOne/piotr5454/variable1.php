@@ -19,9 +19,9 @@ $myProfile = array($how, $age, 'Ibiza');/*zmienna typu tablicowego, może
  * przechowywać wewnątrz () jakieś inne zmienne, ciąg znaków
  */
 
-$boolTrue = true;
-$boolFalse = false;
-$nullVar = null;
+$boolTrue = true; //logic 1
+$boolFalse = false; //logic 0
+$nullVar = null; 
 
 var_dump($myProfile);//funkcja zrzut zmiennej
 
