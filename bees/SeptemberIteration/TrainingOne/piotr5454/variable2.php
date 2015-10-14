@@ -158,3 +158,79 @@ if (true){//analogiczny zapis do tego wyżej
 if (!($boolCandidate5)){//true zostało zanegowane więc echo nie wyświetli się
     echo "jest true!"; 
 }
+
+
+$example = "ala ma kota";
+if (true)
+{
+   echo $example. "\n"; 
+} //standardowy zapis, wyświetli się "ala ma kota"
+
+
+if (true)
+{
+    $example1 = "ala ma kota";
+}
+echo $example1. "\n";/*TUTAJ TEŻ WYŚWIETLI SIĘ "ALA MA KOTA" BO ZMIENNA
+ * W NAWIASACH KLAMROWYCH W WARUNKU MA ZASIĘG GLOBALNY, 
+ * ALE NIE W PĘTLACH I FUNKCJACH
+ */
+
+
+//POJĘCIE PĘTLI
+
+/*Pętla – szczególna funkcja interpretowana przez interpreter tak długo aż 
+warunek zostanie spełniony albo nie;
+ są funkcje które mogą wykonywać się bez końca ale skutkuje to błędem i 
+ * wywalenie interpretera  */
+
+for ($i = 0; $i<100; $i++) //pętla podczas gdy
+{
+     echo "hello world po raz $i"."\n";
+}// wykona się 99 razy czyli tak długo dopóki wartość $i będzie mniejsza od 100
+
+
+for ($i = 0; $i<100; $i=$i+1)//$i=$i+1 to dokładnie to samo co $i++
+{
+    if ($i %2 === 0)
+    {
+        echo "hello world po raz $i"."\n";
+    }    
+}/* w pętle można wrzucać warunki np. sprawdzić czy $i jest podzielne przez 2
+ * i tylko wtedy wykonać pętlę, WIĘC LOGICZNIE RZECZ UJMUJĄC PĘTLA WYŚWIETLI
+ * TYLKO LICZBY PARZYSTE
+ */
+
+
+for ($i = 0; $i<100; $i++)
+{
+    if ($i %2 === 0)
+    {
+        echo "hello world po raz $i"."\n";
+    }  
+        else
+        {
+            echo " $i nie jest podzielne przez 2"."\n";
+        }
+}/*wrzucenie przeciwieństwa za pomocą else LOGICZNIE RZECZ BIORĄC WYŚWIETLI
+ * WSZYSTKIE LICZBY NIEPARZYSTE 
+ */
+
+
+for ($i = 0; $i<100; $i++)
+{
+    if ($i %2 === 0)
+    {
+        echo "hello world po raz $i"."\n";
+    }  
+        else
+        {
+            echo " $i nie jest podzielne przez 2"."\n";
+        }
+}
+echo $i; /* TO ECHO POKAŻE LICZBĘ 100, ponieważ pętla została przerwana kiedy
+ * $i miała wartość sto w ostatnim przebiegu pętli, bo 100 !< 100, 
+ */
+
+// $i++ to to samo co $i=$i+1
+// $i-- to to samo co $i=$i-1
