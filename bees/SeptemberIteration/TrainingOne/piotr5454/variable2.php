@@ -202,7 +202,8 @@ for ($i = 0; $i<100; $i=$i+1)//$i=$i+1 to dokładnie to samo co $i++
  */
 
 
-for ($i = 0; $i<100; $i++)
+for ($i = 0; $i<100; $i++) //SKŁADNIA: for (zmienna; warunek; licznik){
+                           //instrukcje do wykonania }
 {
     if ($i %2 === 0)
     {

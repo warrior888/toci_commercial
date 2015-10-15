@@ -152,6 +152,9 @@ if ($liczba1 + $liczba2 === 6)/*jeśli wiemy że taka operacja zwróci typ liczb
         {
             echo 'suma wartości'.$liczba1. 'i'.$liczba2.'jest równa 6';
         }
+        
+//ZADANIE 1
+        
 /*zainicjuj dwie zmienne $number1 i $number2 o wartościach 92 i 64.
  * Sprawdź czy ich suma jest równa 156, jeśli tak to wyświetl komunikat,
  * że suma zmiennych o wartościach $number1 i $number2 jest równa 156.
@@ -159,8 +162,8 @@ if ($liczba1 + $liczba2 === 6)/*jeśli wiemy że taka operacja zwróci typ liczb
  * warunków nie zostanie spełniony to wyświetl błąd.
  */
         
-$number1 = 92;
-$number2 = 64;
+$number1 = 80;
+$number2 = 92;
 
 if ($nummber1 + $number2 === 156){
     echo "suma zmiennych o wartości $number1 i $number2 jest równa 156" ."\n";
@@ -175,4 +178,33 @@ else if ( ($number1 - $number2) % 4 === 0)//dwa nawiasy zgodnie z zas matematyki
 }
 else {
     echo 'błąd';
+}
+
+// PONIŻEJ WŁAŚCIWE WYKONANIE ZADANIA 1
+
+$number1 = 80;
+$number2 = 92;
+
+if($number1 + $number2 === 156) {
+    echo "Suma zmiennych o wartościach ".$number1." i ".$number2." jest równa 156.";
+} else if (($number1 - $number2) % 4 === 0) {
+    echo "Różnica zmiennych o wartościach ".$number1." i ".$number2." jest podzielna przez 4.";
+} else {
+    echo "błąd!";
+}
+
+//ZADANIE 2
+
+//sprawdź czy Twoje imię i nazwisko są identyczne
+
+$myFirstName = "Piotr";
+$mySurname = "Mlynczak";
+$myDescription = "Nazywam się ".$myFirstName." ".$mySurname."\n";
+
+echo $myDescription;
+
+if($myFirstName == $mySurname){
+    echo "Imię jest identyczne z nazwiskiem.";
+} else {
+    echo "Wszystko ze mną ok.";
 }

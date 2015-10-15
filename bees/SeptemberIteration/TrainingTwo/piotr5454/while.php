@@ -7,14 +7,7 @@ for ($a = 0; $a <=100; $a++)
     }
        
 }
-/* RÓŻNICA W STOSUNKU DO PĘTLI FOR : 
- * 1. zmienną inicjujemy nie w nawiasie () tylko wyżej
- * 2. w () wrzucamy tylko warunek 
- * 3. modyfikacje zmiennej (licznik) wrzucamy w ciało pętli
- * 4. w ciele while nie musi być umieszczony koniecznie licznik, może być np. dowolna
- * zmienna zainicjowana w skrypcie, ALE WAŻNE ŻEBY COŚ BYŁO BO INACZEJ PĘTLA BĘDZIE
- * SIĘ WYKONYWAĆ W NIESKOŃCZONOŚĆ
- */
+
 $a = 0;
 
 while ($a<=100)
@@ -24,6 +17,14 @@ while ($a<=100)
     }
     $a++;
 }
+/* RÓŻNICE W PĘTLI WHILE W STOSUNKU DO FOR : 
+ * 1. w while zmienną początkową inicjujemy nie w nawiasie () tylko wyżej
+ * 2. w () wrzucamy tylko warunek 
+ * 3. modyfikacje zmiennej (licznik) wrzucamy w ciało pętli
+ * 4. w ciele while nie musi być umieszczony koniecznie licznik, może być np. dowolna
+ * zmienna zainicjowana w skrypcie, ALE WAŻNE ŻEBY COŚ BYŁO BO INACZEJ PĘTLA BĘDZIE
+ * SIĘ WYKONYWAĆ W NIESKOŃCZONOŚĆ
+ */
 
 /* której pętli użyć to zależy tylko od tego co robimy, czy chcemy robić coś na
  * zmiennej zainicjowanej poza nawiasem czy na nowej zmiennej która jest w ()
