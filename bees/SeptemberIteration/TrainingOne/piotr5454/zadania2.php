@@ -14,6 +14,7 @@ for ($a = 0; $a <=100; $a++)
 //Dodaj do siebie i zwróć wszystkie liczby z przedziału 20-30. Wszystko na pętli 
 //for
 
+
 $sum = 0;
 for ($j = 20; $j <= 30; $j++) {
     echo $sum = $sum + $j . "\n";
