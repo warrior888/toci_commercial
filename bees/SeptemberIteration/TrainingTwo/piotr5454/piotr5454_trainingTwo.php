@@ -7,7 +7,7 @@
 
 function zadanie1($a, $b)
 {
-    while ($a<=$b)
+    while ($a <= $b)
     {
         if ($a % 2 === 1)
         {
@@ -26,4 +26,15 @@ zadanie1('0','10');
 //ZADANIE 2
 //Napisz funkcję, która x razy wywoła funkcję z zadania 1 (pomyśl dobrze jakie parametry 
 //powinna przyjmować).
+
+function powtorzenie($iloscwyswietlen)
+{
+    for($x = 0; $x < $iloscwyswietlen; $x++)
+    {
+        echo zadanie1;
+    }
+}
+
+powtorzenie (5);
+
 
