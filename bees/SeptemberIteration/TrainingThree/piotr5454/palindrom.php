@@ -12,9 +12,9 @@
     
 }
 
-echo own_str_replace('beata naciuk', 'naciuk', 'zapart');/*szukamy podmiany beata naciuk
- * z naciuk na zapart, lecz nie działa więc piszemy wyżej zwykły str_replace
- */
+//echo own_str_replace('beata naciuk', 'naciuk', 'zapart');/*szukamy podmiany beata naciuk
+ //* z naciuk na zapart, lecz nie działa więc piszemy wyżej zwykły str_replace
+ //*/
 
 //
 //function own_str_replace($kandydat, $podmiana, $textPodmiany)
@@ -28,7 +28,7 @@ echo own_str_replace('beata naciuk', 'naciuk', 'zapart');/*szukamy podmiany beat
 /*ALE WYŚWIETLI SIĘ BŁĄD ŻE JEST NIEWŁAŚCIWA KOLEJNOŚĆ ARGUMENTÓW A WŁAŚCIWA W 
 * PROGRAMIE JEST NATOMIAST TAKA JAK PONIŻEJ*/
 
-echo str_ireplace($search, $replace, $subject);// to jest właściwa kolEjność
+//echo str_ireplace($search, $replace, $subject);// to jest właściwa kolEjność
 
 //trzeba zatem odwrócić kolejność parametrów w funkcji co się dzieje poniżej
 //
