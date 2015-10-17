@@ -25,12 +25,9 @@ function RecursiveArraySearch($array)
     }
 }
 
-$human; //male, osoba, name, surname,
-
-
 $human = array();
 $human['male'] = array();
-$human['male']['man'];
+$human['male']['man'] = array();
 $human['male']['woman'] = array();
 $human['male']['woman']['name'] = 'Mikołaj';
 $human['male']['woman']['surname'] = 'Król';
