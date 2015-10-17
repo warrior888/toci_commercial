@@ -1,13 +1,13 @@
-<?php
-function Palindrom($kandydat)
-{
-    return $kandydatLength = own_strrev($kandydat);
-}
+<?php //
+//function Palindrom($kandydat)
+//{
+//    return $kandydatLength = own_strrev($kandydat);
+//}
 
 
 //PALINDROM KROK PO KROKU !!!
 
-function own_str_replace($kandydat, $podmiana, $textPodmiany)//operujemy na wywołaniu
+//function own_str_replace($kandydat, $podmiana, $textPodmiany)//operujemy na wywołaniu
 {
     
 }
@@ -16,14 +16,14 @@ echo own_str_replace('beata naciuk', 'naciuk', 'zapart');/*szukamy podmiany beat
  * z naciuk na zapart, lecz nie działa więc piszemy wyżej zwykły str_replace
  */
 
-
-function own_str_replace($kandydat, $podmiana, $textPodmiany)
-{
-    
-}
-echo str_replace('beata naciuk', 'naciuk', 'zapart');
-
-echo own_str_replace('beata naciuk', 'naciuk', 'zapart');
+//
+//function own_str_replace($kandydat, $podmiana, $textPodmiany)
+//{
+//    
+//}
+//echo str_replace('beata naciuk', 'naciuk', 'zapart');
+//
+//echo own_str_replace('beata naciuk', 'naciuk', 'zapart');
 
 /*ALE WYŚWIETLI SIĘ BŁĄD ŻE JEST NIEWŁAŚCIWA KOLEJNOŚĆ ARGUMENTÓW A WŁAŚCIWA W 
 * PROGRAMIE JEST NATOMIAST TAKA JAK PONIŻEJ*/
@@ -31,24 +31,24 @@ echo own_str_replace('beata naciuk', 'naciuk', 'zapart');
 echo str_ireplace($search, $replace, $subject);// to jest właściwa kolEjność
 
 //trzeba zatem odwrócić kolejność parametrów w funkcji co się dzieje poniżej
-
-
-function own_str_replace(, $podmiana, $textPodmiany, $kandydat)
-{
-    
-}
-echo str_replace('beata naciuk', 'naciuk', 'zapart');
-
-echo own_str_replace('beata naciuk', 'naciuk', 'zapart');
+//
+//
+//function own_str_replace(, $podmiana, $textPodmiany, $kandydat)
+//{
+//    
+//}
+//echo str_replace('beata naciuk', 'naciuk', 'zapart');
+//
+//echo own_str_replace('beata naciuk', 'naciuk', 'zapart');
 
 /*żeby sprawdzić czy kandydat ma coś do podmiany to potrzebujemy sprawdzić czy
  * string występuje w stringu (funkcja czy string is string) - SPRAWDZA CZY W STOSIE 
  * ISTNIEJE IGŁA, ALE NIE MOŻEMY ZASTOSOWAĆ SYSTEMOWEGO stringisstring TYLKO
  *  MUSIMY NAPISAĆ SWOJE*/
 
-function own_strstr($entireString, $portion)
-{
-    for ($i = 0; $i < strlen($entireString))
+//function own_strstr($entireString, $portion)
+//{
+//    for ($i = 0; $i < strlen($entireString))
 
         
 /* metoda powyżej zwraca true/false, musimy zmierzyć entireString za pomocą FOR
