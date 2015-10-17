@@ -5,36 +5,40 @@
 //Parametr b jest wymagany, a domyślnie wynosi 0.
 
 
+
 function zadanie1($a, $b)
 {
-    while ($a <= $b)
+   $x=$a; 
+    while ($x<=$b)
     {
-        if ($a % 2 === 1)
+        if ($x % 2 === 1)
         {
-            echo $a."\n";
+            echo $x."\n";
         }
-        if ($a % 5 === 1)
+        if ($x % 5 === 1)
         {
-            echo $a. "\n";
+            echo $x. "\n";
         }
-    $a++;
+    $x++;
     }    
     
 }
 zadanie1('0','10');
+echo "\n";
+
 
 //ZADANIE 2
 //Napisz funkcję, która x razy wywoła funkcję z zadania 1 (pomyśl dobrze jakie parametry 
-//powinna przyjmować).
-
+//powinna przyjmować)
+ 
 function powtorzenie($iloscwyswietlen)
 {
-    for($x = 0; $x < $iloscwyswietlen; $x++)
+    for($x = 0; $x <= $iloscwyswietlen; $x++)
     {
-        echo zadanie1;
+        echo zadanie1('0','10'). "\n";
     }
 }
 
-powtorzenie (5);
+powtorzenie (2);
 
 

@@ -94,3 +94,38 @@ function example2 ($min, $max)
 }
 example2('40','70');
 
+
+//PRZYKŁAD 3
+
+function Qba($iloscWyswietlen)
+{
+    for($i = 0; $i <= $iloscWyswietlen; $i++)
+    {
+        echo "Hello world\n";
+    }
+}
+
+Qba(5);
+
+echo "\n";
+
+//PRZYKŁAD 4
+
+function Toci2($imie, $nazwisko)
+{
+    echo $imie . " " . $nazwisko;
+    Qba (2);
+}
+
+Toci2("Lukasz", "Majewski");
+
+//WAŻNE !!!! można wywoływać funkcję wewnątrz innej funkcji WPISUJĄC W MIEJSCU
+//NA INSTRUKCJE NAZWĘ TEJ FUNKCJI A W NAWIASIE ILE RAZY MA BYĆ POWTÓRZONA !!!!, 
+/* Można też w instrukcjach wypisac inne polecenia które mają się wykonać i 
+ * wykonają się w takiej kolejności w jakiej zostaną podane
+ */
+
+/*W JAVASCRIPT jest hierarchiczne wywołoywanie innych funkcji tzn. że można
+ * wywołać tylko tą funkcję która została napisana wcześniej w kodzie
+ */
+
