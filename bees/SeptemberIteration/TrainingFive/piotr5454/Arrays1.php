@@ -6,22 +6,22 @@
 //rekurencja - wywołanie funkcji wewnątrza samej siebie, POZWALA GŁEBIEJ WCHODZIĆ
 //W TABLICE
 
-$films = array ();
+$human = array ();
 
-$contacts[''] = array(
-    'mama' => array('private' => 56123421, 'work' => 21312312312),
-    'tata' => 5122131231,
-    'dziecko' => 213312312
+$human[''] = array(
+    'sex' => array('male' => man, 'female' => woman),
+    'imie' => piotr,
+    'nazwisko' => mlynczak
 );
-echo $contacts['home']['mama']['private'] . "\n";
-function RecursiveArraySearch($array)
-{
-    foreach ($array as $value) {
-        if (!is_array($value)) {
-            echo $value;
-        } else {
-            RecursiveArraySearch($value);
-        }
-    }
-}
+echo $contacts['sex']['imie']['nazwisko'] . "\n";
+//function RecursiveArraySearch($array)
+//{
+//    foreach ($array as $value) {
+//        if (!is_array($value)) {
+//            echo $value;
+//        } else {
+//            RecursiveArraySearch($value);
+//        }
+//    }
+//}
 //var_dump($contacts);
