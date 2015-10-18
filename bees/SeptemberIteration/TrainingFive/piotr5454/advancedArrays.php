@@ -6,14 +6,21 @@
 //rekurencja - wywołanie funkcji wewnątrza samej siebie, POZWALA GŁEBIEJ WCHODZIĆ
 //W TABLICE
 //
-//$human = array ();
+
+//praca, dom, znajomi
+
+//array('qweniuqwe' => 12312, 2, 3, 4);
+
+//$contacts = array();
 //
-//$human[''] = array(
-//    'sex' => array('male' => man, 'female' => woman),
-//    'imie' => piotr,
-//    'nazwisko' => mlynczak
+//$contacts['home'] = array(
+//    'mama' => array('private' => 56123421, 'work' => 21312312312),
+//    'tata' => 5122131231,
+//    'dziecko' => 213312312
 //);
-//echo $contacts['sex']['imie']['nazwisko'] . "\n";
+//
+//echo $contacts['home']['mama']['private'] . "\n";
+//
 //function RecursiveArraySearch($array)
 //{
 //    foreach ($array as $value) {
@@ -24,37 +31,15 @@
 //        }
 //    }
 //}
+//
 //var_dump($contacts);
 
 
-$contacts = array();
+/*ZADANIE 1 stwórz tablice zawierającą dane o człowieku, jego płeć, imię i nazwisko i
+wyświetl dwie ostatnie wartości z tej tablicy*/
 
-//praca, dom, znajomi
-
-//array('qweniuqwe' => 12312, 2, 3, 4);
-
-$contacts['home'] = array(
-    'mama' => array('private' => 56123421, 'work' => 21312312312),
-    'tata' => 5122131231,
-    'dziecko' => 213312312
-);
-
-echo $contacts['home']['mama']['private'] . "\n";
-
-function RecursiveArraySearch($array)
-{
-    foreach ($array as $value) {
-        if (!is_array($value)) {
-            echo $value;
-        } else {
-            RecursiveArraySearch($value);
-        }
-    }
-}
-//
 //$human; //male, osoba, name, surname,
-//
-//
+
 //$human = array();
 //$human['male'] = array();
 //$human['male']['man'];
@@ -63,3 +48,31 @@ function RecursiveArraySearch($array)
 //$human['male']['woman']['surname'] = 'Król';
 
 //var_dump($contacts);
+
+
+$human = array ();
+
+$human['person'] = array(
+    'sex' => array('male' => 'man', 'female' => 'woman'),
+    'imie' => 'piotr',
+    'nazwisko' => 'mlynczak'
+);
+echo $human ['person']['imie']['nazwisko'] . "\n";
+
+
+var_dump($human);
+
+//    
+//   
+//    
+//$human = array ();
+//
+//$human['persons'] = array(
+//    'male' => array('man', 'woman),
+//    'man' => array ('name'=> Piotr, 'surname' => Mlynczak);
+//        
+//echo $human ['persons']['male']['man'] ['name' 'surname'] . "\n";
+//
+//
+//var_dump($human);
+
