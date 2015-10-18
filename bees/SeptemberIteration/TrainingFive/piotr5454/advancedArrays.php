@@ -50,17 +50,17 @@ wyświetl dwie ostatnie wartości z tej tablicy*/
 //var_dump($contacts);
 
 
-//$human = array ();
-//
-//$human['person'] = array(
-//    'sex' => array('male' => 'man', 'female' => 'woman'),
-//    'imie' => 'piotr',
-//    'nazwisko' => 'mlynczak'
-//);
-//echo $human ['person']['imie']['nazwisko'] . "\n";
-//
-//
-//var_dump($human);
+$human = array ();
+
+$human['person'] = array(
+    'sex' => array('male' => 'man', 'female' => 'woman'),
+    'imie' => 'piotr',
+    'nazwisko' => 'mlynczak'
+);
+echo $human ['person']['imie']['nazwisko'] . "\n";
+
+
+var_dump($human);
 
 //    
 //   
