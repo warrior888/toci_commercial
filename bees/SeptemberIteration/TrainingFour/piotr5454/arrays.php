@@ -9,7 +9,6 @@ $arr = array
     $variable,
     'jakas wartosc',
     'inna wartosc',
-    24
 );   //array
 
 //echo $arr[2];
