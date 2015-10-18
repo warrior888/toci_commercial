@@ -25,11 +25,15 @@ function RecursiveArraySearch($array)
     }
 }
 
+<<<<<<< HEAD
 $human = array();
 $human['male'] = array();
 $human['male']['man'] = array();
 $human['male']['woman'] = array();
 $human['male']['woman']['name'] = 'Mikołaj';
 $human['male']['woman']['surname'] = 'Król';
+=======
+
+>>>>>>> 994493d15606833314a906ea4f54c145beef72c6
 
 //var_dump($contacts);
