@@ -19,12 +19,19 @@ ShowArray($arr);
 echo "\n \n \n";
 //OwnCount($arrayName) => count($arrayName), for
 //
-$l = count($arr);
+//
+function OwnCount($arrayName)
+{
+    $i = 0;
+    
+    foreach ($arrayname as $value)
+        {
+        $i++;
+        }
+    return $i;
+}
 
-            for ($i = 0; $i < $l; $i++){
-                echo $i;
-            }
-
+echo OwnCount($arr);
 
 echo  "\n \n \n";
 //ShowArrayInString($arrayName) => ma kota ma psa 9123 -> echo ShowArrayInString($exercises)
