@@ -3,16 +3,16 @@
 
 //zadanie dom 1 napisac palindrm z for
 
-$text = 'kaaaajaarak';
+$text = 'kaaaajaaak';
 $length = strlen($text);
 
 for ( $i = 0 , $j = $length - 1 ;  $i < $j; $i++, $j--) {
-  echo  'I wynosi' . $i . "  " . "J wynosi" . $j . "\n";
+ // echo  'I wynosi' . $i . "  " . "J wynosi" . $j . "\n";
    if ($text[$i] == $text[$j]) {
        echo 'To jest palindrom!' . "\n";
 }
 else {
-       echo 'To nie jest palindrom!';
+      echo 'To nie jest palindrom!';
       break;
   }
 
@@ -27,7 +27,7 @@ for ( $i = 0 , $j = $length - 1 ;  $i < $j; $i++, $j--) {
         break;
     }
 else {
-    echo 'To jest palindrom!' . "\n";
+    return 'To jest palindrom!' . "\n";
     
     }
 
