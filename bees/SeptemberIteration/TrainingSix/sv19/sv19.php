@@ -11,7 +11,7 @@ function Even($number)
     for($i = 0; $i < $lenght ; $i++)
     $counter++;
     {
-        if($counter%2 === 0)
+        if((int)$counter%2 === 0)
             
         {
           return 'Ciag liczbowy ma parzysta ilosc cyfr';
