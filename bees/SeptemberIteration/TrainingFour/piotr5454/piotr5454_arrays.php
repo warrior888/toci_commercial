@@ -173,47 +173,102 @@
 // * w związku z czym jeśli z angielskiego "value" oznacza "wartość" to zmienna $value będzie się 
 // * odnosić do każdej z wartości
 // * 
-// * innymi słowy dla każdego elementu z tej tablicy będącego jakąś wartością, coś zrób z tą wartością
+// * innymi słowy dla każdego elementu w tej tablicy będącego jakąś wartością, coś zrób z tą wartością
 // * np. wyświetl ją
 // * 
 // * TO ZNACZY ŻE PRZY KAŻDYM PRZEBIEGU TEJ PĘTLI DO ZMIENNEJ $VALUE BĘDZIE PODSTAWIANA
 // * PO KOLEI KAŻDA WARTOŚĆ Z TABLICY dzięki czemu zostaną wyświetlone wszystkie dane z tablicy
 // */
 //
-//$arr = array
-//(
-//    'co ma ala' => 'ala ma kota',
-//    56 => 24,
-//    $variable,
-//    'jakas wartosc',
-//    'inna wartosc',
-//); 
+$variable = true;
+
+$arr = array
+(
+    'co ma ala' => 'ala ma kota',
+    56 => 24,
+    $variable,
+    'jakas wartosc',
+    'inna wartosc',
+); 
+//
+//// ---- ZADANIE 1 ----
+//
+////wyświetl wszystkie wartości jakie są w tablicy
 //
 //foreach ($arr as $value) // count($arr)
 //{
 //    echo $value . "\n";//czas życia $value jest tylko między tymi nawiasami
 //}
 //
+//var_dump($arr);
 //
-////var_dump($arr);
 //
-////$arr2 = ['var1', 'var2', 'var3'];
 //
-////napisz funkcję, która AddCharacter, która do każdego elementu w tablic wyświetli go z danym podanym ciągiem znaków
-//// AddCharacter($arrayName, $characters), AddCharacter($arr, 'ala ma psa')
+//
+////  ---- ZADANIE 2 ----
+//
+///* napisz funkcję AddCharacter która każdy element tablicy wyświetli z podanym ciągiem znaków
+// * AddCharacter ($arrayName, $characters), AddCharacter ($arr, 'ala ma psa')
+// */
 //
 //function AddCharacter($arrayName, $characters)
 //{
-//    foreach ($arrayName as $value) {
-//        echo $value . " " . $characters . "\n";
+//    foreach ($arrayName as $value)
+//    {
+//        echo $value ." ". $characters . "\n";//gdyby użyc RETURN zamiast ECHO to przy pierwszym obiegu pętli 
+//    }                                        //cała funkcja zostaje przerwana   
+//}
+//AddCharacter($arr, 'ala ma psa');
+//
+//
+////  ---- ZADANIE 3 ----
+//
+///* napisz funkcję która pobiera dwa paramerty, jako pierwszy parametr pobiera tablice,
+// * jako drugi jakąś wartość i jeżeli ta wartość jest w tablicy to zwraca true jeżeli nie to false  
+// * przy wywołaniu funkcji zwróci:
+// * FindInArray($arr, 'ala ma kota') => true
+// * FindInArray($arr, 888) => false
+// */
+//
+//function FindInArray($arrayName, $search)
+//{
+//    foreach ($arrayName as $value)
+//    {
+//        if ($value === $search )
+//        {
+//            echo true;
+//        }
+//            else
+//            {
+//                echo false;
+//            }
 //    }
 //}
 //
-////AddCharacter($arr, 'ala ma psa');
+//var_dump(FindInArray($arr, 'ala ma kota'));//vardump sprawdzi co ta funkcja zwraca
+////TERAZ FUNKCjA WYŚWIETLI WARTOŚĆ 1 ORAZ NULL CZYLI FALSE
 //
-////FindInArray($arr, 'alamakota') => true
-////FindInArray($arr, 888) => false
+//FindInArray($arr, 'ala ma kota')//A TERAZ WYŚWIETLI TO CO POWINNO W ZADANIU CZYLI TRUE
+//       
+//       
+//// DRUGI SPOSÓB ROZWIĄZANIA
+//        
+//function FindInArray($arrayName, $search)
+//{
+//    foreach ($arrayName as $value)
+//    {
+//        if ($value === $search )
+//        {
+//            return true; //return przerywa działanie funkcji
+//        }
+//    }
+//    return false;
+//}
 //
+//FindInArray($arr, 'ala ma kota');//nic nie zwróci bo return przerwało działanie funkcji
+
+// --- ALE ---
+// 
 //function FindInArray($arrayName, $search) {
 //    foreach ($arrayName as $value){
 //        if($value === $search)
@@ -223,49 +278,105 @@
 //    }
 //    return false;
 //}
-//
-////ShowAllElements($arrayName)
-//
-////var_dump(FindInArray($arr, 24));
-//
-//
-//
-//function ShowAllElements ($arrayName){
-//    foreach ($arrayName as $value){
-//        echo $value."\n"; //'$value';
+//var_dump(FindInArray($arr, 'ala ma kota'));//TO SAMO Z UŻYCIEM funkcji vardump zadziała jak należy
+
+
+//  ---- ZADANIE 4 ----
+// wyświetl wszystkie elementy z tablicy
+
+//function ShowAllElements($arrayName)
+//{
+//    foreach ($arrayName as $value)
+//    {
+//        echo $value ."\n";
 //    }
 //}
-//
-////ShowAllElements($arr);
-//
-//foreach($arr as $key => $value)
+//ShowAllElements($arr);
+
+
+
+
+//  ---- ZADANIE 5 ----
+
+//ZA POMOCĄ foreach MOŻNA WYŚWIETLIĆ OPRÓCZ SAMEJ WARTOŚCI TAKŻE NAZWE KLUCZA
+
+/* do wartości klucza można się dobrać w pętli foreach podając sobie oprócz samej wartości $value
+ * podając na lewo jakąś zmienną do której trafi nazwa tego klucza potem strzłeczkę  i $value czyli
+ * wartość tej zmiennej która będzie w tym kluczu
+ */
+
+//foreach($arr as $key => $value) 
 //{
 //    echo "$key : $value \n";
 //}
-//
-//function SprawdzKlucz($arrayName, $keyName)
+
+// sprawdź teraz czy dany klucz występuje w tablicy, jak jest wyświetl true
+
+/*ZAMIAST parametrów funkcji $x i $y można podac inne nazwy $arrayName i $keyName
+ * żeby się łatwiej kojarzyło z tym czego szukamy i w czym, 
+ * że szukamy ogólnie jakiejś nazwy klucza (czy wartości pod którą ma dany klucz) wewnątrz jakiejś tablicy, 
+ * a konkretną tablicę w której tego szukamy oraz konkretną nazwę klucza którego szukamy podajemy w wywołaniu funkcji
+ * 
+ * A DO ZMIENNYCH $key i $value AUTOMATYCZNIE SĄ PODSTAWIANE PO KOLEI NAZWY KLUCZY ORAZ WARTOŚCI TYCH KLUCZY
+ */
+
+//function sprawdzKlucz($x, $y)
 //{
-//    foreach($arrayName as $key => $value){
-//        if($keyName === $key) {
-//            return true;
+//        foreach ($x as $key => $value)
+//        {
+//            if ($y === $key)
+//            {
+//                return true;
+//            }
 //        }
-//    }
-//    return false;
+//return false;
 //}
-//var_dump($arr);
+//var_dump(sprawdzKlucz($arr, 56));
+
+
+
+
+// ---- ZADANIE 6 ----
+////ShowArray($arrayName) => 'klucz: [nazwa_klucza], wartosc: [wartosc] wyświetl wszystko
+
+function ShowArray($arrayName)
+{        
+foreach ($arrayName as $key => $value) // count($arr)
+{
+    echo "$key : $value \n";
+}
+}
+var_dump($arr);
+
+
+// ---- ZADANIE 7 ----
+//OwnCount($arrayName) => count($arrayName),użyć for, funkcja która zliczy elementy i potem je zwróci
+
+
+// ---- ZADANIE 8 ----
+// 
+//$exercises = array('ala' => 'ma kota', 'bartek' => 'ma psa', 9123);
 //
-//$exercises = array('ala' => 'ma kota', 'bartek' => 'ma psa', 9123, 88, 88);
-////var_dump(SprawdzKlucz($arr, 56));
+//ShowArrayInString($arrayName)
 //
-////ShowArray($arrayName) => 'klucz: [nazwa_klucza], wartosc: [wartosc] wyświetl
-////OwnCount($arrayName) => count($arrayName), for policz
-////ShowArrayInString($arrayName) => ma kota ma psa 9123 -> echo ShowArrayInString($exercises)
+//echo ShowArrayInString($exercises)=> ma kota ma psa 9123
+//
+//mamy tablicę i mamy napisać funkcję dzięki której na ekranie pojawią wartości kluczy po echo
+//JAKO SKLEJONE W JEDEN STRING
+//
+//
+//
+// ---- ZADANIE 9 ----
 ////HowManyIsInArray($arrayName, $field)
-////var_dump(HowManyIsInArray($exercises, 88) => 2
-////var_dump(HowManyIsInArray($exercises, 1500100900) => 0
 //
-////Ania/Ania_arrays.php
+//ILE WYSTĄPIEŃ MA DANE SŁOWO, DANA WARTOŚĆ $field W TABLICY
 //
-////Cały czas słucham, gdyby ktoś miał SUPER WAŻNE PYTANIE, to pytajcie.
-////Ale chciałbym, żebyście poćwiczyli sami szare komórki :)
-////jeśli ktoś skończył, to pisze o tym na TeamViewerze
+//jeśli dodam 88, 88 w $exercises = array('ala' => 'ma kota', 'bartek' => 'ma psa', 9123) 
+//czyli $exercises = array('ala' => 'ma kota', 'bartek' => 'ma psa', 9123, 88, 88)
+//i zrobię var_dump na tą tablicę to chcę otrzymać 2 lub 0 czyli:
+//var_dump(HowManyIsInArray($exercises, 88) => 2
+//var_dump(HowManyIsInArray($exercises, 1500100900) => 0
+//
+
+
+
