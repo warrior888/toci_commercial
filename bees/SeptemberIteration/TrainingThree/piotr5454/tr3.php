@@ -1,11 +1,13 @@
 <?php //
+//function own_strrev () //funkcja wypisuje znaki od końca
+//{
+//}
 //function Palindrom($kandydat)
 //{
 //    return $kandydatLength = own_strrev($kandydat);
 //}
 
-
-//PALINDROM KROK PO KROKU !!!
+//PRZEPISUJEMY FUNKCJĘ str_replace
 
 //function own_str_replace($kandydat, $podmiana, $textPodmiany)//operujemy na wywołaniu
 {

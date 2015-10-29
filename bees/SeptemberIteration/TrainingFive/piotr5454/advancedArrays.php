@@ -4,7 +4,7 @@
 //tablice wielowymiarowe (tablica w tablicy)
 
 //rekurencja - wywołanie funkcji wewnątrza samej siebie, POZWALA GŁEBIEJ WCHODZIĆ
-//W TABLICE
+//W TABLICE i wyświetlać to co nie jest tablicą
 //
 
 //praca, dom, znajomi
