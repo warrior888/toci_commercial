@@ -50,5 +50,23 @@ echo checkTwo(234324421, 2);
 echo "\n";
 echo checkTwo(32727163, 2);
 
+echo "\n" . "\n";
+
 // Zadanie_3
 // Stwórz drzewo genealogiczne - tablica $rodzina, dziadkowie, rodzice, dzieci.
+
+echo "Zadanie_3" . "\n";
+
+$rodzina = array(
+    'dziadkowie' => [Zdzisława, Lech],
+    'rodzice' => [Wiesława, Wiesław],
+    'dzieci' => [Anna, Monika, Adam]
+);
+
+var_dump($rodzina);
+
+//$rodzina2 = array(
+//    'dziadkowie' => ['Zdzislawa i Lech' => ["Wieslawa i Wieslaw"  => [Anna, Monika, Adam]]],
+//);
+//
+//var_dump($rodzina2);
