@@ -116,31 +116,110 @@ function example($number, $n)
 
 var_dump(example(122324, 10));
 
-//$counter = 0;
-//for ($i = 0; $i < $length; $i++) {
-//    // $counter += (int)$string[$i];
-//}
-//echo $counter . "\n";
-//function Example($number, $n)
+
+//  ------ ZADANIE 4 ------
+//napisz funkcję która zliczy wystapienia w $number2 np. cyfry 2 lub dowolnej podanej przez użytkownika
+
+$number2 = 123412313;
+
+function example2($number2, $n)
+{
+    $string = (string)$number2;
+    $length = strlen($string);
+    $counter = 0;
+    for ($i = 0; $i < $length; $i++)
+    {
+        if ((int)$string[$i] === $n)
+        {
+            $counter++;
+        }
+    }
+return $counter;
+}
+
+echo "\n".example2($number2, 2). "\n";
+
+
+//  ------ ZADANIE 5 ------
+//napisz funkcję która wyświetla cokolwiek podane co może być zrzutowane na string od końca do początku
+/*na pewno potrzebujemy:
+ * - zrzutować $param na typ stringowy 
+ * - zmiennej która będzie przechowywała nam długość ciągu znaków
+ * - i jakiś licznik NA ZNAKI bo chcemy wyświetlić jakiś string od końca
+ * Następnie musimy napisać pętlą np. while działającą tak, że:
+ * - podczas gdy długość $length jest większa lub równa 0 to zmniejszaj tą długość i doklejaj do $result zmienną $string
+ * od aktualnej długości czyli $string($length)
+ * 
+ * Tylko jest problem teraz, bo długość $length np. dla ciągu 123123 zwróci wartość 6, więc będziemy próbowali wyświetlać 
+ * string od sześciu który nie istnieje, ponieważ ostatni indeks w tej tablicy ma wartość 6, dlatego musimy odjąć
+ * od długości 1
+ * 
+ * Na koniec funkcja musi wiadomo coś zwracać, w tym przypadku będzie zwracać również licznik.
+ * 
+ * GDYBY FUNKCJA NIC NIE ZWRACAŁA TO WYŚWIETLI NAM WARTOŚĆ NULL
+ * A FUNKCJA KTÓRA NIC NIE ZWRACA !return => NAZYWA SIĘ void
+ * !return => void
+ */
+
+
+function reverse($param)
+{
+       $string = (string)$param;
+       $length = strlen($string);
+       $result  = ""; //string
+       
+       while (length - 1 >= 0)/* odjąć 1 bo inaczej program będzie liczył od indeksu 6 którego nie ma, bo ostatni indeks = 5
+                               */
+       {    
+           $result .= $string($length);
+           $length--; 
+       }
+return $result;
+}
+
+var_dump(reverse(123123));
+
+
+//MOŻEMY PODSTAWIĆ ZMIENNĄ Z POPRZEDNIEGO PRZYKŁADU $number2 I WTEDY ONA BĘDZIE WYŚW. OD KOŃCA
+
+//$number2 = 123412313;
+//
+//function reverse($param)
 //{
-//    $string = (string)$number;
-//    $length = strlen($string);
-//    if ($length === $n) {
-//        return true;
-//    }
-//    return false;
+//       $string = (string)$param;
+//       $length = strlen($string);
+//       $result  = ""; //string
+//       
+//       while (length - 1 >= 0)
+//       {    
+//           $result .= $string($length);
+//           $length--; 
+//       }
+//return $result;
 //}
-//function Licznik($number, $n)
+//
+//var_dump(reverse($number2));
+//
+//
+////ALBO WARTOŚĆ DOMYŚLNĄ PARAMETRU $param która będzie wyśw. od końca
+//
+//function reverse($param = 55456515)
 //{
-//    $string = (string)$number;
-//    $length = strlen($string);
-//    $counter = 0;
-//    for ($i = 0; $i < $length; $i++) {
-//        if ((int)$string[$i] === $n) {
-//            $counter++;
-//        }
-//    }
-//    return $counter;
+//       $string = (string)$param;
+//       $length = strlen($string);
+//       $result  = ""; //string
+//       
+//       while (length - 1 >= 0)
+//       {    
+//           $result .= $string($length);
+//           $length--; 
+//       }
+//return $result;
+//}
+//
+//var_dump(reverse());
+
+
 //}
 ////echo "\n" . Licznik($number2, 0) . "\n";
 ////"123123" //!return => void
