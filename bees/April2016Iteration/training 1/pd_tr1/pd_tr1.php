@@ -1,3 +1,3 @@
 <?php
 
-	echo "dziala";
+	echo "hello word";
