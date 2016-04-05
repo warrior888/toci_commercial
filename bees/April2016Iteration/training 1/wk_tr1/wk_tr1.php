@@ -53,6 +53,23 @@ if ($wiek >= 25)
 {
     echo 'do pracy!';
 }
+
+if($wiek != 100)
+{
+    echo "\n";
+    echo 'nie masz stu lat';
+}
+
+if($wiek == 100 || $wiek == 200)
+{
+    echo "\n";
+    echo 'masz 100 albo 200 lat';
+}
+
+if($wiek > (50 + 1450))
+{
+    echo 'duzo lat';
+}
 echo "\n";
 
 //petla
