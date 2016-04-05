@@ -1,5 +1,6 @@
 <?php
 
+
 	echo "\n";
 	echo 'To dzia³a';
 	echo "\n";
@@ -38,7 +39,7 @@
 		echo 'liceum';
 	}
 	
-	if ($wiek <=19 && $wiek < 24)
+	if ($wiek <= 19 && $wiek < 24)
 	{
 		echo 'studia';
 	}
@@ -46,3 +47,4 @@
 	echo "\n";
 	
 	//petla
+
