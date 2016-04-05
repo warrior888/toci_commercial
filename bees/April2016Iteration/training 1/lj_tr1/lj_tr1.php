@@ -1,12 +1,19 @@
+<!doctype html>
+<html lang="pl">
+<head>
+	<meta charset="UTF-8" />
+	<title>Spotkanie 2</title>
+</head>
+<body>
 <?php
 
 	echo "\n";
-	echo 'To działa';
+	echo 'To działa' . "<br>";
 	echo "\n";
 	
 	//zmienne
-	$wiek = 12;
-	$nazwa = 'tresc';
+	$wiek = 101;
+	$nazwa = 'treść';
 	$limitWiekuDoroslosci = 18;
 	
 	//operatory
@@ -15,43 +22,43 @@
 	//instrukcja warunkowa
 	if ($wiek >= $limitWiekuDoroslosci) 
 	{
-		echo 'Osoba jest dorosla';
+		echo 'Osoba jest dorosła' . "<br>";
 	}
 	else 
 	{
-		echo 'Osoba nie jest dorosla';
+		echo 'Osoba nie jest dorosla' . "<br>";
 	}
 	
-	if ($wiek > 6 && $wiek < 12)
+	
+	
+	if ($wiek > 6 && $wiek <= 12)
 	{
-		echo 'podstawowka';
+		echo 'podstawówka' . "\n";
 	}
 	
-	echo "\n";
 	
-	if ($wiek > 12 && $wiek < 15)
+	if ($wiek > 12 && $wiek <= 15)
 	{
-		echo 'gimbaza';
+		echo 'gimbaza' . "\n";
 	}
 	
-	echo "\n";
 	
-	if ($wiek > 15 && $wiek < 18)
-	{
-		echo 'sredniak';
+	if ($wiek > 15 && $wiek <= 18) {
+		echo 'średniak' . "\n";
 	}
 
-	echo "\n";
 	
-	if ($wiek > 18 && $wiek < 100)
+	if ($wiek > 18 && $wiek <= 100)
 	{
-		echo 'dorosly';
+		echo 'dorosły' . "\n";
 	}
 
-	echo "\n";
-	
+
 	if ($wiek > 100)
 	{
-		echo 'Jaki cudem ty jeszcze człowieku zyjesz ;)';
+		echo 'Jaki cudem ty jeszcze człowieku żyjesz ;)';
 	}
 	//pętla
+?>
+</body>
+</html>
