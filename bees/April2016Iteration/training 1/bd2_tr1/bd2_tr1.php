@@ -1,16 +1,50 @@
 <?php
-$wiek = 21;
 
-if ($wiek>=21) {
 	echo "\n";
-	echo "Wiek powyzej 21 lat";
-	echo "\n";
-} 
+	echo 'To dziala';
+	echo "\n"; 
+	
+	//zmienne
+	$wiek = 12;
+	$nazwa = 'tresc';
+	
+	$zinterpertowany = 'Moj wiek to: ' . $wiek;
+	
+	$limitWiekuDoroslosci = 18;
+	
+	//operatory
+	// + - * / || && == === > < >= <= .
+	
+	//true false null
+	
+	//instrukacja warunkowa
+	if ($wiek >= $limitWiekuDoroslosci)
+	{
+		echo 'Osoba jest dorosla';
+	}
 	else 
-{
-	echo "\n";
-	echo "Wiek ponizej 21 lat;";
-	echo "\n";
-}
-
+	{
+		echo 'Mamy tu dziecko';
+	}
+	
+	echo "\n"; 
+	
+	if ($wiek > 6 && $wiek < 12)
+	{
+		echo 'podstawowka';
+	}
+	
+	if ($wiek >= 12 && $wiek < 15)
+	{
+		echo 'gimbaza';
+	}
+	
+	echo "\n"; 
+	
+	//petla
+	
+	//funkcje
+	
+	// operatory i petle typu isset,while, foreach, switch 
+	
 ?>
