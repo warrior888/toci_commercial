@@ -1,4 +1,5 @@
 <?php
 echo  "\n";
-echo "PG";
+echo "Witaj œwiecie";
+echo "Hello World";
 echo  "\n";
