@@ -1,6 +1,11 @@
 <?php
 
+echo '/n';
+echo '/n';
 echo 'Hello World!';
-echo 'A tu dodam dodatkowa linie';
+$zmienna = 'A tu dodam dodatkowa linie';
+echo $zmienna;
+echo '/n';
+echo '/n';
 
 ?>
