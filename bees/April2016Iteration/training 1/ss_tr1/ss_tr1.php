@@ -38,7 +38,7 @@
 		echo 'liceum';
 	}
 	
-	if ($wiek <=19 && $wiek < 24)
+	if ($wiek <= 19 && $wiek < 24)
 	{
 		echo 'studia';
 	}
