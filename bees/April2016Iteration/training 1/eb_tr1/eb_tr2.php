@@ -1,9 +1,5 @@
 <?php
 
-	echo "\n";
-	echo 'To dziala';
-	echo "\n"; 
-	
 	//zmienne
 	$wiek = 12;
 	$nazwa = 'tresc';
@@ -39,10 +35,20 @@
 		echo 'gimbaza';
 	}
 	
+	if ($wiek >=15 && $wiek < 18)
+	{
+		echo 'licbaza';
+	}
+	
+	if ($wiek >= 18 && $wiek < 23)
+	{
+		echo 'studbaza';
+	}
+	
+	if ($wiek >= 23 && $wiek < 65)
+	{
+		echo 'pracbaza';
+	}
 	echo "\n"; 
 	
 	//petla
-	
-	//funkcje
-	
-	// operatory i petle typu isset,while, foreach, switch 
