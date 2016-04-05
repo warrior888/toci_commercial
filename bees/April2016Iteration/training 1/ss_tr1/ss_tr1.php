@@ -1,5 +1,6 @@
 <?php
 
+
 	echo "\n";
 	echo 'To dzia³a';
 	echo "\n";
@@ -46,3 +47,4 @@
 	echo "\n";
 	
 	//petla
+
