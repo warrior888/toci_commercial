@@ -1,6 +1,6 @@
 <?php
 
 echo 'Hello World!';
-echo 'A tu dodam dodatkow¹ linie';
+echo 'A tu dodam dodatkowa linie';
 
 ?>
