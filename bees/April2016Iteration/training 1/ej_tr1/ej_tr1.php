@@ -33,17 +33,17 @@
 		echo 'Gimbaza';
 	}
 	
-	if ($wiek >=15 && $wiek >21)
+	if ($wiek >=15 && $wiek <21)
 	{
 		echo 'Szko³a œrednia';
 	}
 	
-	if ($wike <=21 && $wiek > 25)
+	if ($wike >=21 && $wiek < 25)
 	{
 		echo 'Studia';
 	}
 	
-	if($wiek <=25 && wiek > 29)
+	if($wiek >=25 && wiek < 29)
 	{
 		echo 'Praca';
 	}

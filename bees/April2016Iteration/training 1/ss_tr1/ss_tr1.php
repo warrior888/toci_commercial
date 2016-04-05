@@ -1,3 +1,3 @@
 <?php
 
-echo "To dzia³a"
+echo "To dzia³a";
