@@ -25,27 +25,27 @@
 	
 	echo "\n"; 
 	
-	if ($wiek > 6 && $wiek < 12)
+	if (!(!($wiek >= 6) || !($wiek < 12)))
 	{
 		echo 'podstawowka';
 	}
 	
-	if ($wiek >= 12 && $wiek < 15)
+	if (!(!($wiek >= 12) || !($wiek < 15)))
 	{
 		echo 'gimbaza';
 	}
 	
-	if ($wiek >=15 && $wiek < 18)
+	if (!(!($wiek >=15) || !($wiek < 18)))
 	{
 		echo 'licbaza';
 	}
 	
-	if ($wiek >= 18 && $wiek < 23)
+	if (!(!($wiek >= 18) || !($wiek < 23)))
 	{
 		echo 'studbaza';
 	}
 	
-	if ($wiek >= 23 && $wiek < 65)
+	if (!(!($wiek >= 23) || !($wiek < 65)))
 	{
 		echo 'pracbaza';
 	}
