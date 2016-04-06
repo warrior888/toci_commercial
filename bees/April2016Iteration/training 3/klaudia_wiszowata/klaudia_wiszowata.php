@@ -9,12 +9,13 @@
 
 	echo "\n";
 	echo "Dlugosc tekstu: " . strlen($trescTekstowa);
-	echo "Moja dlugosc tekstu wynosi: " . bz_strlen($trescTekstowa);
+	echo "Moja dlugosc tekstu wynosi: " . kw_strlen($trescTekstowa);
 	echo "\n";
+	
 
 	//petla
 	
-	function bz_strlen($tekst)
+	function kw_strlen($tekst)
 	{
 		echo "\n";
 		echo 'Nic nie robie';
@@ -35,11 +36,20 @@
 
 	
 	
-	function in_strrev($tekst)
+	function kw_strrev($tekst)
 	{
+		echo "\n";
 		//$i; $i >= 0 $i--
 		//$nowaZmienna = $tekst[$i]
+		for ($i=0; isset($tekst[$i]); $i--)
+		{
+			
+		}
+		echo "\n";
+		return $i;
 	}
+	
+	echo "Costam: ". kw_strrev($trescTekstowa);
 
 	//tablice
 
