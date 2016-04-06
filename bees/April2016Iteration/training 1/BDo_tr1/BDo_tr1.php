@@ -5,12 +5,37 @@
 	echo "\n"; 
 	
 	//zmienne
-	$wiek = 12;
-	$nazwa = 'tresc';
+	$wiek = 19;
 	
-	$zinterpertowany = 'Moj wiek to: ' . $wiek;
+	$limitWieku = 18;
+	$limitEmerytalny = 67;
+	$genderWomen = false;
 	
-	$limitWiekuDoroslosci = 18;
+	if (($wiek >= $limitWieku) && ($wiek <= $limitEmerytalny) && !($genderWomen)) {
+		echo "\n";
+		echo 'Masz '.$wiek.', jestes pelnoletni, nie przekraczasz wieku emerytalnego, i jestes mezczyzna.';
+		echo "\n";
+	} else {
+		echo "\n";
+		echo 'Masz '.$wiek.', jestes gimbus';
+		echo "\n";
+	}
+	
+	//logika
+	$piesGlodny = true;
+	$piesNakarmiony = false;
+	
+	if ($piesGlodny===true) {
+		$piesNakarmiony = true;
+		echo 'Pies zostal nakarmiony';		
+	} else {
+		echo 'Pies nie jest glodny';
+	}
+	
+	
+	//is_nan
+	$nan = sqrt(100);	
+	var_dump($nan, !(is_nan($nan)));
 	
 	//operatory
 	// + - * / || && == === > < >= <= .
@@ -18,28 +43,7 @@
 	//true false null
 	
 	//instrukacja warunkowa
-	if ($wiek >= $limitWiekuDoroslosci)
-	{
-		echo 'Osoba jest dorosla';
-	}
-	else 
-	{
-		echo 'Mamy tu dziecko';
-	}
-	
-	echo "\n"; 
-	
-	if ($wiek > 6 && $wiek < 12)
-	{
-		echo 'podstawowka';
-	}
-	
-	if ($wiek >= 12 && $wiek < 15)
-	{
-		echo 'gimbaza';
-	}
-	
-	echo "\n"; 
+
 	
 	//petla
 	
