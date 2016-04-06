@@ -43,5 +43,9 @@
 	
 	//tablice
 
-	//funkcje strpos strrev palindrom strtr str_replace*
+	//funkcje strpos strrev substr palindrom strtr str_replace*
+	
+	
+	// beata ata => 2 || 3 
+	// beata, 2, 2 => at 
 	
