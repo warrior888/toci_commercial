@@ -3,13 +3,13 @@
 function ml_strrev($slowo)
 {
 	$dlugosc=strlen($slowo);
-	$slowo2='';	
+	$odwSlowo='';	
 	for($i=$dlugosc-1; $i>=0; $i--)
 	{
-		$slowo2.=$slowo[$i];
+		$odwSlowo.=$slowo[$i];
 	}
 	
-	return $slowo2;
+	return $odwSlowo;
 }
 
 echo ml_strrev('lenovo');
