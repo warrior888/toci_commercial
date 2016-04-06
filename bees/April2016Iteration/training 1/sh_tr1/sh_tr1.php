@@ -25,7 +25,7 @@
 	
 	else if($wiek >= 6 && $wiek <12)
 	{
-		echo 'Mamy tu podstawowke co za buractwo!';
+		echo 'Mamy tu podstawowke co za buractwo!''
 	}
 	
 	else if($wiek >=12 && $wiek < 15)
