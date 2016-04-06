@@ -9,8 +9,8 @@
 	$wiek = 12;
 	$zinterpretowany = 'Moj wiek to: ' . $wiek;
 	
-	// operatory
-	// + - * / || && == === < > <= >= .
+	// operatory 
+	// + - * / || && == === < > <= >= . ! !=
 	
 	// instrukcje warunkowe
 	if($wiek < 5)
@@ -25,7 +25,7 @@
 	
 	else if($wiek >= 6 && $wiek <12)
 	{
-		echo 'Mamy tu podstawowke co za buractwo!''
+		echo 'Mamy tu podstawowke co za buractwo!';
 	}
 	
 	else if($wiek >=12 && $wiek < 15)
@@ -49,3 +49,22 @@
 	
 	
 	// petle
+	
+	//funkcje
+	
+	//is set
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
