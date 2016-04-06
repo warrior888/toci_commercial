@@ -23,5 +23,20 @@ function sn_palindrom($tekst){
     }
 sn_palindrom("Ala");
 
-
+function sn_replace( $tekst_wejsciowy, $co_zamienic, $w_co_zmienic ) {
+    $tekst_wyjsciowy = "";
+    $i=0;
+	while($i<strlen($tekst_wejsciowy)){
+	 
+		if ( $tekst_wejsciowy[$i] ==  $co_zamienic ) {
+			$tekst_wyjsciowy .= $w_co_zmienic;
+		}
+        else{
+          $tekst_wyjsciowy.=$tekst_wejsciowy[$i];      
+        }
+    $i++; 
+	}
+    return $tekst_wyjsciowy;
+}
+echo sn_replace('Trolololo','o','olololo' );
 
