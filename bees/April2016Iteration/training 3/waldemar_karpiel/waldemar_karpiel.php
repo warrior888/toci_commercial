@@ -12,4 +12,20 @@ function wk_strrev($text)
     return $odwrocony;
 }
 
-echo wk_strrev('waldemar');
+function wk_palindrome($text)
+{
+    return $text == wk_strrev($text);
+}
+
+//function wk_strpos($myString, $findMe)
+//{
+//    for ($i = 0; $i <= strlen($myString); $i++)
+//    {
+//        if ($myString == $findMe)
+//        {
+//
+//        }
+//    }
+//}
+
+echo wk_strpos('waldemar', 'ald');
