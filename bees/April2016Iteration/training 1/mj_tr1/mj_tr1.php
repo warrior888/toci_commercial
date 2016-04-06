@@ -1,5 +1,27 @@
 <?php
 
+// Dla chêtnych - palindrom
+
+function czyPalindrom($str) {
+	$revStr = "";
+
+	for($i=strlen($str)-1; $i>=0; $i--)
+		$revStr .= $str[$i];
+
+	return $revStr == $str;
+}
+
+if(czyPalindrom("kajak")) {
+	echo "To slowo jest palindromem";
+} else {
+	echo "To slowo NIE jest palindromem";
+}
+
+
+
+
+
+/*
 $wiek = 23;
 
 if($wiek > 6 && $wiek < 12) {
@@ -13,3 +35,4 @@ if($wiek > 6 && $wiek < 12) {
 } else {
 	echo 'wolnosc!';
 }
+*/
