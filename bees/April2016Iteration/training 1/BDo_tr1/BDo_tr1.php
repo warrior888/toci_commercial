@@ -27,16 +27,41 @@
 	
 	if ($piesGlodny===true) {
 		$piesNakarmiony = true;
-		echo 'Pies zostal nakarmiony';		
+		echo 'Pies zostal nakarmiony';	
+		echo "\n";
 	} else {
 		echo 'Pies nie jest glodny';
+		echo "\n";
 	}
-	
+	echo "\n";
+	echo "\n";
 	
 	//is_nan
-	$nan = sqrt(100);	
-	var_dump($nan, !(is_nan($nan)));
+	$nan = 997;
 	
+	if (!(is_nan($nan))) {
+		echo $nan . " is an int!";
+		echo "\n";
+	} else {
+		echo $nan . " is not an int!";
+		echo "\n";
+	}
+	
+	if (is_int($nan)) {
+		echo $nan . " is an int!";
+		echo "\n";
+	} else {
+		echo $nan . " is not an int!";
+		echo "\n";
+	}
+	
+	if (is_float($nan)) {
+		echo $nan . " is a float!";
+		echo "\n";
+	} else {
+		echo $nan . " is not a float!";
+		echo "\n";
+	}
 	//operatory
 	// + - * / || && == === > < >= <= .
 	
