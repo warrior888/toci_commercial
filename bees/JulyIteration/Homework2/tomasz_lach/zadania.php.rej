@@ -1,0 +1,15 @@
+diff a/bees/Homework2/tomasz_lach/zadania.php b/bees/Homework2/tomasz_lach/zadania.php	(rejected hunks)
+@@ -151,7 +151,12 @@
+ // echo end($tescik);
+ 	
+ 	// zad 4 * 
+-$kwotaPrzelewu ="524 135 412";
++$kwotaPrzelewu = 524135412;
++
++
++echo ceil(log10($kwotaPrzelewu));
++echo log10($kwotaPrzelewu);
++
+ function numberToWords($number)
+ {
+ 	// 1. podzielic liczbe na 3 elementowe podliczby
