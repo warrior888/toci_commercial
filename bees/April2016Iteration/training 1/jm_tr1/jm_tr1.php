@@ -5,7 +5,7 @@
 	echo "\n"; 
 	
 	//zmienne
-	$wiek = 12;
+	$wiek = 68;
 	$nazwa = 'tresc';
 	
 	$zinterpertowany = 'Moj wiek to: ' . $wiek;
