@@ -22,6 +22,9 @@
 		
 		for ($i = 0; isset($text[$i]); $i++)
 		{
+			echo "\n";
+			echo "I wynosi: " . $i;
+			echo "\n";
 		}
 		
 		echo "\n";
@@ -40,5 +43,5 @@
 	
 	//tablice
 
-	//funkcje strpos strrev palindrom strtr str_replace
+	//funkcje strpos strrev palindrom strtr str_replace*
 	
