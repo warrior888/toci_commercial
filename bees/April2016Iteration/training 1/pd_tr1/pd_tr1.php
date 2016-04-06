@@ -2,11 +2,23 @@
 
 	$wiek = 19;
 
-	if($wiek > 15 && $wiek > 18)
+
+	if ($wiek >15 && $wiek < 21)
 	{
-		echo "szkola";
+		echo 'szkola srednia';
 	}
-	else if($wiek > 18 && $wiek < 22)
+	
+	else if ($wiek > 21 && $wiek < 25)
 	{
-		echo "studia";
+		echo 'Studia';
+	}
+	
+	else if($wiek > 25 && $wiek < 65)
+	{
+		echo 'Praca';
+	}
+	
+	else if($wiek > 65)
+	{
+		echo 'emerytura :D';
 	}

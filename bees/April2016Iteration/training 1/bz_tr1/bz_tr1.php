@@ -42,3 +42,7 @@
 	echo "\n"; 
 	
 	//petla
+	
+	//funkcje
+	
+	// operatory i petle typu isset,while, foreach, switch 

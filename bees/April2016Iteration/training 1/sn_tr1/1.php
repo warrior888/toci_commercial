@@ -1,20 +1,13 @@
 <?php
 
-
 	echo "\n";
-	echo 'To dzia³a';
+	echo 'To dziaÅ‚a';
 	echo "\n";
 
-	//zmienne
 	$wiek = 12;
 	$nazwa = 'tresc';
 	$limitWiekuDoroslosci = 18;
 	
-	//operatory
-	// + - * / || && == === < >= => =<
-	//true false null
-	
-	//instrukcja warunkowa
 	if ($wiek >= $limitWiekuDoroslosci)
 	{
 		echo 'Osoba jest dorosla';
@@ -39,12 +32,10 @@
 		echo 'liceum';
 	}
 	
-	if ($wiek <= 19 && $wiek < 24)
+	if ($wiek <=19 && $wiek < 24)
 	{
 		echo 'studia';
 	}
 	
 	echo "\n";
-	
-	//petla
-
+?>
