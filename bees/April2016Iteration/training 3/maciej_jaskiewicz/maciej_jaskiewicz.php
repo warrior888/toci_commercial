@@ -1,4 +1,6 @@
 <?php
+<<<<<<< HEAD
+=======
 
 function mj_strrev($str) {
 	$revStr = "";
@@ -13,10 +15,11 @@ function mj_strrev($str) {
 function isPalindrom($str) {
 	$revStr = "";
 
-	for($i=strlen($str)-1; $i>=0; $i--)
+	for($i=strlen($str)-1; $i>=0; $i--) {
 		$revStr .= $str[$i];
+	}
 
-		return $revStr == $str;
+	return $revStr == $str;
 }
 
 function mj_strlen($str) {
@@ -34,3 +37,4 @@ if(isPalindrom("kajak")) echo "To slowo jest palindromem"."\n";
 else echo "To slowo NIE jest palindromem"."\n";
 
 echo mj_strrev($string)."\n";
+>>>>>>> aabedec9dd5bfc9ab007eae89d082ee2717d8787
