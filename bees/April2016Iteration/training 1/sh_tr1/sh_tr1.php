@@ -10,7 +10,7 @@
 	$zinterpretowany = 'Moj wiek to: ' . $wiek;
 	
 	// operatory 
-	// + - * / || && == === < > <= >= . ! !=
+	// + - * / || && == === < > <= >= . ! !=	
 	
 	// instrukcje warunkowe
 	if($wiek < 5)
