@@ -27,3 +27,8 @@
 		return $i;
 	}
 	
+	function in_strrev($text)
+	{
+		
+	}
+	
