@@ -6,10 +6,8 @@ function bd_strrev($str){
     for($i; $i>=0; $i--){
         $string .= $str[$i];
     }
-    echo $string;
-    echo "\n";
-
-
+    return $string;
 }
 
 echo bd_strrev('blazej');
+echo "\n";
