@@ -1,11 +1,10 @@
 <?php
 
-	$wiek = 19;
-
+	$wiek = 70;
 
 	if ($wiek >15 && $wiek < 21)
 	{
-		echo 'szkola srednia';
+		echo 'Szkola srednia';
 	}
 	
 	else if ($wiek > 21 && $wiek < 25)
@@ -20,5 +19,5 @@
 	
 	else if($wiek > 65)
 	{
-		echo 'emerytura :D';
+		echo 'Emerytura';
 	}
