@@ -1,35 +1,64 @@
 <?php
+
+
+function lc_strlen($string)
+{
+    $dlugosc = 0;
+    for($i = 0; isset($string[$i]); $i++ )
+    {
+        $dlugosc += 1;	
+    }	
+    return $dlugosc;
+}
+
 function lc_strrev($nazwa)
 {
-    $dlugosc = strlen($nazwa);
+    $nazwa_odwrotna ='';
+    $dlugosc = lc_strlen($nazwa);
     for($i=$dlugosc-1;$i >=0;$i--)
     {
-        $nazwa1 .= $nazwa[$i];
+         $nazwa_odwrotna .= $nazwa[$i];
     }
-    return $nazwa1;
+    return  $nazwa_odwrotna;
 }
-function lc_palindrom($string)
-	{
-        $palindrom = '';
-        $dlugosc = strlen($string);
-        $palindrom = lc_strrev($string);
-    
-		for($i = $dlugosc - 1; $i >= 0; $i--)
-		{
-			$palindrom .= $string[$i];
-		}
+
+function lc_replace($string)
+{
+    $str = "";
+    for($i=0; $i<lc_strlen($string); $i++)
+    {
+        if($string[$i] != " ")
+        {
+            $str .= $string[$i];
+		}		
+    }
 		
-		if($palindrom == $string)
-		{
-			return 'Palindrom';
-		}
-		else 
-		{
-			return 'Nie Palindrom';
-		}
-	}
+    return $str;
+}
+
+function lc_palindrom($string)
+{
+    $string = lc_replace($string);
+    $palindrom = '';
+    for($i = lc_strlen($string) - 1; $i >= 0; $i--)
+    {
+        $palindrom .= $string[$i];
+    }
+    if($palindrom == $string)
+    {
+        return 'palindrom';
+    }
+    else 
+    {
+        return 'Niestety nie jest to palindrom';
+    }
+}
 	
-	echo lc_palindrom('Text probny a co');
-	
-echo lc_strrev('text');
+
+echo lc_palindrom('diabel zyl');
+echo("<br>");
+echo lc_strrev('Diabel zyl');
+echo("<br>");
+echo lc_replace('proba');
+
 ?>
