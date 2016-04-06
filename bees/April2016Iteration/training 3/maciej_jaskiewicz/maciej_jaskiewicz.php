@@ -13,10 +13,11 @@ function mj_strrev($str) {
 function isPalindrom($str) {
 	$revStr = "";
 
-	for($i=strlen($str)-1; $i>=0; $i--)
+	for($i=strlen($str)-1; $i>=0; $i--) {
 		$revStr .= $str[$i];
+	}
 
-		return $revStr == $str;
+	return $revStr == $str;
 }
 
 function mj_strlen($str) {
