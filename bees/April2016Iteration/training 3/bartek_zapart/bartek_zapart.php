@@ -43,5 +43,5 @@
 	
 	//tablice
 
-	//funkcje strpos strrev palindrom strtr str_replace
+	//funkcje strpos strrev palindrom strtr str_replace*
 	
