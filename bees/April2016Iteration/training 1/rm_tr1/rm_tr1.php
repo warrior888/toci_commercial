@@ -32,42 +32,42 @@
 	
 	//INSTRUKCJA WARUNKOWA IF (ELSE)
 	echo "\n";
+	echo 'Osoba ma ' . $wiek . ' lat ';
 	if ($wiek >= $LimitWiekuDoroslosci)
 	{
-		echo 'Osoba jest dorosla';
+		echo 'jest dorosla i ';
 	}
 	else
 	{
-		echo 'Osoba nie jest dorosla';
+		echo 'nie jest dorosla i ';
 	}
-	echo "\n";
 	if ($wiek <= 6)
 	{
-		echo 'Osoba jest w domu :)';
+		echo 'jest w domu :) - dziecko.';
 	}
 	if ($wiek > 6 && $wiek <= 12)
 	{
-		echo 'Osoba uczy sie w podstawowce';
+		echo 'uczy sie w podstawowce.';
 	}
 	if ($wiek > 12 && $wiek <= 15)
 	{
-		echo 'Osoba uczy sie w gimnazjum';
+		echo 'uczy sie w gimnazjum.';
 	}
 	if ($wiek > 15 && $wiek <= 18)
 	{
-		echo 'Osoba uczy sie w liceum';
+		echo 'uczy sie w liceum.';
 	}
 	if ($wiek > 18 && $wiek <= 24)
 	{
-		echo 'Osoba studiuje';
+		echo 'studiuje.';
 	}
 	if ($wiek > 24 && $wiek <= 67)
 	{
-		echo 'Osoba pracuje zawodowo';
+		echo 'pracuje zawodowo.';
 	}
 	if ($wiek > 67)
 	{
-		echo 'Osoba jest na emeryturze';
+		echo 'jest na emeryturze.';
 	}
 	echo "\n \n";
 	
