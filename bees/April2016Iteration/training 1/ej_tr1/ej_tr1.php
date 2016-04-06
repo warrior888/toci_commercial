@@ -1,7 +1,5 @@
 <?php
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
+
 	echo "\n\n";
 	echo 'Wybierz dzia³anie:';
 	echo "\n---------------------\n";
