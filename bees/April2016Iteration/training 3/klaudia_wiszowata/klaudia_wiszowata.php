@@ -36,21 +36,21 @@
 
 	
 	
-	function kw_strrev($tekst)
+
+	function kw_strrev($slowo)
+{
+	$dlugosc=strlen($slowo);
+	$odwSlowo='';	
+	for($i=$dlugosc-1; $i>=0; $i--)
 	{
-		echo "\n";
-		//$i; $i >= 0 $i--
-		//$nowaZmienna = $tekst[$i]
-		for ($i=0; isset($tekst[$i]); $i--)
-		{
-			
-		}
-		echo "\n";
-		return $i;
+		$odwSlowo.=$slowo[$i];
 	}
 	
-	echo "Costam: ". kw_strrev($trescTekstowa);
+	return $odwSlowo;
+}
 
+echo "Wynik: ". kw_strrev('costamcos');
+	
 	//tablice
 
 	//funkcje strpos strrev palindrom strtr str_replace
