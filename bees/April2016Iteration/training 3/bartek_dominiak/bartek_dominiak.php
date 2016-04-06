@@ -11,3 +11,7 @@
 		
 		return $length;
 	}
+	
+	//tablice
+	
+	//funkcje strpos strrev palindrom strtr str_replace
