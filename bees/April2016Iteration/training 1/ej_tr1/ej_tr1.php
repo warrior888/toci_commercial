@@ -8,7 +8,7 @@
 	echo '3. Dzielenie'."\n";
 	echo '4. Mnozenie'. "\n\n";
 	
-	$rodzajDzialania = 6;
+	$rodzajDzialania = 1;
 	
 	$wartoscA = 15;
 	$wartoscB = 55;
@@ -17,7 +17,7 @@
 	{
 		echo 'Wybrales dodawanie'."\n";
 		$wynikDzialania = $wartoscA + $wartoscB;
-		echo $wartoscA .' + '. $wartoscB . ' = ' .$wartoscA+$wartoscB; // dlaczego jako wynik jest 70
+		echo $wartoscA .' + '. $wartoscB . ' = ' . ($wartoscA+$wartoscB); // dlaczego jako wynik jest 70
 		echo "\n";
 		echo $wartoscA. ' + '. $wartoscB. ' = '. $wynikDzialania;
 	} elseif ($rodzajDzialania == 2)
