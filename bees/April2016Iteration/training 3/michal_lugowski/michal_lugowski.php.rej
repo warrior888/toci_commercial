@@ -1,0 +1,9 @@
+diff a/bees/April2016Iteration/training 3/michal_lugowski/michal_lugowski.php b/bees/April2016Iteration/training 3/michal_lugowski/michal_lugowski.php	(rejected hunks)
+@@ -2,6 +2,7 @@
+ //
+ 
+ /*
++//strpos
+ function ml_strpos($string, $find)
+ {
+ 	$stringlen = strlen($string);
