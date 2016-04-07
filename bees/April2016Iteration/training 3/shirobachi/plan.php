@@ -6,10 +6,9 @@
 	
 	// instrukcje warunkowe	
 	
-	// petle
-	
+	// petle 
 	//funkcje
-	//strpos strtr str_replace substr
+	// strtr str_replace substr
 	
 	//tablice
 	
