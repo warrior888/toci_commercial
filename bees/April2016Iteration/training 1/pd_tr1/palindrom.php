@@ -23,5 +23,4 @@
 		}
 	}
 	
-	echo palindrom('a tu jaka ta kajuta');
 	
