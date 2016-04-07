@@ -1,4 +1,6 @@
 <?php
+<<<<<<< HEAD
+=======
 	echo "\n";
 	echo 'To dziala';
 	echo "\n";
@@ -60,3 +62,4 @@
 	echo "\n";
 	
 	//petla
+>>>>>>> b627783605eea06d4c4fe82961a22edf2335961e

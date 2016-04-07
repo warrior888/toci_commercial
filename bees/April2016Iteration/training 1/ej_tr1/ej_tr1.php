@@ -1,13 +1,11 @@
 <?php
 
-	echo "\n\n";
-	echo 'Wybierz dzia³anie:';
-	echo "\n---------------------\n";
-	echo '1. Dodawanie'."\n";
-	echo '2. Odejmowanie'. "\n";
-	echo '3. Dzielenie'."\n";
-	echo '4. Mnozenie'. "\n\n";
+	$tablica_numerow = array(1,2,3,4,55,66,77);
+	var_dump($tablica_numerow);
 	
+<<<<<<< HEAD
+
+=======
 	$rodzajDzialania = 1;
 	
 	$wartoscA = 15;
@@ -45,4 +43,5 @@
 	echo "\n";
 	
 	echo "\n" . '---------------------------'."\n";
+>>>>>>> eef5e77582f3f1229830d2a51dd5544e4d953ade
 
