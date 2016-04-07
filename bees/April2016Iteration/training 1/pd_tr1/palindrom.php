@@ -6,7 +6,7 @@
 	function palindrom($string)
 	{
 		$string = replace($string);
-		$pali = "";
+		$pali = '';
 		
 		for($i = length($string) - 1; $i >= 0; $i--)
 		{
@@ -15,13 +15,13 @@
 		
 		if($pali == $string)
 		{
-			return "tak";
+			return 'tak';
 		}
 		else 
 		{
-			return "nie";
+			return 'nie';
 		}
 	}
 	
-	echo palindrom("a tu jaka ta kajuta");
+	echo palindrom('a tu jaka ta kajuta');
 	
