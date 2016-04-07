@@ -1,20 +1,64 @@
 <?php
-echo "Działa ";
-$wiek = 16;
-if($wiek > 16 && $wiek < 19)
+
+
+function lc_strlen($string)
 {
-    echo 'Szkola srednia';
+    $dlugosc = 0;
+    for($i = 0; isset($string[$i]); $i++ )
+    {
+        $dlugosc += 1;	
+    }	
+    return $dlugosc;
 }
-if($wiek == 18)
+
+function lc_strrev($nazwa)
 {
-    echo 'Liceum';
+    $nazwa_odwrotna ='';
+    $dlugosc = lc_strlen($nazwa);
+    for($i=$dlugosc-1;$i >=0;$i--)
+    {
+         $nazwa_odwrotna .= $nazwa[$i];
+    }
+    return  $nazwa_odwrotna;
 }
-else
+
+function lc_replace($string)
 {
-    echo 'Technikum';
+    $str = "";
+    for($i=0; $i<lc_strlen($string); $i++)
+    {
+        if($string[$i] != " ")
+        {
+            $str .= $string[$i];
+		}		
+    }
+		
+    return $str;
 }
-if($wiek > 19 && $wiek < 24 || $wiek<25)
+
+function lc_palindrom($string)
 {
-    echo ' Studia ';
+    $string = lc_replace($string);
+    $palindrom = '';
+    for($i = lc_strlen($string) - 1; $i >= 0; $i--)
+    {
+        $palindrom .= $string[$i];
+    }
+    if($palindrom == $string)
+    {
+        return 'palindrom';
+    }
+    else 
+    {
+        return 'Niestety nie jest to palindrom';
+    }
 }
+	
+
+echo lc_palindrom('diabel zyl');
+echo("<br>");
+echo lc_strrev('Diabel zyl');
+echo("<br>");
+echo lc_replace('proba');
+
 ?>
