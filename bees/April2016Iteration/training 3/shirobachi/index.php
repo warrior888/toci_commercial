@@ -2,4 +2,4 @@
 
 $variablefortext = "anyword";
 
-echo $variablefortext[1];
+echo $variablefortext[1]; 

@@ -8,7 +8,8 @@
 	
 	// petle 
 	//funkcje
-	// strtr str_replace substr
+	//  str_replace substr
+	// nie dziala strtr oraz strpos tak jak powienie ;/ nie wiem czemy ;(
 	
 	//tablice
 	
