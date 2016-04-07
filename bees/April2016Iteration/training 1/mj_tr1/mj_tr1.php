@@ -1,15 +1,18 @@
 <?php
 
-$wiek = 23;
+// Dla chêtnych
 
-if($wiek > 6 && $wiek < 12) {
-	echo 'podstawowka';
-} else if($wiek >= 12 && $wiek < 16) {
-	echo 'gimbaza';
-} else if($wiek >= 16 && $wiek < 19) {
-	echo 'ponadgimnazjalna';
-} else if($wiek >= 19 && $wiek < 24) {
-	echo 'studia';
+function isPalindrom($str) {
+	$revStr = "";
+
+	for($i=strlen($str)-1; $i>=0; $i--)
+		$revStr .= $str[$i];
+
+	return $revStr == $str;
+}
+
+if(isPalindrom("kajak")) {
+	echo "To slowo jest palindromem";
 } else {
-	echo 'wolnosc!';
+	echo "To slowo NIE jest palindromem";
 }

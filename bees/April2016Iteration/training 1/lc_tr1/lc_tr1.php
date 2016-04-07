@@ -1,13 +1,20 @@
 <?php
 echo "Działa ";
-
-$wiek = '14';
-if($wiek > 16 && $wiek < 20)
+$wiek = 16;
+if($wiek > 16 && $wiek < 19)
 {
-    echo 'Szkoła średia';
+    echo 'Szkola srednia';
 }
-if($wiek > 20 && $wiek < 24)
+if($wiek == 18)
 {
-    echo 'Studia ';
+    echo 'Liceum';
+}
+else
+{
+    echo 'Technikum';
+}
+if($wiek > 19 && $wiek < 24 || $wiek<25)
+{
+    echo ' Studia ';
 }
 ?>

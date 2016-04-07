@@ -13,7 +13,7 @@
 	$limitWiekuDoroslosci = 18;
 	
 	//operatory
-	// + - * / || && == === > < >= <= .
+	// + - * / || && == === > < >= <= . ! =! [] ++ -- += -= *= /=
 	
 	//true false null
 	
@@ -42,3 +42,7 @@
 	echo "\n"; 
 	
 	//petla
+	
+	//funkcje
+	
+	// operatory i petle typu isset,while, foreach, switch 
