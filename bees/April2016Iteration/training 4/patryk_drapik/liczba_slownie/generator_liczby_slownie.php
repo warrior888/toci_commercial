@@ -16,9 +16,9 @@
 			$slicesNumber = $this->sharingOnSlices($number);
 			$numberVerbally = $this->managerNumberToWords($slicesNumber);
 
-			$odmiana = new Numerals();
+			$numerals = new Numerals();
 			
-			return $odmiana->numeralsVerbally($numberVerbally, $slicesNumber);
+			return $numerals->numeralsVerbally($numberVerbally, $slicesNumber);
 		}
 		
 		protected function sharingOnSlices($number)
@@ -72,4 +72,6 @@
 	
 	
 	$test = new GeneratorNumberToVerbally();
-	echo $test->numberToVerbally('847848948974651897000000'); 
+	echo $test = $test->numberToVerbally('1784800000070548584846548748478481051040000001'); 
+	
+	
