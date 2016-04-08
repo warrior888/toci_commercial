@@ -14,7 +14,11 @@
 				"kwadrylion",
 				"kwadryliard",
 				"kwintylion",
-				"kwintyliard",	
+				"kwintyliard",
+				"sekstylion",
+				"sekstyliard",
+				"septylion",
+				"septyliard",		
 		);
 		
 		private $caps = array(
