@@ -13,7 +13,7 @@ function dd_strrev($textIn){
 	return $textOut;
 }
 
-function isPalindrom($wyraz){
+function dd_isPalindrom($wyraz){
 	$wordLength = dd_strlen($wyraz);
 	for($i =0; $i<$wordLength/2; $i++){
 		if($wyraz[$i] != $wyraz[$wordLength - $i - 1]){
@@ -25,9 +25,11 @@ function isPalindrom($wyraz){
 
 echo dd_strrev('text');
 echo "\n";
-if(isPalindrom("ala")){
+if(dd_isPalindrom("ala")){
 	echo 'Wyraz jest palindromem!';
 } else {
 	echo 'Wyraz nie jest palindromem!';
 }
+
+
 ?>
