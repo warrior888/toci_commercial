@@ -31,20 +31,11 @@
 			{
 				if($date["month"] == 2)
 				{
-					$checkLeapYear = $this->checkLeapYear($date);
-					
-					if($days > 0 && $days <= $this->numberDaysMonth[2][$checkLeapYear])
-					{
-						return true;
-					}
-					else 
-					{
-						return false;
-					}
+					return $days > 0 && $days <= $this->numberDaysMonth[2][$this->checkLeapYear($date)];
 				}
-				else if($days > 0 && $days <= $this->numberDaysMonth[$date["month"]])
+				else 
 				{
-					return true;
+					return $days > 0 && $days <= $this->numberDaysMonth[$date["month"]];
 				}
 			}
 			else
