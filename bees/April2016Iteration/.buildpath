@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<buildpath>
+	<buildpathentry kind="src" path="training 1/ab_tr1"/>
+	<buildpathentry kind="src" path="training 1/AK_tr1"/>
+	<buildpathentry kind="src" path="training 1/AR_tr1"/>
+	<buildpathentry kind="src" path="training 1/BD_tr1"/>
+	<buildpathentry kind="src" path="training 1/bd2_tr1"/>
+	<buildpathentry kind="src" path="training 1/bz_tr1"/>
+	<buildpathentry kind="src" path="training 1/dd_tr1"/>
+	<buildpathentry kind="src" path="training 1/do_tr1"/>
+	<buildpathentry kind="src" path="training 1/ej_tr1"/>
+	<buildpathentry kind="src" path="training 1/km_tr1"/>
+	<buildpathentry kind="src" path="training 1/kw_tr1"/>
+	<buildpathentry kind="src" path="training 1/lc_tr1"/>
+	<buildpathentry kind="src" path="training 1/lj_tr1"/>
+	<buildpathentry kind="src" path="training 1/mj_tr1"/>
+	<buildpathentry kind="src" path="training 1/mr_tr1"/>
+	<buildpathentry kind="src" path="training 1/pd_tr1"/>
+	<buildpathentry kind="src" path="training 1/pg_tr1"/>
+	<buildpathentry kind="src" path="training 1/pw_tr1"/>
+	<buildpathentry kind="src" path="training 1/rj_tr1"/>
+	<buildpathentry kind="src" path="training 1/rm_tr1"/>
+	<buildpathentry kind="src" path="training 1/shirobachi"/>
+	<buildpathentry kind="src" path="training 1/sn_tr1"/>
+	<buildpathentry kind="src" path="training 1/ss_tr1"/>
+	<buildpathentry kind="src" path="training 1/tf_tr1"/>
+	<buildpathentry kind="src" path="training 1/tj_tr1"/>
+	<buildpathentry kind="src" path="training 1/wk_tr1"/>
+	<buildpathentry kind="src" path="training 3/bartek_dominiak"/>
+	<buildpathentry kind="src" path="training 3/bartek_zapart"/>
+	<buildpathentry kind="src" path="training 3/blazej_doleska"/>
+	<buildpathentry kind="src" path="training 3/damian_dabrowski"/>
+	<buildpathentry kind="src" path="training 3/edwin"/>
+	<buildpathentry kind="src" path="training 3/emil_borysiuk"/>
+	<buildpathentry kind="src" path="training 3/jakub_michalski"/>
+	<buildpathentry kind="src" path="training 3/klaudia_wiszowata"/>
+	<buildpathentry kind="src" path="training 3/lukasz_cywka"/>
+	<buildpathentry kind="src" path="training 3/lukasz_janus"/>
+	<buildpathentry kind="src" path="training 3/maciej_jaskiewicz"/>
+	<buildpathentry kind="src" path="training 3/michal_lugowski"/>
+	<buildpathentry kind="src" path="training 3/patryk_drapik"/>
+	<buildpathentry kind="src" path="training 3/patryk_wilusz"/>
+	<buildpathentry kind="src" path="training 3/radoslaw_makowski"/>
+	<buildpathentry kind="src" path="training 3/rafal_janik"/>
+	<buildpathentry kind="src" path="training 3/shirobachi"/>
+	<buildpathentry kind="src" path="training 3/slawomir_sawicki"/>
+	<buildpathentry kind="src" path="training 3/szymon_nytko"/>
+	<buildpathentry kind="src" path="training 3/tomek_janusz"/>
+	<buildpathentry kind="src" path="training 3/waldemar_karpiel"/>
+	<buildpathentry kind="src" path="training 4/bartek_zapart"/>
+	<buildpathentry kind="src" path="training 4/lukasz_janus"/>
+	<buildpathentry kind="src" path="training 4/maciej_jaskiewicz"/>
+	<buildpathentry kind="src" path="training 4/patryk_drapik/liczba_slownie"/>
+	<buildpathentry kind="src" path="training 4/Shirobachi"/>
+	<buildpathentry kind="con" path="org.eclipse.php.core.LANGUAGE"/>
+</buildpath>
