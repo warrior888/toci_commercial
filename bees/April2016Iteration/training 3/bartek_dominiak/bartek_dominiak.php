@@ -21,7 +21,7 @@
 	{
 		$stringRev = '';
 		
-		for ($i=bd_strlen($string); $i>=0; $i--)
+		for ($i=bd_strlen($string)-1; $i>=0; $i--)
 		{
 			$stringRev .= $string[$i];
 		}
