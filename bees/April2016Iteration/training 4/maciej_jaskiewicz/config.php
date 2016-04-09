@@ -1,10 +1,12 @@
 <?php
 
-set_include_path(get_include_path(). PATH_SEPARATOR . "PeselValidation");
-set_include_path(get_include_path(). PATH_SEPARATOR . "StringLib");
+set_include_path(get_include_path(). PATH_SEPARATOR . "ZADANIA/PeselValidation");
+set_include_path(get_include_path(). PATH_SEPARATOR . "ZADANIA/ComplexStrings");
+
+set_include_path(get_include_path(). PATH_SEPARATOR . "library/StringLib");
 
 function __autoload($className) {
 
-	@include_once($className.".php");
+	require_once($className.".php");
 
 }
