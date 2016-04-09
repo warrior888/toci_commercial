@@ -1,26 +1,19 @@
 <?php
 
-<<<<<<< HEAD
+
 //funkcje strpos palindrom strtr str_replace*
 
 //strlen
 	function bd_strlen ($string)	
 	{		
-		for ($i=0; isset($string[$i]); $i++) 
-=======
-	function length($string)
-	{
-		$length = 0;
-		
 		for($i = 0; isset($string[$i]); $i++ )
->>>>>>> b0b23659d4aec846d4eea525cea6c8b16f30976f
 		{
 			
 		}
 		return $i;
 	}
 	
-<<<<<<< HEAD
+
 //strrev	
 	function bd_strrev ($string) 
 	{
@@ -89,8 +82,6 @@ echo '** Funkcja strpos **';
 echo "\n";
 echo 'Wyraz:' . bd_strpos($stringLonger, $stringNeedle);
 
-=======
 	//tablice
 	
 	//funkcje strpos strrev palindrom strtr str_replace
->>>>>>> b0b23659d4aec846d4eea525cea6c8b16f30976f
