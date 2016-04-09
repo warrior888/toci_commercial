@@ -23,6 +23,14 @@ function dd_isPalindrom($wyraz){
 	return true;
 }
 
+function dd_substr($od, $przez, $wyraz){
+	$subs = "";
+	for($i = $od; $i < $od + $przez; $i++ ){
+		$subs .= $wyraz[$i];
+	}	
+	return $subs;
+}
+
 echo dd_strrev('text');
 echo "\n";
 if(dd_isPalindrom("ala")){
@@ -30,6 +38,10 @@ if(dd_isPalindrom("ala")){
 } else {
 	echo 'Wyraz nie jest palindromem!';
 }
+
+echo "\n";
+echo dd_substr(2, 4, "neandertalczyk");
+echo "\n";
 
 
 ?>
