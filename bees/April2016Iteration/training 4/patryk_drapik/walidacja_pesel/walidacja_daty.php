@@ -24,7 +24,6 @@
 		
 		protected function checkDays($date)
 		{
-			$checkMonth = $this->checkMonth($date);
 			$days = (int)$date["days"];
 			
 			if($this->checkMonth($date))
