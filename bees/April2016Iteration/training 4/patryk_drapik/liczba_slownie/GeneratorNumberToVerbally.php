@@ -1,7 +1,7 @@
 <?php
 	
-	require_once 'liczby_slownie.php';
-	require_once 'liczebniki.php';
+	require_once 'NumberWords.php';
+	require_once 'Numerals.php';
 
 	class GeneratorNumberToVerbally extends NumberWords
 	{
@@ -72,6 +72,6 @@
 	
 	
 	$test = new GeneratorNumberToVerbally();
-	echo $test = $test->numberToVerbally('1784800000070548584846548748478481051040000001'); 
+	echo $test = $test->numberToVerbally('17848000000705485848465487'); 
 	
 	
