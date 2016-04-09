@@ -1,9 +1,8 @@
 <?php 
 
-//funkcje strlen strpos strrev substr palindrom strtr str_replace*
+//funkcje strlen strrev strpos substr palindrom strtr str_replace*
 
 //strlen
-
 	function bd_strlen ($string)	
 	{
 		$length = 0;
@@ -27,9 +26,17 @@
 		}
 		return $stringRev;
 	}
-
-$string = 'Przyklad';	
 	
+//strpos
+	function bd_strpos ($stringLonger, $stringMatch) 
+	{
+		
+	}
+
+$string = 'Przyklad';
+$stringLonger = 'Dluzszy ciag znakow do sprawdzenia';
+$stringMatch = 'do';
+
 //wypisywanie
 echo "\n";
 echo '** Funkcja strlen **';
@@ -40,3 +47,9 @@ echo "\n";
 echo '** Funkcja strrev **';
 echo "\n";
 echo 'Robie lustrzane odbicie wyrazu "' . $string . '": ' . bd_strrev($string);
+
+echo "\n";
+echo '** Funkcja strpos **';
+echo "\n";
+echo 'Szukam wyrazu "'. $stringMatch .'" w ciagu znakow: "' . $stringLonger . '": ' . bd_strpos($stringLonger, $stringMatch);
+
