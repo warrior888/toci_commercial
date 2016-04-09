@@ -39,9 +39,21 @@ if(dd_isPalindrom("ala")){
 	echo 'Wyraz nie jest palindromem!';
 }
 
+function dd_strpos($fragment ,$wyraz){
+	$dlugoscFrag = dd_strlen($fragment);
+	$dlugoscWyr = dd_strlen($wyraz);
+	
+	for ($i = 0; $i < ($dlugoscWyr - $dlugoscFrag); $i++) {
+		if( dd_substr($i, $dlugoscFrag, $wyraz) === $fragment) return $i;
+	}
+	return "nie ma!";
+}
+
+$napis = 'neandertalczyk';
 echo "\n";
-echo dd_substr(2, 4, "neandertalczyk");
+echo dd_substr(2, 4, $napis);
 echo "\n";
+echo 'fragment znajduje sie na pozycji: '.dd_strpos('tal', $napis);
 
 
 ?>
