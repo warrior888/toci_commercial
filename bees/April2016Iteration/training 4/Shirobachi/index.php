@@ -1,6 +1,7 @@
 <?php
+	/*
 
-	/*$rok = 2016;
+	$rok = 2016;
 	$rok = "jakis text";
 	
 	echo $rok;
@@ -35,7 +36,7 @@
 				
 			}
 	
-	echo $tekst;*/
+	echo $tekst;
 	
 	$ciekawa = 'piekna';
 	$piekna = 'sliczna';
@@ -52,6 +53,63 @@
 	{
 		echo 'pierwsza dziala';		
 	}
+	
+	
+	$text = 'slowo';
+	
+	echo $text.$text; // konkatenacja
+
+	$tablica = array(12,5,1,5,7,45,1,5,55); //utworzenie tablicy
+	
+	var_dump($tablica); //podejrzebnie wszystkich szufladek i ich typow (uzywany przy debagowaniu)
+	
+ 
+	$tablica = array(12,5,1,5,array(45,1,5,55)); //utworzenie tablicy z tablica w tablicy
+	
+	var_dump($tablica); //podejrzebnie wszystkich szufladek i ich typow (uzywany przy debagowaniu)
+	
+
+	$tablica = array (2 => 5, 1=>3, 6,12);
+	var_dump($tablica);
+	
+	$tablica = array('klucz' => 'cyrk');  //asociacia .. 
+	var_dump($tablica);
+
+	*/
+
+	$tablica = array(12,5,1,5,array(45,1,5,55));
+
+	foreach ($tablica as $key => $value)
+	{
+		if(is_array($value))
+		{
+			echo "Stary to jest tablica ;) \n";
+		}
+		
+		echo $key . '=>' . $value . "\n";
+	}
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
 	
 	
 	
