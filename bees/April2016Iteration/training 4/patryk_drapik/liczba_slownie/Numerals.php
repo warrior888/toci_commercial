@@ -63,8 +63,7 @@
 		
 		protected function checkVariety($number)
 		{
-			$number = (int)$number;
-			
+			$number = (int)substr($number, -2);
 			$lastNumber = (int)substr($number, -1);
 
 			if($number == 1)
@@ -77,7 +76,6 @@
 			}
 			else if($lastNumber > 1 && $lastNumber < 5)
 			{
-				
 				return 2;
 			}
 		}

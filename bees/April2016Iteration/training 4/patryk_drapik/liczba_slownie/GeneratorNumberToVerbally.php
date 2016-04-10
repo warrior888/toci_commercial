@@ -27,8 +27,8 @@
 			
 			while(strlen($number) > 0)
 			{
-					$slicesNumber[] = substr($number,-3);
-					$number = substr($number, 0, -3);
+				$slicesNumber[] = substr($number,-3);
+				$number = substr($number, 0, -3);
 			}
 			
 			return array_reverse($slicesNumber);
@@ -72,6 +72,6 @@
 	
 	
 	$test = new GeneratorNumberToVerbally();
-	echo $test = $test->numberToVerbally('17848000000705485848465487'); 
+	echo $test = $test->numberToVerbally('1000000'); 
 	
 	
