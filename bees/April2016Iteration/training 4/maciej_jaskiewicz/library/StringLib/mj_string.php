@@ -17,10 +17,10 @@ class MJ_STRING {
 		}
 		return $revStr;
 	}
-	
+
 	public static function strpos($string, $findEl, $offset = 0) {
-		for($i=$offset; $i<mj_strlen($string); $i++) {
-			if(mj_substr($string, $i, mj_strlen($findEl)) == $findEl) {
+		for($i=$offset; $i<self::strlen($string); $i++) {
+			if(self::substr($string, $i, self::strlen($findEl)) == $findEl) {
 				return $i;
 			}
 		}

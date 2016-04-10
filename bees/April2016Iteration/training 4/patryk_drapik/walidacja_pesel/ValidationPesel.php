@@ -1,7 +1,7 @@
 <?php
 	
-	require_once 'walidacja_daty.php';
-	require_once 'cyfra_kontrolna.php';
+	require_once 'ValidationDate.php';
+	require_once 'CheckDigitPesel.php';
 
 	class ValidationPesel
 	{
@@ -27,7 +27,7 @@
 				
 				$checkDate = new ValidationDate();
 				$checkDigit = new CheckDigitPesel();
-
+ 
 				return $checkDate->checkDate($this->date) && $checkDigit->checkDigit($pesel);
 			}
 			else
@@ -66,6 +66,6 @@
 	
 	
 	$test = new ValidationPesel();
-	$test = $test->checkPesel("49022901580");
-
+	$test = $test->checkPesel("49323001580");
+	
 	var_dump($test);
