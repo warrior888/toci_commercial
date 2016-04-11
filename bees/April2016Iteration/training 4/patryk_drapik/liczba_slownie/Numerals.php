@@ -36,29 +36,26 @@
 		{
 			$numberVerbally = "";
 			$sizeNumber = "";
-			$index = 0;
 
-			for($i = count($slicesNumber) - 1; $i >= 0; $i--)
+			for($i = count($slicesNumber) - 1, $j = 0; $i >= 0; $i--, $j++)
 			{
-				if($slicesNumber[$index] > 0)
+				if($slicesNumber[$j] > 0)
 				{
 					if($i == 1)
 					{
-						$sizeNumber = $this->numerals["tys"][$this->checkVariety($slicesNumber[$index])];
-						$numberVerbally .= $slicesNumberVerbally[$index]. $sizeNumber." ";	
+						$sizeNumber = $this->numerals["tys"][$this->checkVariety($slicesNumber[$j])];
+						$numberVerbally .= $slicesNumberVerbally[$j]. $sizeNumber." ";	
 					}
 					else if($i > 1)
 					{
-						$sizeNumber = $this->numerals[$i - 1]. $this->caps[$this->checkVariety($slicesNumber[$index])];
-						$numberVerbally .= $slicesNumberVerbally[$index]. $sizeNumber." ";
+						$sizeNumber = $this->numerals[$i - 1]. $this->caps[$this->checkVariety($slicesNumber[$j])];
+						$numberVerbally .= $slicesNumberVerbally[$j]. $sizeNumber." ";
 					}
 					else 
 					{
-						$numberVerbally .= $slicesNumberVerbally[$index];
+						$numberVerbally .= $slicesNumberVerbally[$j];
 					}
 				}
-				
-				$index++;
 			}
 			
 			return $numberVerbally;
@@ -66,29 +63,20 @@
 		
 		protected function checkVariety($number)
 		{
-			$number = (int)$number;
-			
-			if($number > 0)
-			{
-				$lastNumber = (int)substr($number, -1);
+			$number = (int)substr($number, -2);
+			$lastNumber = (int)substr($number, -1);
 
-				if($number == 1)
-				{
-					return 0;
-				}
-				else if(($number > 9 && $number < 22) || ($lastNumber < 2 && $number > 9) || ($lastNumber > 4 && $lastNumber < 10))
-				{
-					return 1;
-				}
-				else if($lastNumber > 1 && $lastNumber < 5)
-				{
-					
-					return 2;
-				}
-			}
-			else
+			if($number == 1)
 			{
 				return 0;
+			}
+			else if(($number > 9 && $number < 22) || ($lastNumber < 2 && $number > 9) || ($lastNumber > 4 && $lastNumber < 10))
+			{
+				return 1;
+			}
+			else if($lastNumber > 1 && $lastNumber < 5)
+			{
+				return 2;
 			}
 		}
 	}

@@ -64,7 +64,6 @@
 		}
 	}
 	
-	
 	$test = new ValidationPesel();
 	$test = $test->checkPesel("49323001580");
 	
