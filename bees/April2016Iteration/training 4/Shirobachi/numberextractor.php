@@ -2,7 +2,7 @@
 
 function NumberExtractor($word)
 {
-	$number = 0;
+	$number = '';
 	
 	for($i=0; $i<strlen($word); $i++)
 	{
@@ -35,8 +35,7 @@ function NumberExtractor($word)
 	
 }//fun
 
-	//$text = 'ashgdj2b3hb3b23j2b3hg23gj5gk3jhb6g578f6fgfd';
-	$text = "s"; //WTF s==0 ??	
+	$text = 'ashgdj2b3hb3b23j2b3hg23gj5gk3jhb6g578f6fgfd';
 
 
 
