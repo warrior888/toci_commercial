@@ -75,8 +75,6 @@
 	$tablica = array('klucz' => 'cyrk');  //asociacia .. 
 	var_dump($tablica);
 
-	*/
-
 	$tablica = array(12,5,1,5,array(45,1,5,55));
 
 	foreach ($tablica as $key => $value)
@@ -89,11 +87,28 @@
 		echo $key . '=>' . $value . "\n";
 	}
  
+	*/
+                          //    0123456789
+//	$var = 'ala ma kota'; // => ala NIE ma kota 
 
+//	echo $var . "\n";
 
+//	substr_replace($var, 'nie', 4);
+//	substr_replace('nie', $var, 4);
 
+//	echo $var . "\n";
 
+$var = 'ala ma kota';
+echo "$var\n";
 
+$var = substr_replace($var, 'nie ', 4, 0);
+echo $var;
+
+//substr_replace(string, replacement, start, how_many)
+// string - napis na którym wykonujemy operacje
+// replacement - element ktory dorzucam 
+// start index gdzie zaczynam
+// how_many ile usunac? 
 
 
 
