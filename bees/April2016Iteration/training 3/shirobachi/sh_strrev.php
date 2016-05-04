@@ -11,7 +11,7 @@
 
 	function sh_strrev($word)
 	{
-		$newword;
+		$newword = '';
 		
 		for($i=sh_strlen($word)-1; $i>=0; $i--)
 		{

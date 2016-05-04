@@ -27,8 +27,7 @@ function str_is($word1, $word2)
 
 str_is($word1, $word2);
 echo "osc wystapilo $trafienia razy w slowie zczegolnosc!";
-*/
-//====
+*/ 
 
 //code repair by Patryk Wilusz! 
 $word1 = 'szczegolnosc';
@@ -45,18 +44,18 @@ function str_is($word1, $word2)
             for($j=1; $j < strlen($word2); $j++, $k++)
             {
                 if($word1[$k] != $word2[$j]){
-                    echo $word1[$k]."!=".$word2[$j]."\n";
+                    //echo $word1[$k]."!=".$word2[$j]."\n";
                     break;
-                }
+                }//if
                 else if($word1[$k] == $word2[$j] && $j == strlen($word2)-1)
                 {
                     $trafienia++;
                     break;                 
-                }
-            }
-        }
-    }
+                }//esle
+            }//for
+        }//if
+    }//for
     return $trafienia;
-}
+}//fun
  
-echo "osc wystapilo ".str_is($word1, $word2)." razy!";
+echo "osc wystapilo ".str_is($word1, $word2)." razy w słowie szczegolnosc!";
