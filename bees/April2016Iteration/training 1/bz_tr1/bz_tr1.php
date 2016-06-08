@@ -13,7 +13,7 @@
 	$limitWiekuDoroslosci = 18;
 	
 	//operatory
-	// + - * / || && == === > < >= <= .
+	// + - * / || && == === > < >= <= . ! =! [] ++ -- += -= *= /=
 	
 	//true false null
 	

@@ -1,0 +1,5 @@
+2016-04-22 08:10 DOM1 Okno Otworz NULL Agnieszka
+2016-04-22 08:12 DOM1 Okno Zamknij NULL Arek
+2016-04-22 08:15 DOM1 Telewizor Wlacz NULL Alicja
+2016-04-22 08:24 DOM1 Radio Wlacz NULL Bartek
+2016-04-22 08:26 DOM1 Pralka Wlacz Brak_zasilania Bartek

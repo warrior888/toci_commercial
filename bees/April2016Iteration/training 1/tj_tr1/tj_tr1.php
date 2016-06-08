@@ -1,49 +1,34 @@
 <?php
-	echo "\n";
-	echo 'To dziala';
-	echo "\n";
 
-	//zmienne
-	$wiek = 30;
-	$nazwa = 'tresc';
-	$limitWiekuDoroslosci = 18;
-	
-	//operatory
-	// + - * / || && == === < >= => =<
-	//true false null
-	
-	//instrukcja warunkowa
-	if ($wiek >= $limitWiekuDoroslosci)
-	{
-		echo 'Osoba jest dorosla';
-	}
-	else
-	{
-		echo 'Mamy tu dziecko';
-	}
+	$trescTextowa = 'cokolwiek';
 	echo "\n";
-	if ($wiek > 6 && $wiek < 12)
-	{
-		echo 'podstawowka';
-	}
 	
-	if ($wiek >= 12 && $wiek < 16)
-	{
-		echo 'gimanzjum';
-	}
+	echo $trescTextowa[1] . $trescTextowa[7];
+	echo "\n";
+	echo "Dlugosc textu: " . strlen($trescTextowa);
 	
-	if ($wiek >= 16 && $wiek < 19)
-	{
-		echo 'liceum';
-	}
-	
-	if ($wiek >= 19 && $wiek < 25)
-	{
-		echo 'studia';
-	}
-	else 
-	 	echo 'Chodzisz do pracy, przykro mi ';
+	echo tj_strlen($trescTextowa);
 	
 	echo "\n";
 	
-	//petla
+	function tj_strlen($text)
+	{
+		echo "\n";
+		echo 'nic nie robie';
+		var_dump(isset($text[9]));
+		
+		for ($i = 0; isset($text[$i]); $i++)
+		{
+			
+		}
+		
+		echo "\n";
+		
+		return $i;
+	}
+	
+	function in_strrev($text)
+	{
+		
+	}
+	
