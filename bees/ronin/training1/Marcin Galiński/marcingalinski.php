@@ -1,7 +1,7 @@
 <?php
 	
 	
-	
+	/*
 	//1
 	
 	$tab = array( 'a'=> 10 , 'b' => 50 , 'c' => 100 , 'd' =>30 , 'e' => 65 );
@@ -27,8 +27,11 @@
 	//6
 	$result = marcingalinskiStringReplace("beata", "ta", "tka");
 	echo $result . "\n";
+	*/
 	
 	
+	
+	//1*******************************************************************************
 	function marcingalinskiFindElementInTable($table, $element)
 	{
 		foreach( $table as $key => $value )
@@ -40,6 +43,7 @@
 		}
 	}
 	
+	//2*******************************************************************************
 	function marcingalinskiOwnSubString($text, $start, $length)
 	{
 		$zm = "";
@@ -50,6 +54,7 @@
 		return $zm;
 	}
 	
+	//3*******************************************************************************
 	function marcingalinskiLetterPosition($text, $letter)
 	{
 		for( $i = 0 ; $i <= (strlen($text) - 1) ; $i++ )
@@ -62,36 +67,26 @@
 		return (-1);
 	}
 	
+	//4*******************************************************************************
 	function marcingalinskiCountLetters($string)
 	{
+		
+		
 		$tab = array();
-		/*for( $i = 0 ; $i < strlen( $string ) ; $i++ )
+		for( $i = 0 ; $i < strlen( $string ) ; $i++ )
 		{
-			++$tab[$string[$i]];
+			@++$tab[($string[$i])];
 		}
 		
-		return $tab;*/
-		
-		for( $i = 0 ; $i < strlen($string) ; $i++ )
-		{
-			$tab[$string[$i]] = 0;
-			//echo $tab[$string[$i]];
-		}
-		
-		foreach( $tab as $key => $value )
-			echo $tab[$key]++;
-		
-		var_dump($tab);
-		
+		return $tab;
 	}
 	
+	//5*******************************************************************************
 	function marcingalinskiStringPosition($text, $needle)
 	{
 		for( $i = 0 ; $i < (strlen($text)) ; $i++ )
 		{
-			//echo $text[$i] . " ";
 			$subString = marcingalinskiOwnSubString($text, $i , strlen($needle) );
-			//echo $subString . "<br/>";
 			if( $subString == $needle )
 			{
 				return $i;
@@ -100,6 +95,7 @@
 		return (-1);
 	}
 	
+	//6*******************************************************************************
 	function marcingalinskiStringReplace($text, $needle, $replace)
 	{
 		$poz = marcingalinskiStringPosition($text, $needle);
@@ -108,7 +104,5 @@
 			$text[$i] = "";
 		}
 		$text .= $replace;
-		//var_dump($text);
 		return $text;
 	}
-?>
