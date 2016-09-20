@@ -55,7 +55,7 @@
 	
 		return $retVal; 
 	}
-	echo FormatAccountNumber('1010204839252734584734');
+	//echo FormatAccountNumber('1010204839252734584734');
 	
 	
 	
@@ -77,5 +77,53 @@
 		// 123 456 123 
 		// sto dwadziescia trzy miliony czterysta piecdziesiat szesc tysiecy sto dwadziescxia trzy
 	}
+	
+	
+	//Napisz funkcje, ktora zwraca reprezentacje slowna podanego ciagu liczb, np. 1234 zwroci jeden dwa trzy cztery
+	
+	
+	function PodajReprezentacjeSlowna($liczba)
+	{
+	$liczba = str_split($liczba);
+	$tmp ="";
+		foreach ($liczba as $v) 
+		{	
+			switch ($v) {
+				case "1":
+				$tmp.="jeden ";
+				break;
+				case "2":
+				$tmp.="dwa ";
+				break;
+				case "3":
+				$tmp.="trzy ";
+				break;
+				case "4":
+				$tmp.="cztery ";
+				break;
+				case "5":
+				$tmp.="piec ";
+				break;
+				case "6":
+				$tmp.="szesc ";
+				break;
+				case "7":
+				$tmp.="siedem ";
+				break;
+				case "8":
+				$tmp.="osiem ";
+				break;
+				case "9":
+				$tmp.="dziwiec ";
+				break;
+				case "0":
+				$tmp.="zero ";
+				break;		
+		}
+		}
+		return $tmp;
+	}
+	
+	echo PodajReprezentacjeSlowna("67578");
 	
 	//echo GetMoneyValue('123 456 123');
