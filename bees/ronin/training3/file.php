@@ -12,12 +12,14 @@
 			
 			//var_dump($codeAndBank);
 			$result .= '\''.$codeAndBank[0].'\' => \''.trim($codeAndBank[1]).'\', ';
+			//var_dump(fputs($handle,'\''.$codeAndBank[0].'\' => \''.trim($codeAndBank[1]).'\', '));
 		}
 		
 		return $result;
 	}
 	
-	echo GetCode();
+	$res = GetCode();
+	file_put_contents('banki_out.txt', $res);
 	
 	function ValidatePesel($peselCandidate)
 	{
