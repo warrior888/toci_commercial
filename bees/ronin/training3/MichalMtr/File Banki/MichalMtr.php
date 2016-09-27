@@ -2,7 +2,7 @@
 
 // -----------------------------------------------------------------------------------
 // Programming Course: PHP Basics (bees), by Bartłomiej Zapart (TOCI), September 2016.
-// Homework after Training 3 session, dated 2016.09.25. Part 1 of 4.
+// Homework after Training 3 session, dated 2016.09.25. Part 1 of 3.
 // Author:	MichalMtr (mtr180deg)
 // -----------------------------------------------------------------------------------
 
