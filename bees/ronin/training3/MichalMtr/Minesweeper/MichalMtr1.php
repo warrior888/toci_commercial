@@ -15,7 +15,7 @@
 		
 	$columns = 5;
 	$rows = 5;
-	$bombs = 7;
+	$bombs = 3;
 	
 	GenerateMinesweeperTable($columns, $rows, $bombs);
 	
@@ -23,8 +23,8 @@
 	// Main function.----------------------------------------------------------------------- 
 	function GenerateMinesweeperTable($dimX, $dimY, $bombsNumber)
 	{	
-		if (is_numeric($dimX) && is_numeric($dimY) && 
-			is_numeric($bombsNumber) && $bombsNumber <= $dimX * $dimY)  // Input check.
+		if (is_int($dimX) && is_int($dimY) && is_int($bombsNumber) && 
+			$bombsNumber <= $dimX * $dimY && $dimX * $dimY > 0)  			// Input check.
 		{
 			$table = ZeroTable($dimX, $dimY);  // Call the table with only zeros.
 			$i = 0; 
