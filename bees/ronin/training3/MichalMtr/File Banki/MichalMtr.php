@@ -32,18 +32,18 @@
 // -----------------------------------------------------------------------------------
 
 	function GetCodeOther()
+	{
+		$handle = fopen('banki_other.txt', 'r');
+		$result = '';
+		
+		while($line = fgets($handle))
 		{
-			$handle = fopen('banki_other.txt', 'r');
-			$result = '';
-			
-			while($line = fgets($handle))
-			{
-				$codeAndBank = explode(" \t", $line);
-				$result .= '\''.$codeAndBank[0].'\' => \''.trim($codeAndBank[1]).'\', ';
-			}
-			
-			return $result;
+			$codeAndBank = explode(" \t", $line);
+			$result .= '\''.$codeAndBank[0].'\' => \''.trim($codeAndBank[1]).'\', ';
 		}
+		
+		return $result;
+	}
 		
 		$res = GetCodeOther();
 		fwrite(fopen('banki_out_case1.txt', 'w'), $res); // one method

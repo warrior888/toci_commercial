@@ -24,24 +24,24 @@
 	
 	
 	
-	PRZY DRUGIM ZADANIU MOŻNA KORZYSTAĆ Z GOTOWYCH FUNKCJI A PRZY WALIDACJI DATY TJ. function ValidateDate ŻEBY NIE BYŁO TAK ŻE SKORZYSTAMY Z GOTOWEGO DATE TIME
-	I ZROBIMY TRAJKECZA TYLKO FAKTYCZNIE ZWALIDOWAĆ DATĘ  // try // catch -- przechwytywanie bledow
+	//PRZY DRUGIM ZADANIU MOĹ»NA KORZYSTAÄ† Z GOTOWYCH FUNKCJI A PRZY WALIDACJI DATY TJ. function ValidateDate Ĺ»EBY NIE BYĹ�O TAK Ĺ»E SKORZYSTAMY Z GOTOWEGO DATE TIME
+	//I ZROBIMY TRAJKECZA TYLKO FAKTYCZNIE ZWALIDOWAÄ† DATÄ�  // try // catch -- przechwytywanie bledow
 	
-	// 1. Sprawdzić czy data jest poprawna po jej rozcięciu w ten sposób "84 08 08", następnie zwalidować datę, a potem zwalidować cały pesel
+	// 1. SprawdziÄ‡ czy data jest poprawna po jej rozciÄ™ciu w ten sposĂłb "84 08 08", nastÄ™pnie zwalidowaÄ‡ datÄ™, a potem zwalidowaÄ‡ caĹ‚y pesel
 	
-	// na to jest algorytm z wikipedi, polecany bo tam dalej jest jak jest płeć, suma kontrolna itd. i zgodnie z tym zwalidować czy pesel jest poprawny
+	// na to jest algorytm z wikipedi, polecany bo tam dalej jest jak jest pĹ‚eÄ‡, suma kontrolna itd. i zgodnie z tym zwalidowaÄ‡ czy pesel jest poprawny
 	
 	function ValidatePesel($peselCandidate)
 	{
 		substr($peselCandidate, 0, 2);
-		// wycina datę z peselu np. 84 08 08
+		// wycina datÄ™ z peselu np. 84 08 08
 		
 		ValidateDate();
 	
 	}
 	
-	function ValidateDate($year, $month, $day) // funkcja ta ma sprawdzić czy data wycięta z peselu w function ValidatePesel jest datą i ta funkcja będzie
-												// do wywołania w  function ValidatePesel
+	function ValidateDate($year, $month, $day) // funkcja ta ma sprawdziÄ‡ czy data wyciÄ™ta z peselu w function ValidatePesel jest datÄ… i ta funkcja bÄ™dzie
+												// do wywoĹ‚ania w  function ValidatePesel
 	{
 		
 	}
@@ -109,7 +109,7 @@ function ValidateChecksum($pesel)
 			$sum += $value * $weights[$i];
 		}
 		
-    return substr($sum % 10, -1, 1) == 0; // wycina ostatnią cyfrę z sumy kontrolnej ktora otrzymujemy po dodaniu wynikow z $sum += $digit * $weights[$i];
+    return substr($sum % 10, -1, 1) == 0; // wycina ostatniÄ… cyfrÄ™ z sumy kontrolnej ktora otrzymujemy po dodaniu wynikow z $sum += $digit * $weights[$i];
 }
 
 
@@ -136,7 +136,7 @@ function ValidateDate($year, $month, $day)
 		return false;
 	}		
 		
-	// rok musi zawierać  się przedziale 00-99	
+	// rok musi zawieraÄ‡  siÄ™ przedziale 00-99	
 	if ($year < 0 || $year > 99)
 	{
 		echo "PODANO NIEPRAWIDLOWY ROK";
@@ -163,31 +163,31 @@ function ValidateDate($year, $month, $day)
 ValidatePesel("87060915452");
 	
 	
-	// 2. stworzyć tablicę tablic i w tych tablicach tablic rozlosować miny, stworzyć tablicę tablic  dla planszy sapera, 
+	// 2. stworzyÄ‡ tablicÄ™ tablic i w tych tablicach tablic rozlosowaÄ‡ miny, stworzyÄ‡ tablicÄ™ tablic  dla planszy sapera, 
 	
-	// przyjmujemy dowolny rozmiar tablicy, randomowo losujemy gdzie są bomby i wyliczamy wokół danej bomby cyfry które mają się pojawić, czyli
+	// przyjmujemy dowolny rozmiar tablicy, randomowo losujemy gdzie sÄ… bomby i wyliczamy wokĂłĹ‚ danej bomby cyfry ktĂłre majÄ… siÄ™ pojawiÄ‡, czyli
 	
-	// wchodzimy do każdej kratki i sprawdzamy ile wokół jest bomb i podajemy cyfrę
+	// wchodzimy do kaĹĽdej kratki i sprawdzamy ile wokĂłĹ‚ jest bomb i podajemy cyfrÄ™
 	
-	// Zrobić to na dwa sposoby 
+	// ZrobiÄ‡ to na dwa sposoby 
 	
 	function GenerateMinesweeperTable($dimx, $dimy, $bombsNumber)
 	{
-		array(array(), array()); // pierwszy sposób tablica w tablicy
+		array(array(), array()); // pierwszy sposĂłb tablica w tablicy
 		// 0 0 0 0 0 0 0 0 0 
 		// 0
 		// 0 0 0-1 0 1 1 1 1
 		
 		
 		
-		array();// drugi sposób jedna tablica czyli dimx razy dimy, i pierwsze zero z drugiego rzędu będzie przeniesione do pierwszego rzędu i będzie dziesięć
-				// zer w pierwszym rzędzie a nie dziewięć jak w pierwszym sposobie
-				// i po tej tablocy umiejętnie się poruszać żeby wyliczać jej odpowiednie wskazania
+		array();// drugi sposĂłb jedna tablica czyli dimx razy dimy, i pierwsze zero z drugiego rzÄ™du bÄ™dzie przeniesione do pierwszego rzÄ™du i bÄ™dzie dziesiÄ™Ä‡
+				// zer w pierwszym rzÄ™dzie a nie dziewiÄ™Ä‡ jak w pierwszym sposobie
+				// i po tej tablocy umiejÄ™tnie siÄ™ poruszaÄ‡ ĹĽeby wyliczaÄ‡ jej odpowiednie wskazania
 		
 		// 0 0 0 0 0 0 0 0 0 0
 		// 
 		
-		rand(0, $dimx - 1); // losowanie współrzędnych x, y, czyli od 0 do $dimx - 1 i od 0 do $dimy - 1 i tam gdzie się wylosują włożyć BOMBĘ CZYLI -1
+		rand(0, $dimx - 1); // losowanie wspĂłĹ‚rzÄ™dnych x, y, czyli od 0 do $dimx - 1 i od 0 do $dimy - 1 i tam gdzie siÄ™ wylosujÄ… wĹ‚oĹĽyÄ‡ BOMBÄ� CZYLI -1
 		rand(0, $dimy - 1); 
 	
 	}
