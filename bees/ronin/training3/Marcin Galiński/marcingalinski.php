@@ -1,6 +1,6 @@
 <?php
 	//1
-	$saving = SaveCode(GetCode()) . "\n";
+	//$saving = SaveCode(GetCode()) . "\n";
 	//2
 	//echo ValidatePesel(93051705895) . "\n";
 	//3
