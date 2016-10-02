@@ -1,6 +1,6 @@
 <?php
 	//1
-	//echo $saving = SaveCode(GetCode()) . "\n";
+	$saving = SaveCode(GetCode()) . "\n";
 	//2
 	//echo ValidatePesel(93051705895) . "\n";
 	//3
@@ -22,7 +22,7 @@
 	
 	function SaveCode( $code )
 	{
-		$handle = fopen("banki_out.txt" , 'w');
+		$handle = fopen("bankiOut.txt" , 'w');
 		$result = fwrite($handle,$code);
 		return $result;
 	}
