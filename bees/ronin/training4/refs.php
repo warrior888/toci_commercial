@@ -1,5 +1,7 @@
 <?php
 
+// przekazywanie zmiennych przez referencje do funkcji
+
 	function PassByReference (&$table, &$int)
 	{
 		$table[] = 'wpis';
