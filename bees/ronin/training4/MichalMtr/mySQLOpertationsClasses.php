@@ -17,8 +17,8 @@
 		public abstract function Connect(); 
 // 		public abstract function Create($query); // Czy tak?
 		public abstract function Insert();
-// 		public abstract function Update();
-// 		public abstract function Delete();
+ 		public abstract function Update($query);
+// 		public abstract function Delete($query);
 // 		public abstract function Select();
 		
 		protected function __construct()
@@ -26,7 +26,7 @@
 			$this->Connect();
 // 			$this->Create($this->query); // Czy tak?
 			$this->Insert();
-// 			$this->Update();
+ 			$this->Update('update tabelka ');
 // 			$this->Delete();
 // 			$this->Select();
 		}

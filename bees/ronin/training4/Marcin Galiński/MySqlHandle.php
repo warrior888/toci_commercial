@@ -3,10 +3,11 @@
 	
 	class MySqlHandle extends DbHandle
 	{
+		
 		public function Connect()
 		{
-			$connectionHandle = new mysqli($this->dbHost,$this->dbUser,$this->dbPass,$this->dbName);
-			return $connectionHandle;
+			$this->connectionHandle = new mysqli($this->dbHost,$this->dbUser,$this->dbPass,$this->dbName);
+			return $this->connectionHandle;
 		}
 		
 		public function __construct()
@@ -15,10 +16,8 @@
 		}
 		
 		public function InsertDeleteUpdate($query)
-		{
-			$connect = $this->Connect();
-			
-			$result = $connect->query($query);
+		{	
+			$result = $this->connectionHandle->query($query);
 			return $connect->affected_rows;
 		}
 		

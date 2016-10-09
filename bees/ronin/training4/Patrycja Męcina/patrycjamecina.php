@@ -27,7 +27,7 @@ class patrycjamecina extends DbHandle
 
 	public function Select($select)
 	{
-		$result = pg_query($connection, $select);
+		$result = pg_query($this->handle, $select);
 		$table = array();
 
 		while($row = pg_fetch_assoc($result))

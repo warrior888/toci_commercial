@@ -1,8 +1,17 @@
 <?php
 
+	abstract class stol {}
+	class krzeslo extends stol {} 
+	class furtka {}
+
 	abstract class DbHandle
 	{
 		public abstract function Connect();
+		
+		public function Test(stol $stol)
+		{
+			
+		}
 		
 		private $float = 8.8;
 		
@@ -17,6 +26,11 @@
 		public function Connect()
 		{
 			mysqli_connect();
+		}
+		
+		public function Test()
+		{
+			
 		}
 		
 		public function __construct()
@@ -35,7 +49,10 @@
 		{
 			parent::__construct();
 		}
-		
+		public function Test(stol $krzeslo)
+		{
+			
+		}
 		public function Connect()
 		{
 			//$this->connectionString = $string;
@@ -59,3 +76,8 @@
 	
 	$obiekt->Connect('dupa');
 	$obiekt2->Connect('cyce');
+	
+	class PassMeIn
+{
+
+}

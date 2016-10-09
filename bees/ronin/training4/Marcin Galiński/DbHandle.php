@@ -6,6 +6,8 @@
 		protected  $dbPass;
 		protected  $dbName;
 		
+		protected $connectionHandle;
+		
 		public abstract function Connect();
 	
 		//private $float = 8.8;
