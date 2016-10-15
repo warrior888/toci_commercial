@@ -1,5 +1,6 @@
 <?php
 
+	
 	class DbSelect
 	{
 		public function Select($table, array $asterisk, array $where)
