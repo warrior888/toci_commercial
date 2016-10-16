@@ -12,7 +12,11 @@
             $this->user = $user;
             $this->pass = $pass;
             $this->db = $db;
+            
+            
         }
+        
+        
     }
     
     class MySqlDbHandler extends DbHandler
@@ -22,6 +26,7 @@
         public function __construct()
         {
             parent::__construct('localhost', 'root', '', 'samochody');
+            $this->Connect();
         }
     
         public function Connect()
@@ -36,7 +41,11 @@
             $result = mysqli_fetch_array($resource); 
             
             return $result;
-            }
+        }
+        
+        public function __destruct(){
+        	//disconnect
+        }
     }    
 
     class DbSelect
@@ -57,12 +66,14 @@
         public $where = array(array('marka', 'LIKE', '\'Ford\''), array('model', 'LIKE', '\'Fiesta\''));
         public $table = 'auta';
                   
-        public function Select() 
+        public function Select($table, array $asterisk, array $where) 
         {
             $select = $this->selectPart . implode(', ', $this->asterisk) . $this->fromPart . 
-                      $this->table . $this->wherePart . implode(' ', $this->where[0]) . 
-                      $this->andPart . implode(' ', $this->where[1]);
-            
+                      $this->table . $this->wherePart ;
+            foreach ($where as $value)
+            {
+            	// sklejanie where marka like ford
+            }
             return $select;
         }        
     }
@@ -71,7 +82,7 @@
     $select = new MySqlSelect();
     
     $task->Connect();   
-    print_r($task->StartQuery($select->Select()));
+    print_r($task->StartQuery($select->Select('')));
     
 //     Fatal error: Call to undefined function pg_fetch_all() in line 36
     
