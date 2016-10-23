@@ -29,6 +29,8 @@ class CheckersBoard
 			}
 			echo "\n";
 		}
+		
+		
 	}
 	
 	private function SetCheckers($i,$j)
@@ -97,9 +99,9 @@ class Checker extends Figure
 	{
 		if( $this->CanOccupy($checkerBoard->board[$srcX][$srcY], $checkerBoard->board[$destX][$destY], $checkerBoard) )
 		{
-				$help = $checkerBoard->board[$destX][$destY];
-				$checkerBoard->board[$destX][$destY] = $checkerBoard->board[$srcX][$srcY];
-				$checkerBoard->board[$srcX][$srcY] = $help;
+			$help = $checkerBoard->board[$destX][$destY];
+			$checkerBoard->board[$destX][$destY] = $checkerBoard->board[$srcX][$srcY];
+			$checkerBoard->board[$srcX][$srcY] = $help;
 			
 		}
 	}

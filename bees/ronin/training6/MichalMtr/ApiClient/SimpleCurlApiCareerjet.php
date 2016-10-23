@@ -13,9 +13,37 @@
 	
 	// Create array of countries and country language codes from external file.
 	// Picks country language code on the basis of given country name.
+
+	class MichalQuestion 
+	{
+		public function Question()
+		{
+			$answer = self::Ask();
+			
+		}
+		
+		public static function Ask()
+		{
+			$this->Question();
+			return 'answer';
+		}
+	}
+
 	class PickCountryForSearch
 	{
+		protected $michalQuestion;
+		
+		public function __construct(){
+			$this->michalQuestion = new MichalQuestion();
+		}
+		
 		public $fileName = 'countries.txt';
+		
+		public function Example()
+		{
+			//$michalQuestion = new MichalQuestion();
+			MichalQuestion::Ask();
+		}
 	
 		public function CountryList()
 		{
